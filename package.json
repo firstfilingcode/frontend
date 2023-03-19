@@ -1,0 +1,68 @@
+{
+  "homepage": "./",
+  "name": "first",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@progress/kendo-react-pdf": "^5.10.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "aos": "^2.3.4",
+    "axios": "^1.2.1",
+    "file-saver": "^2.0.5",
+    "formik": "^2.2.9",
+    "generate-pdf-from-react-html": "^1.0.5",
+    "jquery": "^3.6.3",
+    "jwt-decode": "^3.1.2",
+    "moment": "^2.29.4",
+    "next": "^13.2.3",
+    "react": "^18.2.0",
+    "react-accessible-accordion": "^5.0.0",
+    "react-bar-loader": "^1.0.0",
+    "react-bootstrap": "^2.7.2",
+    "react-client-session": "^0.0.8",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-countup": "^6.4.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-meta-tags": "^1.0.1",
+    "react-owl-carousel": "^2.3.3",
+    "react-router-dom": "^6.5.0",
+    "react-scripts": "^5.0.1",
+    "react-scroll-to-top": "^3.0.0",
+    "react-secure-storage": "^1.1.0",
+    "react-tabs": "^6.0.0",
+    "react-toastify": "^9.1.1",
+    "react-tooltip": "^5.8.1",
+    "react-top-loading-bar": "^2.3.1",
+    "react-visibility-sensor": "^5.1.1",
+    "reactstrap": "^9.1.5",
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

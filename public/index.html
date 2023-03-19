@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/FirstFiling.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="App Description"
+      data-react-helmet="true"
+    />
+    <meta name="theme-color" content="#008f68" data-react-helmet="true" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/FirstFiling.png" />
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+      integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/css/evo-calendar.min.css"/>
+
+
+<script src="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/js/evo-calendar.min.js"></script>
+<script>
+ document
+    .getElementsByTagName('meta')
+    .namedItem('description')
+    .setAttribute('content','My Meta Description Here')
+
+window.addEventListener("calender", () => {
+  $.getJSON("https://accounts.rusoft.in/api/getCalender", function(data){
+   var array = data.data;
+
+   $("#calendar").evoCalendar({calendarEvents:array
+     });
+     window.dispatchEvent(new Event("calenderInitialze"));
+});
+  });
+
+  </script>
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API = Tawk_API || {},
+      Tawk_LoadStart = new Date();
+  (function() {
+      var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6217c0a7a34c2456412808e1/1fsmch4q4';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+  })();
+</script>
+
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+
+</script>
+<!--End of Tawk.to Script-->
+
+  
+
+    <title>First Filing</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
