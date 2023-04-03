@@ -79,7 +79,7 @@ const Wallet = () => {
 
                                             <tr>
                                                 <td className="leftBorderNone">{index + 1}</td>
-                                                <td>{item.refer_by === "..." ? "Service Purchased" : item.th_heading + " " + item.refer_by} </td>
+                                                <td>{ item.transaction_no === "FirstLogin" ? "Registration Bonus" :  item.refer_by === "..." ? "Service Purchased" : item.th_heading + " " + item.refer_by} </td>
                                                 <td><b>₹ {item.amount}</b></td>
                                                 <td>{item.status === "1" ? "Credited" : "Debited"}</td>
                                                 <td>{moment(item.created_at).format('hh:mm')}   </td>

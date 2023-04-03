@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import ServiceType2 from "../Services/ServiceType2";
-import Footer from "./Footer";
-import Header from "./Header";
 import backgroundForPresumptive1 from "../common/Images/backgroundForPresumptive1.gif";
-import incometax_men2 from "../common/Images/canPremtive.png";
+import incometax_men2 from "../common/Images/questionMark9.png";
 import Presumptive12 from "../common/Images/Presumptive12.png";
-import Presumptive11 from "../common/Images/Presumptive11.png";
-import Presumptive10 from "../common/Images/Presumptive10.png";
-import Presumptive9 from "../common/Images/Presumptive9.png";
+import Presumptive11 from "../common/Images/calculator9.png";
+import Presumptive10 from "../common/Images/Thumsup9.png";
+import Presumptive9 from "../common/Images/TAX9.png";
 import checkcircle1 from "../common/Images/checkCircle.svg";
 import ServiceName from "../Services/NameOfService";
 import secureLocalStorage from "react-secure-storage";
@@ -15,7 +13,7 @@ import { NavLink } from "react-router-dom";
 import Faq from "../FAQ/Faq";
 import Enquiry2 from "../Enquiry/enquiry2";
 
-function TaxFilingTrandingForeignStocks() {  
+function TaxFilingTrandingForeignStocks() {
   const [buyNow, setbuyNow] = useState("");
   window.addEventListener("itr_service", () => {
     setbuyNow(
@@ -24,7 +22,6 @@ function TaxFilingTrandingForeignStocks() {
   });
   return (
     <>
-      <Header />
       <div className="container">
         <ServiceName />
         <div className="row">
@@ -32,7 +29,7 @@ function TaxFilingTrandingForeignStocks() {
             <span className=" itrPageHeading">
               Presumptive / Freelancing Income{" "}
             </span>
-            <section className="backgroundPresumptive">
+            <section className="Teamwork9">
               <div className="fixwidthPremtive">
                 <p className="itrPageDescription">
                   Freelancing in India has a bright future. As per the Income
@@ -123,57 +120,6 @@ function TaxFilingTrandingForeignStocks() {
 
       <div className="container">
         <div className="row mt-3">
-          <div className="col-md-6 itrnomatter">
-            <p className="itrnomatterp">Do freelancers have to pay tax?</p>
-
-            <p className="partnershiptollp_p">
-              In India, there are 15 million freelancers. Around 40% of all
-              freelance jobs offered around the world are done by freelancers
-              from India (1). According to industry estimates the Indian
-              'freelancers' market size is likely to grow to a whopping $20-$30
-              billion by 2025(1).
-            </p>
-
-            <p className="partnershiptollp_p">
-              Freelancers are the people who prefer working for themselves,
-              mostly from home and not a registered company. They get hired to
-              work on specific tasks for a specific duration and get paid upon
-              the completion of their assignment.
-            </p>
-
-            <p className="partnershiptollp_p">
-              But all of this comfort comes at a cost, and like other salaries
-              of business professionals, freelancers also have to pay tax on
-              whatever they earn.
-            </p>
-          </div>
-          <div className="col-md-1"></div>
-          <div className="col-md-5 itrnomatter">
-            <p className="itrnomatterp">Presumptive Taxation</p>
-
-            <p className="partnershiptollp_p">
-              Sec 44ADA contains the provision for computing gains from
-              profession on a presumptive basis.
-            </p>
-
-            <span className="boldTextItr">
-              “A sum equal to or higher than 50 % of the total gross receipts”
-            </span>
-            <p className="partnershiptollp_p">
-              shall be deemed to be the gain from such profession under the head
-              "Profits and gains of business or profession.”In simple words, if
-              a person is a specified professional and having gross receipts
-              less than or equal to Rs. 50 lakhs then sec 44ADA is for him!
-            </p>
-
-            <p className="partnershiptollp_p">
-              As per sec 44ADA, he has to offer at least 50% of his gross
-              receipts as profit i.e. the amount on which tax shall be levied.
-              or, we can say out of your gross receipts, government considers
-              50% as expenses and 50 % as profit.
-            </p>
-          </div>
-
           <div className="col-md-12">
             <p className="titleOfFirstFilling">
               Applicability of Taxes and ITR Filing for Freelancers
@@ -263,20 +209,71 @@ function TaxFilingTrandingForeignStocks() {
               benefits for freelancers.
             </p>
           </div>
+          <div className="col-md-6 itrnomatter">
+            <p className="itrnomatterp">Do freelancers have to pay tax?</p>
+
+            <p className="partnershiptollp_p">
+              In India, there are 15 million freelancers. Around 40% of all
+              freelance jobs offered around the world are done by freelancers
+              from India (1). According to industry estimates the Indian
+              'freelancers' market size is likely to grow to a whopping $20-$30
+              billion by 2025(1).
+            </p>
+
+            <p className="partnershiptollp_p">
+              Freelancers are the people who prefer working for themselves,
+              mostly from home and not a registered company. They get hired to
+              work on specific tasks for a specific duration and get paid upon
+              the completion of their assignment.
+            </p>
+
+            <p className="partnershiptollp_p">
+              But all of this comfort comes at a cost, and like other salaries
+              of business professionals, freelancers also have to pay tax on
+              whatever they earn.
+            </p>
+          </div>
+          <div className="col-md-1"></div>
+          <div className="col-md-5 itrnomatter">
+            <p className="itrnomatterp">Presumptive Taxation</p>
+
+            <p className="partnershiptollp_p">
+              Sec 44ADA contains the provision for computing gains from
+              profession on a presumptive basis.
+            </p>
+
+            <span className="boldTextItr">
+              “A sum equal to or higher than 50 % of the total gross receipts”
+            </span>
+            <p className="partnershiptollp_p">
+              shall be deemed to be the gain from such profession under the head
+              "Profits and gains of business or profession.”In simple words, if
+              a person is a specified professional and having gross receipts
+              less than or equal to Rs. 50 lakhs then sec 44ADA is for him!
+            </p>
+
+            <p className="partnershiptollp_p">
+              As per sec 44ADA, he has to offer at least 50% of his gross
+              receipts as profit i.e. the amount on which tax shall be levied.
+              or, we can say out of your gross receipts, government considers
+              50% as expenses and 50 % as profit.
+            </p>
+          </div>
+
+
 
           <div className="col-md-4">
-            <section className="marginOfImage ">
+            <section className="marginOfImage text-center">
               <div>
                 <img
                   src={incometax_men2}
-                  width={"217px"}
-                  height="396px"
+                  width={"100%"}
                   alt="incometax_men2"
                 />
               </div>
-              <button className="btn itrFIleButton">
+              <NavLink to="/Contact">      <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button> </NavLink>
             </section>
           </div>
 
@@ -409,48 +406,7 @@ function TaxFilingTrandingForeignStocks() {
             </section>
           </div>
 
-          <div className="col-md-12 mt-3">
-            <p className="titleOfFirstFilling">
-              What are the TDS rates for freelancers?
-            </p>
-          </div>
 
-          <div className="col-md-7">
-            <p className="partnershiptollp_p">
-              Tax Deducted at Source (TDS) is the amount of money deducted as
-              tax by the payer before making a payment for any service. TDS is a
-              part of your tax obligation to the government on your income. The
-              only difference is that it is deducted before you receive payment.
-            </p>
-
-            <p className="partnershiptollp_p">
-              In case of professional services, TDS is applicable at a rate of
-              10% under Section 194J whenever a professional/ organisation pays
-              a freelancer more than Rs 30,000 (per transaction or in total for
-              the financial year). The deducted tax must be deposited with the
-              government.
-            </p>
-
-            <p className="partnershiptollp_p">
-              For instance, let us assume that you are a freelancer and have
-              invoiced a client for ₹40,000. The client will subtract ₹4,000
-              (10% of your invoiced amount) and pay you the remainder of
-              ₹36,000. The client is responsible for depositing the deducted
-              amount with the government as Tax Deducted at Source (TDS).
-            </p>
-          </div>
-
-          <div className="col-md-5">
-            <section className="backgroundForPresumptive">
-              <img
-                src={backgroundForPresumptive1}
-                alt="backgroundForPresumptive"
-              />
-              {/* <button className="btn itrFIleButton">
-                Schedule Free Consultation
-              </button> */}
-            </section>
-          </div>
 
           <div className="col-md-12 mt-3">
             <p className="partnershiptollp_p">
@@ -478,9 +434,9 @@ function TaxFilingTrandingForeignStocks() {
                 alt="backgroundForPresumptive"
                 className="mobileImg"
               />
-              <button className="btn itrFIleButton">
+            <NavLink to="/Contact">   <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button> </NavLink>
             </section>
           </div>
 
@@ -522,6 +478,48 @@ function TaxFilingTrandingForeignStocks() {
 
           <div className="col-md-12 mt-3">
             <p className="titleOfFirstFilling">
+              What are the TDS rates for freelancers?
+            </p>
+          </div>
+
+          <div className="col-md-7">
+            <p className="partnershiptollp_p">
+              Tax Deducted at Source (TDS) is the amount of money deducted as
+              tax by the payer before making a payment for any service. TDS is a
+              part of your tax obligation to the government on your income. The
+              only difference is that it is deducted before you receive payment.
+            </p>
+
+            <p className="partnershiptollp_p">
+              In case of professional services, TDS is applicable at a rate of
+              10% under Section 194J whenever a professional/ organisation pays
+              a freelancer more than Rs 30,000 (per transaction or in total for
+              the financial year). The deducted tax must be deposited with the
+              government.
+            </p>
+
+            <p className="partnershiptollp_p">
+              For instance, let us assume that you are a freelancer and have
+              invoiced a client for ₹40,000. The client will subtract ₹4,000
+              (10% of your invoiced amount) and pay you the remainder of
+              ₹36,000. The client is responsible for depositing the deducted
+              amount with the government as Tax Deducted at Source (TDS).
+            </p>
+          </div>
+
+          <div className="col-md-5">
+            <section className="backgroundForPresumptive">
+              <img
+                src={backgroundForPresumptive1}
+                alt="backgroundForPresumptive"
+              />
+            <NavLink to="/Contact">   <button className="btn itrFIleButton">
+                Schedule Free Consultation
+              </button> </NavLink>
+            </section>
+          </div>
+          <div className="col-md-12 mt-3">
+            <p className="titleOfFirstFilling">
               How can freelancers calculate their advance tax
             </p>
           </div>
@@ -556,9 +554,9 @@ function TaxFilingTrandingForeignStocks() {
           <div className="col-md-5">
             <section className="text-center">
               <img src={Presumptive11} alt="Presumptive11" />
-              <button className="btn itrFIleButton btnreletive">
+              <NavLink to="/Contact">      <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button> </NavLink>
             </section>
           </div>
         </div>
@@ -644,9 +642,9 @@ function TaxFilingTrandingForeignStocks() {
           <div className="col-md-5">
             <section className="text-center">
               <img src={Presumptive10} alt="Presumptive10" />
-              <button className="btn itrFIleButton">
+              <NavLink to="/Contact">    <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button> </NavLink>
             </section>
           </div>
 
@@ -913,7 +911,6 @@ function TaxFilingTrandingForeignStocks() {
       </div>
 
       <Faq />
-      <Footer />
     </>
   );
 }

@@ -121,7 +121,14 @@ import Contact from "./components/common/Contact";
 import Refer from "./components/common/Refer";
 import TermCondition from "./components/common/TermCondition";
 import AboutUs from "./components/common/AboutUs";
-
+import DisclaimerPolicy from "./components/common/DisclaimerPolicy";
+import CancellationRefundPolicy from "./components/common/CancellationRefundPolicy";
+import SecurityPolicy from "./components/common/SecurityPolicy";
+import UnsubscribeNewsLetter from "./components/common/UnsubscribeNewsLetter";
+import Support from "./components/common/Support";
+import Header from "./components/common/Header";
+import Footer from "./components/common/Footer";
+import TaxationAdvisoryCryptocurrency from "./components/common/TaxationAdvisoryCryptocurrency";
 
 function App() {
   useEffect(() => {
@@ -133,11 +140,18 @@ function App() {
   }, []);
   return (
     <>
+      <Header />
 
       <Routes>
 
         <Route path="/" element={<Index />} />
+        <Route path="/UnsubscribeNewsLetter/:token_no" element={<UnsubscribeNewsLetter />} />
+        <Route path="/Support" element={<Support />} />
+        <Route path="/TaxationAdvisoryCryptocurrency" element={<TaxationAdvisoryCryptocurrency />} />
         <Route path="/GstRegistration" element={<GstRegistration />} />
+        <Route path="/DisclaimerPolicy" element={<DisclaimerPolicy />} />
+        <Route path="/CancellationRefundPolicy" element={<CancellationRefundPolicy />} />
+        <Route path="/SecurityPolicy" element={<SecurityPolicy />} />
         <Route path="/OrderSummary2/:user_id" element={<OrderSummary2 />} />
         <Route path="/New" element={<New />} />
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
@@ -148,7 +162,7 @@ function App() {
         <Route path="/Blogdetails" element={<Blogdetails />} />
         <Route path="/UserInfo" element={<UserInfo />} />
         <Route path="/IncomeTaxreturn_2" element={<IncomeTaxreturn_2 />} />
-        <Route path="/LongTermCapitalGans" element={<LongTermCapitalGans />} />
+        <Route path="/Individual-Updated-Tax-Filing-Plan-having-Capital-gain-(ESOPS-and-RSU)-(ITR-U)" element={<LongTermCapitalGans />} />
         <Route path="/OrderDetails" element={<OrderDetails />} />
         <Route path="/PanApplication" element={<PanApplication />} />
         <Route path="/TrademarkRegistrationCompany" element={<TrademarkRegistrationCompany />} />
@@ -160,7 +174,7 @@ function App() {
         <Route path="/StartUpIndiaRegistration" element={<StartUpIndiaRegistration />} />
         <Route path="/TanRegistration" element={<TanRegistration />} />
         <Route path="/RocFilling" element={<RocFilling />} />
-        <Route path="/BusinessTaxReturnsCorporateEntities" element={<BusinessTaxReturnsCorporateEntities />} />
+        <Route path="/Business-Tax-Returns-for-Corporate-Entities" element={<BusinessTaxReturnsCorporateEntities />} />
         <Route path="/LiveNriTaxReturnFiling" element={<LiveNriTaxReturnFiling />} />
         <Route path="/LivePresumptiveIncomeTaxFiling" element={<LivePresumptiveIncomeTaxFiling />} />
         <Route path="/NgoRegistration" element={<NgoRegistration />} />
@@ -183,68 +197,68 @@ function App() {
         <Route path="/DigitalSignatureClass3" element={<DigitalSignatureClass3 />} />
         <Route path="/CompanyNameRemoval" element={<CompanyNameRemoval />} />
         <Route path="/IncomeTaxreturn" element={<IncomeTaxreturn />} />
-        <Route path="/AmendmentGoodsServicesGst" element={<AmendmentGoodsServicesGst />} />
+        <Route path="/AMENDMENT-OF-GOODS-AND-SERVICES-TAX-(GST)-REGISTRATION" element={<AmendmentGoodsServicesGst />} />
         <Route path="/ShopLicense" element={<ShopLicense />} />
-        <Route path="/TaxFilingSecuritiesTraders" element={<TaxFilingSecuritiesTraders />} />
+        <Route path="/Tax-Filing-for-Securities-Traders" element={<TaxFilingSecuritiesTraders />} />
         <Route path="/FormDtp3" element={<FormDtp3 />} />
         <Route path="/Form20A" element={<Form20A />} />
-        <Route path="/ResidentsForeignIncomeTaxReturns" element={<ResidentsForeignIncomeTaxReturns />} />
-        <Route path="/CapitalGainsTaxReliefSection89" element={<CapitalGainsTaxReliefSection89 />} />
+        <Route path="/Residents-with-foreign-Income-Tax-Return-Filing" element={<ResidentsForeignIncomeTaxReturns />} />
+        <Route path="/Individual-Tax-Filing-Plan-having-Capital-gain-(ESOPS-and-RSU)" element={<CapitalGainsTaxReliefSection89 />} />
         <Route path="/Inc22A" element={<Inc22A />} />
         <Route path="/TradmarkRenewalCompany" element={<TradmarkRenewalCompany />} />
         <Route path="/RevisedIncomeTaxReturnFiling2" element={<RevisedIncomeTaxReturnFiling2 />} />
-        <Route path="/GoodsAndServiceGST" element={<GoodsAndServiceGST />} />
+        <Route path="/GOODS-AND-SERVICES-TAX-(GST)-REGISTRATION" element={<GoodsAndServiceGST />} />
         <Route path="/ChangeRegisteredOffice" element={<ChangeRegisteredOffice />} />
         <Route path="/ChangesMemorandumAssociation" element={<ChangesMemorandumAssociation />} />
-        <Route path="/RevisedIncomeTaxReturnFiling" element={<RevisedIncomeTaxReturnFiling />} />
+        <Route path="/Presumptive-Freelancing-Income-Updated-ITR-Filing-(ITR-U)" element={<RevisedIncomeTaxReturnFiling />} />
         <Route path="/TradmarkObjectionManagement" element={<TradmarkObjectionManagement />} />
         <Route path="/LiveIndividualTaxFiling" element={<LiveIndividualTaxFiling />} />
         <Route path="/AppointADirector" element={<AppointADirector />} />
         <Route path="/PanForNRI" element={<PanForNRI />} />
-        <Route path="/NRITaxReturn" element={<NRITaxReturn />} />
-        <Route path="/AdvanceTaxCalculation" element={<AdvanceTaxCalculation />} />
+        <Route path="/NRI-Individual-tax-Filing" element={<NRITaxReturn />} />
+        <Route path="/Advance-Tax-Calculation" element={<AdvanceTaxCalculation />} />
         <Route path="/LiveFilingSalariedEmployee" element={<LiveFilingSalariedEmployee />} />
         <Route path="/DigitalSignatureDgft" element={<DigitalSignatureDgft />} />
         <Route path="/PartnershipFirmtoLLP" element={<PartnershipFirmtoLLP />} />
         <Route path="/Section8NidhiCompliances" element={<Section8NidhiCompliances />} />
         <Route path="/TdsReturnSalaryAndOtherPayment" element={<TdsReturnSalaryAndOtherPayment />} />
-        <Route path="/GST_E_Way_Bill" element={<GST_E_Way_Bill />} />
-        <Route path="/LetterUndertaking" element={<LetterUndertaking />} />
-        <Route path="/Cancellation_SurrenderGst" element={<Cancellation_SurrenderGst />} />
+        <Route path="/GST-E-WAY-BILL-REGISTRATION-AND-ONE-E-WAY-BILL-GENERATION" element={<GST_E_Way_Bill />} />
+        <Route path="/LETTER-OF-UNDERTAKING-(LUT-REGISTRATION)" element={<LetterUndertaking />} />
+        <Route path="/CANCELLATION-OR-SURRENDER-OF-GST-REGISTRATION-(GSTR-10)" element={<Cancellation_SurrenderGst />} />
         <Route path="/ProfessionalTax" element={<ProfessionalTax />} />
         <Route path="/TrademarkRenewalIndividual" element={<TrademarkRenewalIndividual />} />
-        <Route path="/LtcgAdvisory" element={<LtcgAdvisory />} />
-        <Route path="/PrivateLimitedCompany" element={<PrivateLimitedCompany />} />
-        <Route path="/IndividualTaxFilingPlan" element={<IndividualTaxFilingPlan />} />
+        <Route path="/Long-Term-Capital-Gains-(LTCG)-Filing-(sale-of-Immovable-Property)" element={<LtcgAdvisory />} />
+        <Route path="/PRIVATE-LIMITED-COMPANY-(PLC)-ESTABLISHMENT" element={<PrivateLimitedCompany />} />
+        <Route path="/Salaried-Individual-Return-for-More-than-50-lacs" element={<IndividualTaxFilingPlan />} />
         <Route path="/IncorporateSubsidiary" element={<IncorporateSubsidiary />} />
         <Route path="/CryptocurrencyTaxationAdvisory" element={<CryptocurrencyTaxationAdvisory />} />
-        <Route path="/TaxFillingGainsCryptocurrencyIndividual" element={<TaxFillingGainsCryptocurrencyIndividual />} />
+        <Route path="/Individual-Tax-Filing-for-Gains-from-Cryptocurrency" element={<TaxFillingGainsCryptocurrencyIndividual />} />
         <Route path="/IncreaseAutorisedShareCapital" element={<IncreaseAutorisedShareCapital />} />
         <Route path="/EsopRsu" element={<EsopRsu />} />
         <Route path="/ResidentsForeignIncomeTax" element={<ResidentsForeignIncomeTax />} />
-        <Route path="/DigitalSignatureIndianClass3" element={<DigitalSignatureIndianClass3 />} />
+        <Route path="/Digital-Signature-for-Indian-Citizens-Class-3" element={<DigitalSignatureIndianClass3 />} />
         <Route path="/LlpToPvtLtdCompanyInIndia" element={<LlpToPvtLtdCompanyInIndia />} />
         <Route path="/IncorporateSubsidiaryForeign" element={<IncorporateSubsidiaryForeign />} />
-        <Route path="/TaxFilingSaleShares" element={<TaxFilingSaleShares />} />
+        <Route path="/Tax-Return-Filing-for-Sale-of-Shares-Mutual-Funds" element={<TaxFilingSaleShares />} />
         <Route path="/LiveBusinessTaxReturns" element={<LiveBusinessTaxReturns />} />
-        <Route path="/TdsReturnSalaryPayment" element={<TdsReturnSalaryPayment />} />
-        <Route path="/TaxFilingTrandingForeignStocks" element={<TaxFilingTrandingForeignStocks />} />
+        <Route path="/TDS-Return-on-Salary-Payment-(Form-24Q)" element={<TdsReturnSalaryPayment />} />
+        <Route path="/Tax-Return-Filing-for-trading-in-Foreign-Stocks" element={<TaxFilingTrandingForeignStocks />} />
         <Route path="/DigitalSignatureNriClass3" element={<DigitalSignatureNriClass3 />} />
         <Route path="/ChangeCompanyName" element={<ChangeCompanyName />} />
-        <Route path="/SalariedIndivual" element={<SalariedIndivual />} />
-        <Route path="/GSTR1" element={<GSTR1 />} />
+        <Route path="/Salaried-Individual-Return-(less-than-50-lacs)" element={<SalariedIndivual />} />
+        <Route path="/GST-Return-Filing-GSTR-1-3B" element={<GSTR1 />} />
         <Route path="/GSTR3B" element={<GSTR3B />} />
         <Route path="/GSTR9" element={<GSTR9 />} />
         <Route path="/GSTR9C" element={<GSTR9C />} />
         <Route path="/GSTR4" element={<GSTR4 />} />
-        <Route path="/TaxNoticeManagement" element={<TaxNoticeManagement />} />
+        <Route path="/Tax-Notice-Management" element={<TaxNoticeManagement />} />
         <Route path="/PrivateToLLP" element={<PrivateToLLP />} />
         <Route path="/TdsReturnSaleOfProperty" element={<TdsReturnSaleOfProperty />} />
         <Route path="/PrivateToOPC" element={<PrivateToOPC />} />
-        <Route path="/PresumptiveIncomeTaxFiling" element={<PresumptiveIncomeTaxFiling />} />
+        <Route path="/Presumptive-Freelancing-Income" element={<PresumptiveIncomeTaxFiling />} />
         <Route path="/LLP" element={<LLP />} />
         <Route path="/OPC" element={<OPC />} />
-        <Route path="/TaxFillingCryptocurrencyTrading" element={<TaxFillingCryptocurrencyTrading />} />
+        <Route path="/Tax-Filing-For-Gains-From-Cryptocurrency-and-Trading" element={<TaxFillingCryptocurrencyTrading />} />
         <Route path="/Order" element={<Order />} />
         <Route path="/Itr1" element={<Itr1 />} />
         <Route path="/Itr2" element={<Itr2 />} />
@@ -254,7 +268,7 @@ function App() {
         <Route path="/:referCode" element={<Refer />} />
       </Routes>
 
-
+      <Footer />
     </>
   );
 }

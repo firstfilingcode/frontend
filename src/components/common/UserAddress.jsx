@@ -65,7 +65,16 @@ const UserAddress = (props) => {
     }
     return errors;
   };
+  const [value, setValue] = useState(["house_no",
+  "area",
+  "pincode",
+  "city",
+  "code",
+  "mobile",
+  "state",
+  "email"]);
 
+  const [found, setFound] = useState(false);
   const [viewUserInfo, setViewUserInfo] = useState("");
   const [response, setResponse] = useState(false);
   let location = useLocation();
@@ -75,6 +84,14 @@ const UserAddress = (props) => {
       .then((json) => {
         //alert(JSON.stringify(json.allowed_input[0]));
         setAllowed_input(json.allowed_input);
+        for (var i = 0; i < (json.allowed_input).length; i++) {
+          if (value.indexOf(json.allowed_input[i]) > -1) {
+              setFound(true);
+              break;
+          }
+      
+
+      }
         setResponse(true);
         setViewUserInfo(location.state.view_user_info);
       });
@@ -189,6 +206,7 @@ const UserAddress = (props) => {
   };
   const [states, setStates] = useState([]);
   const [citys, setCitys] = useState([]);
+  const [phoneCode, setPhoneCode] = useState([]);
   useEffect(() => {
     const getData = () => {
       fetch(BASE_URL + "/getStates")
@@ -204,13 +222,27 @@ const UserAddress = (props) => {
           setCitys(json.citys);
         });
     };
+    const getPhoneCode = () => {
+      fetch(BASE_URL + "/getPhoneCode")
+        .then((res) => res.json())
+        .then((json) => {
+          setPhoneCode(json.phoneCode);
+        });
+    };
     getData();
+    getPhoneCode();
     getCity();
     getUserAddress();
   }, []);
   return (
+    <>
+    <div className="col-md-12">
+    <span className="UserInfo_Heading_title">
+  {found === false ?  <h4 className="text-center">No Required Fields </h4> : 'This address will be used for any communication related at your filing'}    
+    </span>
+  </div>
     <form onSubmit={formik.handleSubmit}>
-      <fieldset disabled={viewUserInfo === "1" ? true : false}>
+      <fieldset disabled={viewUserInfo === 1 ? true : false}>
         <div className="row">
           {allowed_input.indexOf("house_no") > -1 ? (
             <div className="col-md-4 info_input_padding inputLabel">
@@ -410,7 +442,13 @@ const UserAddress = (props) => {
                 }}
               >
                 <option value="">Select</option>
-                <option value="IN +91">IN +91</option>
+                {phoneCode.map((code) => {
+                  return (
+                    <>
+                      <option value={"+" + code.phonecode}>{"+" + code.phonecode}</option>
+                    </>
+                  );
+                })}
               </select>
               {formik.touched.code && formik.errors.code ? (
                 <span style={{ color: "red", fontSize: "12px" }}>
@@ -451,7 +489,7 @@ const UserAddress = (props) => {
           )}
           {response ? (
             <div className="col-md-12 info_input_padding">
-              {viewUserInfo === "1" ? (
+              {viewUserInfo === 1 ? (
                 ""
               ) : (
                 <button
@@ -484,6 +522,7 @@ const UserAddress = (props) => {
         </div>
       </fieldset>
     </form>
+    </>
   );
 };
 

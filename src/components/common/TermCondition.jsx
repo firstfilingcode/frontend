@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Footer from "./Footer";
-import Header from "./Header";
 import { BASE_URL } from "./services/Helper";
 
 const TermCondition = () => {
@@ -21,8 +19,6 @@ const TermCondition = () => {
 
   return (
     <>
-      <Header />
-
       {isLoded === false ? (
         <div className="container">
           <div className="col-md-12">
@@ -36,8 +32,6 @@ const TermCondition = () => {
           </div>
         </div>
       )}
-
-      <Footer />
     </>
   );
 };

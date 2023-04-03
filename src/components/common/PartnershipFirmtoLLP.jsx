@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Enquiry2 from "../Enquiry/enquiry2";
 import ServiceType2 from "../Services/ServiceType2";
-import Footer from "./Footer";
-import Header from "./Header";
 import DocReq13 from "../common/Images/DocReq13.png";
 import incometax_men2 from "../common/Images/LLPOver.png";
 import checkcircle1 from "../common/Images/checkCircle.svg";
@@ -21,7 +19,6 @@ function PartnershipFirmtoLLP() {
   });
   return (
     <>
-      <Header />
       <div className="container">
         <ServiceName />
         <div className="row">
@@ -188,9 +185,9 @@ function PartnershipFirmtoLLP() {
                   alt="incometax_men2"
                 />
               </div>
-              <button className="btn itrFIleButton">
+              <NavLink to="/Contact">    <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button> </NavLink>
             </section>
           </div>
 
@@ -290,9 +287,9 @@ function PartnershipFirmtoLLP() {
 
           <div className="col-md-5 text-center llpMainImg">
             <img src={partnershiptollp} alt="partnershiptollp" />
-            <button className="btn itrFIleButton">
+            <NavLink to="/Contact">   <button className="btn itrFIleButton">
               Schedule Free Consultation
-            </button>
+            </button> </NavLink>
           </div>
         </div>
       </div>
@@ -490,7 +487,6 @@ function PartnershipFirmtoLLP() {
       </div>
 
       <Faq />
-      <Footer />
     </>
   );
 }

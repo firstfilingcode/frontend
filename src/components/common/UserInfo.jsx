@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
-import Footer from "./Footer";
-import Header from "./Header";
 import { userInfo } from "../common/services/userInfo";
 import UserAddress from "../common/UserAddress";
 import UserBank from "../common/UserBank";
@@ -67,11 +65,19 @@ const UserInfo = () => {
         )
       ) {
         errors.aadhar_no = "Invalid Aadhar Number";
+      } else {
+        if (aadharNoResult === true) {
+        } else {
+          errors.aadhar_no = "Please Enter Valid Aadhar Number";
+        }
       }
     }
     if (allowed_input.indexOf("pan_no") > -1) {
       if (!valData.pan_no) {
         errors.pan_no = "Please Enter Pan Number";
+      } else if (valData.pan_no.length < 10) {
+        // alert(valData.pan_no.length);
+        errors.pan_no = "Invalid Pan Number";
       } else {
         if (panNoResult === true) {
 
@@ -136,6 +142,8 @@ const UserInfo = () => {
   });
 
   const [panNoResult, setPanNoResult] = useState(false);
+  const [aadharNoResult, setAadharNoResult] = useState(false);
+
   const checkPancard = (event) => {
     if (event.target.value.length === 10) {
       var myHeaders = new Headers();
@@ -160,7 +168,6 @@ const UserInfo = () => {
           if (json.success === true) {
             setPanNoResult(true);
           } else {
-            formik.setErrors({ pan_no: "Invalid Pan No." })
             setPanNoResult(false);
           }
         })
@@ -234,37 +241,32 @@ const UserInfo = () => {
     if (e.target.value.length == 12) {
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
-      myHeaders.append(
-        "Authorization",
-        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3NjQ0NjEwNiwianRpIjoiY2NmYjM3OWEtNGU4NS00ZGZhLTg0MTItNzA0MzZlOTA0YzYzIiwidHlwZSI6ImFjY2VzcyIsImlkZW50aXR5IjoiZGV2LmZpcnN0ZmlsaW5nQHN1cmVwYXNzLmlvIiwibmJmIjoxNjc2NDQ2MTA2LCJleHAiOjE2NzczMTAxMDYsInVzZXJfY2xhaW1zIjp7InNjb3BlcyI6WyJ1c2VyIl19fQ.zyYhGctEZ58mH5xKIk-YcQltyvlcUlV2sSMLsdfIwj4"
-      );
+      myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3NzkyMDYzNiwianRpIjoiODAzYjEzMTAtM2IzMC00YTg1LWE0Y2YtMDNhYTIzMjUwNWM1IiwidHlwZSI6ImFjY2VzcyIsImlkZW50aXR5IjoiZGV2Lm1hYXZhbGFuY29uc3VsdGFuY3lAc3VyZXBhc3MuaW8iLCJuYmYiOjE2Nzc5MjA2MzYsImV4cCI6MTk5MzI4MDYzNiwidXNlcl9jbGFpbXMiOnsic2NvcGVzIjpbInVzZXIiXX19.cbNvI0QnMDHW-xEouN87-BAheo8yWEnzP5w29IJjoN8");
 
       var raw = JSON.stringify({
-        id_number: e.target.value,
+        "id_number": e.target.value
       });
 
       var requestOptions = {
-        method: "POST",
+        method: 'POST',
         headers: myHeaders,
         body: raw,
-        redirect: "follow",
+        redirect: 'follow'
       };
 
-      fetch(
-        "https://sandbox.surepass.io/api/v1/aadhaar-validation/aadhaar-validation",
-        requestOptions
-      )
+      fetch("https://KYC-API.surepass.io/api/v1/aadhaar-validation/aadhaar-validation", requestOptions)
         .then((response) => response.json())
         .then((json) => {
-          // alert(JSON.stringify(json.data.remarks))
           if (json.data.remarks === "success") {
+            setAadharNoResult(true);
           } else {
-            alert("Adhar is not valid");
+            setAadharNoResult(false);
           }
         })
-        .catch((error) => console.log("error", error));
     }
   };
+
+
   const getUserInfo = () => {
     formData.append("user_id", location.state.user_id);
     formData.append("order_id", location.state.order_id);
@@ -290,7 +292,6 @@ const UserInfo = () => {
 
   return (
     <>
-      <Header />
       <div className="container">
         <div className="row">
           <div className="col-md-11 order-list">
@@ -350,7 +351,7 @@ const UserInfo = () => {
                       </span>
                     </div>
                     <form onSubmit={formik.handleSubmit}>
-                      <fieldset disabled={viewUserInfo === "1" ? true : false}>
+                      <fieldset disabled={viewUserInfo === 1 ? true : false}>
                         <div className="row">
                           {allowed_input.indexOf("cin") > -1 ? (
                             <div className="col-md-4 info_input_padding inputLabel">
@@ -635,6 +636,7 @@ const UserInfo = () => {
                                 id="pan_no"
                                 className="form-control"
                                 placeholder="Pan Number"
+                                maxLength={"10"}
                                 value={
                                   state.pan_no
                                     ? data1.pan_no
@@ -669,6 +671,7 @@ const UserInfo = () => {
                                 type="text"
                                 id="aadhar_no"
                                 name="aadhar_no"
+                                maxLength={"12"}
                                 className="form-control"
                                 placeholder="Aadhar Number"
                                 value={
@@ -684,6 +687,7 @@ const UserInfo = () => {
                                 onBlur={formik.handleBlur}
                                 onClick={(e) => {
                                   handleChange2(e, "aadhar_no");
+                                  handleAdhar(e, "aadhar_no");
                                 }}
                               />
                               {formik.touched.aadhar_no &&
@@ -700,7 +704,7 @@ const UserInfo = () => {
                           )}
                           {response ? (
                             <div className="col-md-12 info_input_padding">
-                              {viewUserInfo === "1" ? (
+                              {viewUserInfo === 1 ? (
                                 ""
                               ) : (
                                 <button
@@ -739,12 +743,7 @@ const UserInfo = () => {
               <TabPanel>
                 <div className="card userInfo_card">
                   <div className="card-body contactinput">
-                    <div className="col-md-12">
-                      <span className="UserInfo_Heading_title">
-                        This address will be used for any communication related
-                        at your filing
-                      </span>
-                    </div>
+                   
                     <UserAddress
                       state={{
                         order_id: location.state.order_id,
@@ -757,11 +756,7 @@ const UserInfo = () => {
               <TabPanel>
                 <div className="card userInfo_card">
                   <div className="card-body contactinput">
-                    <div className="col-md-12">
-                      <span className="UserInfo_Heading_title">
-                        Your refund will be issued to this account
-                      </span>
-                    </div>
+                   
                     <UserBank
                       state={{
                         order_id: location.state.order_id,
@@ -775,7 +770,6 @@ const UserInfo = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

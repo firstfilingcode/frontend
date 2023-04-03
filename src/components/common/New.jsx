@@ -1,7 +1,5 @@
 import React from "react";
 import Enquiry from "../Enquiry/enquiry";
-import Footer from "./Footer";
-import Header from "./Header";
 import gere from "../common/Images/gere.png";
 import checkcircle from "../common/Images/checkCircleWhite.png";
 import { NavLink } from "react-router-dom";
@@ -10,7 +8,6 @@ import benefits from "../common/Images/benefits.png";
 const New = () => {
   return (
     <>
-      <Header />
       <div className="container">
         <div className="col-md-12 order-list" id="sevicetype2">
           <ul>
@@ -241,7 +238,6 @@ const New = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

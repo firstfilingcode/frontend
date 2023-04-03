@@ -8,6 +8,7 @@ body {
   line-height: 19px;
   font-size: 16px;
   background: #fcfcfc;
+  font-family: "Inter", sans-serif !important;
 }
 
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
@@ -112,7 +113,7 @@ body {
   /* Easy Sign in/up */
   width: 168px;
   height: 38px;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -319,11 +320,11 @@ body {
 
 .link-filling {
   padding-top: 45px;
-  font-family: "Inter", sans-serif;
+
 }
 
 .heading-filling {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
@@ -342,7 +343,7 @@ body {
   letter-spacing: 0.04em;
   color: #222222;
   padding-top: 45px;
-  font-family: "Inter", sans-serif;
+
   background-color: #fcfcfc;
   padding: 20px 20px 20px 0px;
 }
@@ -364,14 +365,15 @@ body {
 }
 
 .itr-e-filling-section {
-  padding-top: 249px;
-  padding-left: 52px;
-  padding-right: 55px;
-  padding-bottom: 216px;
+  padding-top: 109px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 109px;
 }
 
+
 .itr-e-filling-heading {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -390,13 +392,12 @@ body {
 .itr-e-filling-description p {
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   text-align: justify;
-  letter-spacing: 0.04em;
-  font-family: "Inter", sans-serif;
+  letter-spacing: 0.01em;
+
   color: #ffffff;
 }
 
@@ -416,7 +417,7 @@ body {
   border-radius: 4px;
   color: white;
   border: none;
-  font-family: "Inter", sans-serif;
+
   width: 178px;
   height: 40px;
   transition: 0.5s;
@@ -477,7 +478,7 @@ body {
 }
 
 .button-text {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -505,7 +506,7 @@ body {
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
   border: none;
-  font-family: "Inter", sans-serif;
+
   width: 120px;
   height: 40px;
 }
@@ -538,7 +539,7 @@ body {
   border-radius: 4px;
   color: white;
   border: none;
-  font-family: "Inter", sans-serif;
+
   width: 120px;
   height: 40px;
   transition: 0.5s;
@@ -596,7 +597,8 @@ body {
 
 .web-color {
   color: #5c77d8;
-  font-family: "Inter", sans-serif;
+
+  font-size: 20px;
 }
 
 .money-is-essential-but-time-is {
@@ -670,12 +672,11 @@ body {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 35px;
   text-align: center;
   letter-spacing: 0.04em;
   color: #aeaeae;
-  padding-top: 10px;
 }
 
 .social {
@@ -695,9 +696,10 @@ body {
   letter-spacing: 0.05em;
   font-weight: 300;
   font-size: 13px;
-  font-family: "Inter", sans-serif;
+
   line-height: 25px;
   padding: 30px;
+  padding-top: 10px;
 }
 
 a {
@@ -827,7 +829,7 @@ a {
   line-height: 35px;
   letter-spacing: 0.04em;
   color: #222222;
-  font-family: "Inter", sans-serif;
+
 }
 
 .arrowRight {
@@ -851,7 +853,7 @@ a {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  font-family: "Inter", sans-serif;
+
 }
 
 .heading {
@@ -859,7 +861,7 @@ a {
   font-weight: 600;
   font-size: 20px;
   line-height: 35px;
-  font-family: "Inter", sans-serif;
+
 }
 
 .team-heading {
@@ -868,24 +870,32 @@ a {
   letter-spacing: 0.04em;
   color: #313645;
   text-align: center;
-  padding-top: 60%;
 }
 
 .team-top-padding {
   padding-top: 80px;
+  display: flex;
+  align-items: center;
 }
 
 .team-text {
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 25px;
-  display: flex;
-  align-items: center;
   text-align: justify;
-  letter-spacing: 0.05em;
   color: #313645;
-  font-family: "Inter", sans-serif;
+
+}
+
+.boldTextTeam {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: justify;
+  color: #313645;
+
 }
 
 /* ------------- 1600 x 900 End------------------- */
@@ -907,7 +917,7 @@ a {
 .v-effect-link a {
   text-decoration: none;
   display: block;
-  font-family: "Inter", sans-serif;
+
   position: relative;
   color: black;
   padding: 0.5em 0;
@@ -1256,8 +1266,18 @@ a {
   background-position: center;
 }
 
-.sevicesBack22 {
+.ServiceBack22 {
   background-image: url("../components/common/Images/sevicesBack22.png");
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center;
+}
+
+.ServiceBack23 {
+  background-image: url("../components/common/Images/sevicesBack23.png");
   width: 100%;
   height: auto;
   background-size: cover;
@@ -1278,6 +1298,26 @@ a {
 
 .servicebgpic3 {
   background-image: url("../components/common/Images/ServiceBack3.jpg");
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center;
+}
+
+.serviceBackground2 {
+  background-image: url("../components/common/Images/serviceBackground2.png");
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center;
+}
+
+.ServiceBack22 {
+  background-image: url("../components/common/Images/ServiceBack22.png");
   width: 100%;
   height: auto;
   background-size: cover;
@@ -1322,7 +1362,7 @@ a {
 
 .findforyou {
   padding-top: 75px;
-  font-family: "Inter", sans-serif;
+
   padding-bottom: 35px;
   color: white;
   font-weight: 400;
@@ -1365,12 +1405,12 @@ a {
 
 .service-padding .card {
   border: none;
-  font-family: "Inter", sans-serif;
+
 }
 
 .service-padding1 .card {
   border: none;
-  font-family: "Inter", sans-serif;
+
 }
 
 .event-title {
@@ -1620,7 +1660,7 @@ tr.calendar-body {
   border-radius: 8px;
   box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.25);
   margin-top: -85px;
-  font-family: "Inter", sans-serif;
+
 }
 
 .headtext {
@@ -1816,7 +1856,7 @@ tr.calendar-body {
 }
 
 .modal_heading {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
@@ -1830,7 +1870,7 @@ tr.calendar-body {
 }
 
 .modal_subtitle {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -1932,7 +1972,7 @@ tr.calendar-body {
   font-size: 16px;
   letter-spacing: 4%;
   margin-bottom: 10%;
-  font-family: "Inter", sans-serif;
+
 }
 
 .col-first span {
@@ -2000,12 +2040,10 @@ svg {
   width: 80%;
 }
 
-.newsletterText {
-  font-family: "Inter", sans-serif;
-}
+.newsletterText {}
 
 .links-tag a {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
@@ -2022,7 +2060,7 @@ svg {
 }
 
 .Newsletter {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -2081,7 +2119,7 @@ svg {
 }
 
 .copyright {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 13px;
@@ -2100,7 +2138,7 @@ svg {
 
 .cardcolumn {
   transition: 0.5s;
-  font-family: "Inter", sans-serif;
+
   padding: 0px 30px;
 }
 
@@ -2233,11 +2271,11 @@ svg {
   letter-spacing: 0.04em;
   color: #222222;
   font-size: 12px;
-  font-family: "Inter", sans-serif;
+
 }
 
 .blog-cardhead p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
@@ -2248,7 +2286,7 @@ svg {
 }
 
 .blog-cardhead h5 {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -2276,7 +2314,7 @@ svg {
 }
 
 .blog-cardlink a {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -2314,7 +2352,6 @@ svg {
   padding: 5% 9%;
   background-color: #ffffff;
   color: #000000;
-  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
@@ -2352,7 +2389,7 @@ svg {
 }
 
 .why_first_filing p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -2363,7 +2400,7 @@ svg {
 }
 
 .what_income_2 span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -2373,7 +2410,7 @@ svg {
 
 .income-tax-card-text2 {
   padding-top: 10px;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -2407,7 +2444,7 @@ svg {
 }
 
 .income-tax-card-text {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -2437,7 +2474,7 @@ svg {
   padding: 10px 20px;
   background: transparent;
   color: #5c77d8;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -2453,7 +2490,7 @@ svg {
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
   border: none;
-  font-family: "Inter", sans-serif;
+
   color: white;
 }
 
@@ -2553,7 +2590,7 @@ svg {
 
 /* Start Gst Registration Page Css */
 .headingGST {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
@@ -2576,7 +2613,7 @@ svg {
 }
 
 .listing li {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -2585,7 +2622,7 @@ svg {
 }
 
 .firstrowheadind {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -2600,7 +2637,7 @@ svg {
 }
 
 .businessreg {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 500;
   font-size: 28px;
@@ -2626,7 +2663,7 @@ svg {
 }
 
 .gstregis_p p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
@@ -2655,7 +2692,7 @@ svg {
 
 .textdetail1 {
   padding-bottom: 19px;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -2664,11 +2701,12 @@ svg {
 }
 
 .gstRow p {
-  font-family: "Inter", sans-serif;
+
+  padding: 0px 20px;
 }
 
 .secondrowheading {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -2684,7 +2722,7 @@ svg {
   font-size: 13px;
   color: #313645;
   line-height: 28px;
-  font-family: "Inter", sans-serif;
+
 }
 
 .whatisgst {
@@ -2696,7 +2734,7 @@ svg {
 }
 
 .aboutgst {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -2706,16 +2744,17 @@ svg {
 }
 
 .describe p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
   line-height: 20px;
   color: #313645;
+  text-align: justify;
 }
 
 .describe_1 p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
@@ -2744,7 +2783,7 @@ svg {
 }
 
 .what_income p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -2754,7 +2793,7 @@ svg {
 }
 
 .what_income_p p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
@@ -2764,7 +2803,7 @@ svg {
 }
 
 .what_income span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -2776,7 +2815,7 @@ svg {
   background-image: url("../components/common/Images/1.png");
   background-size: 100% 100%;
   width: 210px;
-  height: 120px;
+
   position: relative;
   z-index: 5;
 }
@@ -2785,7 +2824,7 @@ svg {
   background-image: url("../components/common/Images/2.png");
   background-size: 100% 100%;
   width: 210px;
-  height: 120px;
+
   position: relative;
   z-index: 4;
 }
@@ -2794,7 +2833,7 @@ svg {
   background-image: url("../components/common/Images/3.png");
   background-size: 100% 100%;
   width: 210px;
-  height: 120px;
+
   position: relative;
   z-index: 3;
 }
@@ -2803,7 +2842,7 @@ svg {
   background-image: url("../components/common/Images/4.png");
   background-size: 100% 100%;
   width: 210px;
-  height: 120px;
+
   position: relative;
   z-index: 2;
 }
@@ -2812,7 +2851,7 @@ svg {
   background-image: url("../components/common/Images/5.png");
   background-size: 100% 100%;
   width: 210px;
-  height: 120px;
+
   position: relative;
   z-index: 1;
 }
@@ -2821,7 +2860,7 @@ svg {
   background-image: url("../components/common/Images/6.png");
   background-size: 100% 100%;
   width: 210px;
-  height: 120px;
+
 }
 
 .gstRow .col-md-2 {
@@ -2867,7 +2906,7 @@ svg {
 }
 
 .gsttext {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -2876,7 +2915,7 @@ svg {
 }
 
 .gsttext2 {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
@@ -2897,22 +2936,21 @@ svg {
 }
 
 .gstman img {
-  width: 629.44px;
-  height: 697px;
+  width: 100%;
 }
 
 .gstman-text h4 {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 28px;
   color: #5c77d8;
-  margin-bottom: 4%;
+  margin-bottom: 2%;
 }
 
 .gstman-text p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
@@ -2929,12 +2967,14 @@ svg {
 }
 
 .gstlist ul li {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
   line-height: 30px;
   color: #313645;
+  display: flex;
+  align-items: baseline;
 }
 
 .textend {
@@ -2957,7 +2997,7 @@ svg {
 }
 
 .gst-input input::placeholder {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -2976,10 +3016,6 @@ svg {
   border-radius: 8px;
 }
 
-.panRow {
-  padding-top: 40px;
-}
-
 .input-padding-pan {
   padding: 50px 33px;
 }
@@ -2989,7 +3025,7 @@ svg {
 }
 
 .pan-input-heading {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -3033,7 +3069,7 @@ svg {
 }
 
 .whatispan {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -3042,7 +3078,7 @@ svg {
 }
 
 .Structure_of_PAN {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -3052,7 +3088,7 @@ svg {
 }
 
 .Character {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -3255,7 +3291,7 @@ svg {
   top: 35px;
   left: 42%;
   color: #4b74e6;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -3270,7 +3306,7 @@ svg {
 }
 
 .panbox-text {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 500;
   font-size: 11px;
@@ -3338,7 +3374,7 @@ svg {
 }
 
 .pan-headingtext h4 {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -3390,7 +3426,7 @@ svg {
 }
 
 .pan-input input::placeholder {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -3474,7 +3510,7 @@ h2.resp-accordion {
 }
 
 .accodianSpan {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -3489,7 +3525,7 @@ h2.resp-accordion {
 }
 
 .accodian_answere {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
@@ -3548,7 +3584,7 @@ h2.resp-accordion {
 }
 
 .header-text span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
@@ -3610,16 +3646,14 @@ h2.resp-accordion {
 
 .headerBackground {
   background: #fcfcfc;
-  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); */
   padding: 5px;
-  position: fixed;
+  position: sticky;
   width: 100%;
   z-index: 1000;
-}
-
-.paddingBottomFIxed {
-  position: relative;
-  padding-bottom: 7%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 1%;
 }
 
 .paddingli {
@@ -3826,7 +3860,7 @@ h2.resp-accordion {
 
 .list-header ul li a {
   text-decoration: none;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -3838,7 +3872,7 @@ h2.resp-accordion {
 
 .list-header ul li span {
   text-decoration: none;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -3850,7 +3884,7 @@ h2.resp-accordion {
 
 .list-header2 ul li a {
   text-decoration: none;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -3893,7 +3927,7 @@ h2.resp-accordion {
 }
 
 .income-tex-topheading h4 {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 300;
   font-size: 40px;
@@ -3930,7 +3964,7 @@ h2.resp-accordion {
 .tabpadding2 a {
   color: rgba(192, 156, 255, 0.9);
   font-size: 13px;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
@@ -3949,7 +3983,7 @@ h2.resp-accordion {
 }
 
 .titletab {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -4094,7 +4128,7 @@ h2.resp-accordion {
   align-items: center;
   cursor: pointer;
   padding: 0px 10px;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -4134,7 +4168,7 @@ h2.resp-accordion {
 }
 
 .order-list ul li span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4154,7 +4188,7 @@ h2.resp-accordion {
 }
 
 .order-list2 ul li span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4175,7 +4209,7 @@ h2.resp-accordion {
 }
 
 .order-input .form-control::placeholder {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -4189,7 +4223,7 @@ h2.resp-accordion {
 }
 
 .order-input select {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -4213,7 +4247,7 @@ h2.resp-accordion {
 }
 
 .order-input button span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -4235,13 +4269,29 @@ h2.resp-accordion {
 .order-input label {
   padding-left: 3px;
   padding-bottom: 10px;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
   letter-spacing: 0.05em;
   color: #313645;
+}
+
+.redArrow {
+  rotate: -17deg;
+  position: relative;
+  left: 16%;
+  margin-bottom: 19px;
+}
+
+.TDStopimig {
+  display: flex;
+  justify-content: center;
+  background-image: url('../components/common/Images/TDStopimig.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 378px;
 }
 
 .order-arrow-right {
@@ -4281,7 +4331,7 @@ h2.resp-accordion {
 }
 
 .order-number {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -4321,7 +4371,7 @@ h2.resp-accordion {
 }
 
 .order-button-submit {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -4358,17 +4408,17 @@ h2.resp-accordion {
 }
 
 .order-name {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.05em;
   color: #313645;
 }
 
 .order-time {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -4389,7 +4439,7 @@ h2.resp-accordion {
 }
 
 .order-button-status span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -4406,7 +4456,7 @@ h2.resp-accordion {
 .contactNo span {
   border: 1px solid #ffffff;
   border-radius: 4px 0px 0px 4px;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 13px;
@@ -4417,10 +4467,10 @@ h2.resp-accordion {
 }
 
 .contactNo h3 {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 36px;
   margin-bottom: 0px;
   letter-spacing: 0.0032em;
@@ -4555,7 +4605,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .bigUl li span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4569,7 +4619,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* Start Order Summary First Filling */
 
 .info {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -4579,7 +4629,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .text_info {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -4604,7 +4654,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .info_tabs .react-tabs__tab--selected {
-  background-image: url(../components/common/Images/contactbg-2.png) !important;
+  background-image: url('../components/common/Images/contactbg-2.png') !important;
   background-size: 100% 100% !important;
   background-color: transparent !important;
   border-bottom: none !important;
@@ -4613,7 +4663,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .info-bg12 {
-  background-image: url(../components/common/Images/contactbg-1.png);
+  background-image: url("../components/common/Images/contactbg-1.png");
   padding: 10px;
   width: 345px;
   background-size: 100% 100%;
@@ -4638,7 +4688,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   justify-content: center;
   color: black;
   box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.25);
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -4647,7 +4697,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .info_card span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -4684,7 +4734,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .info-button small {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 13px;
@@ -4695,7 +4745,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .info-button2 small {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 13px;
@@ -4723,7 +4773,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .sectionINfo1 span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -4791,7 +4841,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .couponcode button h6 {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 13px;
@@ -4810,7 +4860,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .spantext {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -4822,7 +4872,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .OrderSUmmeryPriceSPan {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -4834,7 +4884,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .del {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -4845,7 +4895,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .OrderSummeryPL {
   color: #000;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -5358,7 +5408,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .income-tax-card-text2 {
   padding-top: 10px;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -5388,7 +5438,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .income-tax-card-text {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -5418,7 +5468,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   padding: 10px 20px;
   background: transparent;
   color: #5c77d8;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -5434,7 +5484,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
   border: none;
-  font-family: "Inter", sans-serif;
+
   color: white;
 }
 
@@ -5534,7 +5584,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* Start Gst Registration Page Css */
 .headingGST {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
@@ -5557,7 +5607,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .listing li {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -5566,13 +5616,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .firstrowheadind {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 28px;
   color: #5c77d8;
-  padding-bottom: 13px;
 }
 
 .listing_second li {
@@ -5581,7 +5630,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .businessreg {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 500;
   font-size: 28px;
@@ -5663,7 +5712,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .textdetail1 {
   padding-bottom: 5px;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -5671,15 +5720,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: #313645;
 }
 
-.gstRow p {
-  font-family: "Inter", sans-serif;
-}
+.gstRow p {}
 
 .secondrowheading {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 28px;
   color: #5c77d8;
   padding-bottom: 12px;
@@ -5692,7 +5739,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 13px;
   color: #313645;
   line-height: 28px;
-  font-family: "Inter", sans-serif;
+
 }
 
 .whatisgst {
@@ -5704,7 +5751,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .aboutgst {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -5718,7 +5765,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .describe p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
@@ -5820,7 +5867,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .what_income_12 span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -5829,7 +5876,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .what_income_12 p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -5889,7 +5936,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .what_income_2 p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -5901,7 +5948,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .what_income_3 p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -5913,7 +5960,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .what_income_3 span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -5922,7 +5969,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .what_income_p p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
@@ -5933,7 +5980,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .income-tex-topheading h4 {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 300;
   font-size: 40px;
@@ -5957,7 +6004,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .what_income_1 span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -5967,7 +6014,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .ServicesP {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -5978,7 +6025,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .what_income_2 span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -5992,7 +6039,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .listing_1 li {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -6003,7 +6050,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .gstlist_1 ul li {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -6013,7 +6060,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .gstlist_1 p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -6105,7 +6152,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: #fff;
   border-radius: 50px;
   margin-top: -60px;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -6115,7 +6162,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .bg-clock1 p {
   position: absolute;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -6129,7 +6176,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .clock_p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -6147,7 +6194,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .income_texretun_input::placeholder {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -6215,7 +6262,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .UserInfo_Heading_title {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -6229,7 +6276,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /*  Start incometax_2 return */
 
 .incometaxreture_2 {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 34px;
@@ -6240,7 +6287,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .incometaxreture_3 span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -6270,7 +6317,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .incometaxreture_4 span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -6280,7 +6327,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .incometaxreture_4 p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -6293,7 +6340,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .incometaxreture_2 p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -6315,8 +6362,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border-image-slice: 1;
 }
 
+.bgStars {
+  background-image: url('../components/common/Images/gstBgStar.gif');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 30px;
+}
+
 .first_income_box span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -6356,7 +6410,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .incometax_form_india span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -6368,7 +6422,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .incometax_form_india p {
   white-space: nowrap;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -6427,7 +6481,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 } */
 
 .what_income_11 span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -6438,7 +6492,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .what_income_11 p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -6655,7 +6709,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25));
   border-radius: 4px;
   margin-top: 10px;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -6676,7 +6730,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .dnone p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -6701,7 +6755,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border-radius: 4px;
   color: white;
   margin-top: 10px;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -6725,7 +6779,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .profileDetails span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -6757,7 +6811,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .order_document h5 {
   border: 0.5px solid #b9b8c0;
   padding: 10px;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -6860,7 +6914,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .document_after ul li {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -6941,7 +6995,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .order_input_content h2 {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -6953,7 +7007,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .order_input_content p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -6970,7 +7024,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .order_input_content h6 {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -7059,7 +7113,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .upload_document_2 span {
   padding-left: 10px;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -7073,7 +7127,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .upload_document_4 input::placeholder {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -7083,7 +7137,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .upload_document_4 select {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -7193,7 +7247,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .chat_today span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -7320,7 +7374,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .chat_header_text h5 {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -7381,7 +7435,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .firstFiling_body p {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -7394,7 +7448,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .firstFiling_body span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -7483,7 +7537,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .payment_text span {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -7510,7 +7564,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .firstfiling_header h5 {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -8017,7 +8071,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .h2text {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 500;
   font-size: 28px;
@@ -8418,7 +8472,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .order_document_12 h5 {
   padding: 10px;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -8811,13 +8865,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
       #ef6cfb 100%);
   border-image-slice: 1;
   filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25));
-  width: 170px;
-  height: 170px;
   margin-right: 15px;
   border-radius: 4px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  width: 250px;
+  padding: 20px;
+}
+
+.SmallActiveColor {
+  background-color: #9f80d4;
 }
 
 .firstfiling_contect_mid_contenet img {
@@ -8948,7 +9007,7 @@ div>#overlay-header {
 }
 
 .smallFontSpan {
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -10772,10 +10831,127 @@ div>#overlay-header {
 
 .backgroundPresumptive {
   background-image: url("../components/common/Images/backgroundPresumptive.png");
-  width: 927px;
-  height: 587px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   background-repeat: no-repeat;
+  background-size: 100%;
+  height: 350px;
+}
+
+.unsubscribeflexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.unsubscribeCard .card-header {
+  background: linear-gradient(90deg, #4b74e6 0.85%, #c46cfb 64.31%, #ef6cfb 96.05%);
+  border-top: 6px solid #000000;
+  border-radius: 0px;
+  border-bottom: none;
+}
+
+.unsubcribeInput {
+  border-radius: 0px;
+  border: 1px solid #4b74e6;
+}
+
+.unsubcribeInput:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.alertMessage {
+  background: #313645;
+}
+
+.unsubscribeCard .card-body {
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  text-align: center;
+}
+
+.unsubscribeCard {
+  width: 500px;
+  border-radius: 0px;
+}
+
+.Teamwork1 {
+  background-image: url("../components/common/Images/Teamwork1.png");
+  margin-bottom: 60px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 500px;
+}
+
+.Teamwork2 {
+  background-image: url("../components/common/Images/Teamwork2.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 455px;
+}
+
+.Teamwork3 {
+  background-image: url("../components/common/Images/Teamwork3.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 430px;
+}
+
+.Teamwork4 {
+  background-image: url("../components/common/Images/Teamwork4.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 430px;
+}
+
+.Teamwork5 {
+  background-image: url("../components/common/Images/Teamwork5.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 440px;
+}
+
+.Teamwork6 {
+  background-image: url("../components/common/Images/Teamwork6.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 450px;
+}
+
+.Teamwork7 {
+  background-image: url("../components/common/Images/Teamwork7.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 450px;
+}
+
+.Teamwork8 {
+  background-image: url("../components/common/Images/Teamwork8.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 400px;
+}
+
+.Teamwork9 {
+  background-image: url("../components/common/Images/Teamwork9.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 440px;
+}
+
+.Teamwork10 {
+  background-image: url("../components/common/Images/Teamwork10.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 350px;
+}
+
+.Teamwork11 {
+  background-image: url("../components/common/Images/Teamwork11.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 450px;
 }
 
 .partnershiptollpli ul {
@@ -10787,7 +10963,7 @@ div>#overlay-header {
   content: "";
   background: url('../components/common/Images/checkCircle.png') no-repeat;
   position: relative;
-  top: 5px;
+  top: 9px;
   padding-left: 25px;
 }
 
@@ -10825,6 +11001,10 @@ div>#overlay-header {
   letter-spacing: 0.0032em;
   color: #343434;
   text-align: justify;
+}
+
+.panRow {
+  margin-top: 25px;
 }
 
 .Boldpartnershiptollp_p {
@@ -11195,7 +11375,7 @@ div>#overlay-header {
 
 .NormalInvoiceTax {
   text-decoration: none;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
@@ -11210,7 +11390,7 @@ div>#overlay-header {
 
 .paymentText {
   text-decoration: none;
-  font-family: "Inter", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
@@ -11852,7 +12032,7 @@ div>#overlay-header {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 30px;
   text-align: center;
   letter-spacing: 0.0032em;
@@ -11862,13 +12042,409 @@ div>#overlay-header {
 }
 
 .BackgroundDigital {
-  background-image: url("../components/common/Images/digital.png");
+  background-image: url("../components/common/Images/digital.gif");
   background-repeat: no-repeat;
   height: 381px;
   background-size: 100%;
 }
 
+.GSTICONS {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.BackgroundDigital2 {
+  display: flex;
+  justify-content: space-between;
+  background-image: url("../components/common/Images/Digi.png");
+  background-repeat: no-repeat;
+  height: 395px;
+  background-size: 100%;
+}
+
 /* End Contacts Css */
+
+/* gst return start */
+
+.gstdocument_req {
+  width: 100%;
+  height: 442px;
+  background: #f7f7f7;
+}
+
+.gstdocument_ {
+  margin-top: -88px;
+}
+
+.gstredocument_requ ul li {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: justify;
+  letter-spacing: 0.0032em;
+  color: #343434;
+  /* white-space: nowrap; */
+}
+
+.gstredocument_requ ul li::before {
+  top: 4px;
+}
+
+.gstdocument_smallimg {
+  background-image: url("../components/common/Images/gstdocument1.gif");
+  width: 200px;
+  height: 202px;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  margin-top: 98px;
+  margin-left: 23px;
+}
+
+.gstdocument_smallimg img {
+  margin-left: 138px;
+  margin-top: -73px;
+}
+
+.gstdocument_ button {
+  margin-top: 45px;
+  margin-left: 145px;
+}
+
+.gstdocument_req1 p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.0032em;
+  text-transform: capitalize;
+  color: #5c77d8;
+  margin-bottom: -55px;
+  width: 60%;
+  margin-top: 50px;
+}
+
+.gstdocument1_cotenet {
+  padding-left: 60px;
+}
+
+.Latefees_text p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: justify;
+  letter-spacing: 0.0032em;
+  color: #343434;
+}
+
+.late_fees_img img {
+  width: 100%;
+  height: 252px;
+}
+
+.late_fees_img button {
+  margin-left: 100px;
+}
+
+.gstpaid_month p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: justify;
+  letter-spacing: 0.0032em;
+  color: #343434;
+}
+
+.Gstreturn_prossess {
+  background: url("../components/common/Images/gstpros.png");
+  background-size: auto;
+  width: 100%;
+  height: 179px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.Gstreturn_prossess1 {
+  background: url("../components/common/Images/gstpros1.png");
+  background-size: auto;
+  width: 100%;
+  height: 179px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.Gstreturn_prossess2 {
+  background: url("../components/common/Images/gstpros2.png");
+  background-size: auto;
+  width: 100%;
+  height: 179px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.Gstreturn_prossess3 {
+  background: url("../components/common/Images/gstpros3.png");
+  background-size: auto;
+  width: 100%;
+  height: 179px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.Gstreturn_prossess4 {
+  background: url("../components/common/Images/gstpros4.png");
+  background-size: auto;
+  width: 100%;
+  height: 179px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.gstreturnTable_content tbody td {
+  padding: 20px 20px;
+  text-align: start;
+}
+
+/* gst return end */
+
+/* TDS return start */
+.costTds_bt button {
+  margin-left: 60px;
+}
+
+.calTds_section {
+  background: #f5f5f5;
+}
+
+.janTds_bt button {
+  margin-left: 58px;
+}
+
+.TdsTable_content {
+  background: #f5f5f5;
+}
+
+.TdsTable_content p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: justify;
+  letter-spacing: 0.0032em;
+  color: #5c77d8;
+}
+
+.TDSreturn_prossess {
+  background: url("../components/common/Images/StarTDS.png");
+  background-size: auto;
+  width: 100%;
+  height: 179px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.TDSreturn_prossess1 {
+  background: url("../components/common/Images/StarTDS1.png");
+  background-size: auto;
+  width: 100%;
+  height: 179px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.TDSreturn_prossess2 {
+  background: url("../components/common/Images/StarTDS2.png");
+  background-size: auto;
+  width: 100%;
+  height: 179px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.TDSreturn_prossess3 {
+  background: url("../components/common/Images/StarTDS3.png");
+  background-size: auto;
+  width: 100%;
+  height: 179px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.TDSreturn_prossess4 {
+  background: url("../components/common/Images/StarTDS4.png");
+  background-size: auto;
+  width: 100%;
+  height: 179px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.TDSresived_text h6 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: left;
+  letter-spacing: 0.0032em;
+  text-transform: capitalize;
+  color: #5c77d8;
+}
+
+.TDSresived_text p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: justify;
+  letter-spacing: 0.0032em;
+  color: #343434;
+}
+
+.TDSimg_section {
+  background: #F7F7F7;
+}
+
+.gstdocument_smallimg1 img {
+  margin-left: 108px;
+  margin-top: -40px;
+}
+
+/* TDS return end */
+
+
+/* start Ask n Expert Css  */
+
+.paddingtopAsk {
+  margin-top: 60px;
+}
+
+.backgroundAskExpert {
+  background: #313645;
+  height: 1994px;
+}
+
+.backgroundAskExpert ul {
+  list-style: none;
+  padding-left: 0px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.backgroundAskExpert ul li {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.0032em;
+  text-transform: capitalize;
+  color: #E7E7E7;
+  padding: 15px;
+  border-bottom: 1px solid #606060;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.backgroundAskExpert ul li::after {
+  content: "\f105";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  float: right;
+  text-decoration: none;
+  font-size: 15px;
+  padding-left: 15px;
+}
+
+.asknexpertService {
+  border: 3px solid #5C77D8;
+  border-radius: 0px;
+  margin-bottom: 20px;
+}
+
+.asknexpertService .card-header {
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  border-bottom: none;
+  background: linear-gradient(180deg, rgba(75, 116, 230, 0.8) -5.86%, rgba(132, 93, 201, 0.88) 22.72%, #845DC9 49.01%, rgba(132, 93, 201, 0.88) 77.02%, rgba(239, 108, 251, 0.8) 103.88%);
+}
+
+.asknexpertService .card-body {
+  padding: 20px 40px 0px 40px;
+}
+
+.asknExpertTitle {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FCFCFC;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.ServiceRuppe {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 30px;
+  text-align: justify;
+  letter-spacing: 0.04em;
+  color: #5C77D8;
+}
+
+.btn-asknexpert {
+  background: linear-gradient(92.24deg, #4B74E6 0%, #845DC9 35.94%, #845DC9 68.19%, #EF6CFB 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  padding: 7px 25px;
+  border: none;
+  border-radius: 0px;
+}
+
+.flexAskExpert {
+  border-top: 1px dashed #CDCDCD;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-asknexpert:hover {
+  color: white;
+}
+
+/* End Ask n Expert Css  */
+
+
+
 @media only screen and (max-width: 1366px) {
   .loginimg {
     margin-left: -153px;
@@ -11979,8 +12555,72 @@ div>#overlay-header {
 
 @media only screen and (max-width: 600px) {
 
+  .GSTICONS {
+    width: 34px;
+  }
+
+  .costTds_bt button {
+    padding-left: 0px;
+  }
+
+  .gstdocument_smallimg {
+    margin-top: 0px;
+  }
+
+
+  .TDSresived_text h6 {
+    font-size: 14px;
+  }
+
+  .TDSresived_text p {
+    font-size: 13px;
+  }
+
+  .janTds_bt button {
+    margin-left: 0px;
+  }
+
+
+  .gstdocument_ button {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  .gstdocument_smallimg img {
+    margin-left: 90px;
+    margin-top: 0px;
+    width: 200px;
+  }
+
+  .late_fees_img button {
+    margin-left: 0px;
+  }
+
+  .gstdocument_smallimg {
+    width: 100px;
+    height: auto;
+    margin-left: 0px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .gstdocument_req1 p {
+    font-size: 14px;
+    margin-top: 0px;
+    width: auto;
+    text-align: center;
+  }
+
+  .gstdocument1_cotenet {
+    padding-left: 0px;
+  }
+
   .BackgroundDigital {
     height: 200px;
+  }
+
+  .BackgroundDigital2 {
+    height: 250px;
   }
 
   .enquiryContacts {
@@ -12063,10 +12703,6 @@ div>#overlay-header {
     font-size: 16px;
   }
 
-  .panRow {
-    padding-top: 10px;
-  }
-
   .backgroundrowPresumtive {
     padding: 10px;
   }
@@ -12104,6 +12740,95 @@ div>#overlay-header {
     padding: 10px;
     background-size: 100%;
     height: auto;
+    margin-bottom: 10px;
+  }
+
+  .Teamwork1 {
+    width: 100%;
+    padding: 10px;
+    background-size: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .Teamwork2 {
+    width: 100%;
+    padding: 10px;
+    background-size: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .Teamwork3 {
+    width: 100%;
+    padding: 10px;
+    background-size: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .Teamwork4 {
+    width: 100%;
+    padding: 10px;
+    background-size: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .Teamwork5 {
+    width: 100%;
+    padding: 10px;
+    background-size: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .Teamwork6 {
+    width: 100%;
+    padding: 10px;
+    background-size: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .Teamwork7 {
+    width: 100%;
+    padding: 10px;
+    background-size: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .Teamwork8 {
+    width: 100%;
+    padding: 10px;
+    background-size: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .Teamwork9 {
+    width: 100%;
+    padding: 10px;
+    background-size: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .Teamwork10 {
+    width: 100%;
+    padding: 10px;
+    background-size: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .Teamwork11 {
+    width: 100%;
+    padding: 10px;
+    background-size: 100%;
+    height: auto;
+    margin-bottom: 10px;
   }
 
   .fixwidthPremtive {
@@ -12270,7 +12995,7 @@ div>#overlay-header {
 
   .dropdownitems span {
     text-decoration: none;
-    font-family: "Inter", sans-serif;
+
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
@@ -12296,7 +13021,7 @@ div>#overlay-header {
 
   .dropdownitems3 span {
     text-decoration: none;
-    font-family: "Inter", sans-serif;
+
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
@@ -12349,7 +13074,7 @@ div>#overlay-header {
     transition: 0.3s;
     cursor: pointer;
     text-decoration: none;
-    font-family: "Inter", sans-serif;
+
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
@@ -12387,7 +13112,7 @@ div>#overlay-header {
   .listingheaderli li a {
     cursor: pointer;
     text-decoration: none;
-    font-family: "Inter", sans-serif;
+
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
@@ -12420,7 +13145,7 @@ div>#overlay-header {
     transition: 0.3s;
     cursor: pointer;
     text-decoration: none;
-    font-family: "Inter", sans-serif;
+
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
@@ -12430,7 +13155,7 @@ div>#overlay-header {
 
   .DropdownItem1 span {
     text-decoration: none;
-    font-family: "Inter", sans-serif;
+
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
@@ -12811,20 +13536,11 @@ div>#overlay-header {
     width: auto;
   }
 
-  .team-heading {
-    padding-top: 6%;
-  }
 
   .cardcolumn {
     padding: 0px 5px;
   }
 
-  .itr-e-filling-section {
-    padding-top: 100px;
-    padding-left: 40px;
-    padding-right: 43px;
-    padding-bottom: 100px;
-  }
 
   .income-tax-hover {
     height: 243px;
@@ -12931,10 +13647,6 @@ div>#overlay-header {
     font-size: 13px;
   }
 
-  .gstman img {
-    width: 100%;
-    height: auto;
-  }
 
   .accordion__button {
     padding-left: 10px;

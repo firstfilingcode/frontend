@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import arrow from "../common/Images/arrowWhite.png";
 import eyes from "../common/Images/eyes.png";
 import { Input, Label } from "reactstrap";
@@ -19,6 +17,7 @@ import order_timing from "../common/Images/order_timing.png";
 import orderfulfillment from "../common/Images/order-fulfillment.png";
 import order_process from "../common/Images/order-process.png";
 import delete_document from "../common/Images/delete_document.png";
+import stopSign from "../common/Images/stop2.png";
 import noData from "../common/Images/nodata.png";
 import { BASE_URL } from "../common/services/Helper";
 import { saveAs } from "file-saver";
@@ -202,7 +201,6 @@ function Order() {
   const [allOrder, setAllOrder] = useState(0);
 
   const [isLoaded, setIsLoaded] = useState(false);
-
   const getData = async () => {
     await fetch(BASE_URL + "/getOrderList/" + ReactSession.get("user_id"))
       .then((res) => res.json())
@@ -220,11 +218,11 @@ function Order() {
     setTab(dataLabel);
   }, []);
   useEffect(() => {
-    const countPending = orderD.filter((data) => data.payment_status === "0");
-    const countPast = orderD.filter((data) => data.status === "13");
-    const countCancel = orderD.filter((data) => data.payment_status === "2");
-    const countOngoing = orderD.filter((data) => data.payment_status === "1");
-    const countAllOrder = orderD.filter((data) => data.payment_status === "1");
+    const countPending = orderD.filter((data) => data.payment_status === 0);
+    const countPast = orderD.filter((data) => data.status === 13);
+    const countCancel = orderD.filter((data) => data.payment_status === 2);
+    const countOngoing = orderD.filter((data) => data.payment_status === 1);
+    const countAllOrder = orderD.filter((data) => data.payment_status === 1);
     setPending(countPending.length);
     setPast(countPast.length);
     setCancel(countCancel.length);
@@ -266,11 +264,11 @@ function Order() {
       alert("Please enter amount");
     } else {
       var options = {
-        key: "rzp_test_J5gb7QDhbjgDVX",
-        key_secret: "QRIjmwdqxnccRUbo9kkUqETQ",
+        key: "rzp_live_jbC4AEjxQR7e0n",
+        key_secret: "f4FmWs2haU2V12myXvKFp3nJ",
         amount: amount * 100,
         currency: "INR",
-        name: "Rukmani Software",
+        name: "First Filing",
         description: "Live Transaction",
         handler: function (response) {
           // alert("payment done");
@@ -289,9 +287,9 @@ function Order() {
           });
         },
         prefill: {
-          name: "prashant sharma",
-          email: "pspc18@gmail.com",
-          contact: "8079094990",
+          name: localStorage.getItem("displayName"),
+          email: localStorage.getItem("email"),
+          contact: localStorage.getItem("mobile"),
         },
         notes: {
           address: "Razorpay corporate office",
@@ -311,16 +309,17 @@ function Order() {
     e.stopPropagation();
     document.getElementById(order_no).click();
   };
-
+  const [trackServiceName, setTrackServiceName] = useState("");
   const trackModal = (e) => {
     e.stopPropagation();
     const value = e.target.getAttribute("data-id");
+    const ServiceName = e.target.getAttribute("data-name");
     setShowModal(true);
     fetch(BASE_URL + "/trackOrder/" + value + "/" + ReactSession.get("user_id"))
       .then((res) => res.json())
       .then((json) => {
         setTrackOrder(json);
-        // alert(JSON.stringify(trackOrder));
+        setTrackServiceName(ServiceName);
         // setData(json.data);
         // setDocumentCount(json.documentsCount)
         // setExpertAssiged(json.expert_assigned)
@@ -344,7 +343,6 @@ function Order() {
   }
   return (
     <>
-      <Header />
       <div className="container">
         <div className="row">
           <div className="col-md-12 order-list">
@@ -726,8 +724,9 @@ function Order() {
                               {ca_assigned_name === "undefined"
                                 ? ""
                                 : ca_assigned_name.charAt(0) +
-                                " " +
-                                ca_assigned_name.split(" ")[1]}{" "}
+                                " "
+
+                              } {ca_assigned_name.split(" ")[1] === undefined ? "" : ca_assigned_name.split(" ")[1]}{" "}
                               <sup>CA</sup>
                             </abbr>
                           </h3>
@@ -747,8 +746,8 @@ function Order() {
                               {rm_assigned_name === "undefined"
                                 ? ""
                                 : rm_assigned_name.charAt(0) +
-                                " " +
-                                rm_assigned_name.split(" ")[1]}{" "}
+                                " "}
+                              {rm_assigned_name.split(" ")[1] === undefined ? "" : rm_assigned_name.split(" ")[1]}
                               <sup>RM</sup>
                             </abbr>
                           </h3>
@@ -909,9 +908,9 @@ function Order() {
                         <div
                           className="card-body"
                           onClick={
-                            data.status === "13"
+                            data.status === 13
                               ? ""
-                              : data.payment_status === "0"
+                              : data.payment_status === 0
                                 ? ""
                                 : (e) =>
                                   MyDocUpload(
@@ -935,7 +934,7 @@ function Order() {
                             <div className="col-md-8 col-6">
                               <span className="order-number">
                                 Order {data.order_no}
-                                {data.payment_status === "0" ? (
+                                {data.payment_status === 0 ? (
                                   ""
                                 ) : (
                                   <>
@@ -976,7 +975,7 @@ function Order() {
                                 ""
                               )}
 
-                              {data.payment_status === "0" ? (
+                              {data.payment_status === 0 ? (
                                 <abbr title="Delete Order">
                                   <button
                                     className="eye-button cursor-pointer"
@@ -995,19 +994,20 @@ function Order() {
                                       <i className="fa fa-wechat"></i>
                                     </button>
                                   </abbr>
-
-                                  <abbr title="View Invoice">
-                                    <NavLink
-                                      to={{ pathname: "/OrderDetails" }}
-                                      state={{
-                                        order_id: data.id,
-                                      }}
-                                    >
-                                      <button className="eye-button cursor-pointer">
-                                        <img src={eyes} alt="" />
-                                      </button>
-                                    </NavLink>
-                                  </abbr>
+                                  {data.status === 13 ?
+                                    <abbr title="View Invoice">
+                                      <NavLink
+                                        to={{ pathname: "/OrderDetails" }}
+                                        state={{
+                                          order_id: data.id,
+                                        }}
+                                      >
+                                        <button className="eye-button cursor-pointer">
+                                          <img src={eyes} alt="" />
+                                        </button>
+                                      </NavLink>
+                                    </abbr>
+                                    : ""}
                                 </>
                               )}
                             </div>
@@ -1023,13 +1023,14 @@ function Order() {
                               </span>
                             </div>
                             <div className="col-md-6 col-6">
-                              {data.payment_status === "0" ? (
+                              {data.payment_status === 0 ? (
                                 ""
                               ) : (
                                 <button
                                   className="OrderTrack"
                                   onClick={trackModal}
                                   data-id={data.id}
+                                  data-name={data.name}
                                 >
                                   Track Your Order
                                 </button>
@@ -1039,29 +1040,29 @@ function Order() {
                             <div className="col-md-6 textend col-6">
                               <button
                                 className={
-                                  data.status === "13"
+                                  data.status === 13
                                     ? "cancel-color"
-                                    : data.payment_status === "1"
+                                    : data.payment_status === 1
                                       ? "order-button-status"
-                                      : data.payment_status === "0"
+                                      : data.payment_status === 0
                                         ? "pending-color"
-                                        : data.payment_status === "2"
+                                        : data.payment_status === 2
                                           ? "cancel-color"
                                           : ""
                                 }
                               >
                                 <abbr
                                   title={
-                                    data.payment_status === "1"
+                                    data.payment_status === 1
                                       ? "Paid Rs. " + data.total_amount
-                                      : data.payment_status === "0"
+                                      : data.payment_status === 0
                                         ? "Just pay only Rs. " + data.total_amount
                                         : ""
                                   }
                                 >
                                   <span
                                     onClick={
-                                      data.payment_status === "0"
+                                      data.payment_status === 0
                                         ? (e) =>
                                           razorPay(
                                             data.total_amount,
@@ -1072,17 +1073,17 @@ function Order() {
                                         : ""
                                     }
                                   >
-                                    {data.status === "13" ? (
+                                    {data.status === 13 ? (
                                       "Order Fulfilled"
                                     ) : (
                                       <>
-                                        {data.payment_status === "1"
+                                        {data.payment_status === 1
                                           ? "Payment Done"
                                           : ""}
-                                        {data.payment_status === "0"
+                                        {data.payment_status === 0
                                           ? "Payment Pending"
                                           : ""}
-                                        {data.payment_status === "2"
+                                        {data.payment_status === 2
                                           ? "Payment Cencelled"
                                           : ""}
                                       </>
@@ -1111,9 +1112,9 @@ function Order() {
                 {tab === "ongoing" ? (
                   <section className="paddingLeftDoc">
                     {orderD.map((data, index) =>
-                      data.status === "13" ? (
+                      data.status === 13 ? (
                         ""
-                      ) : data.payment_status === "1" ? (
+                      ) : data.payment_status === 1 ? (
                         <div
                           id="myDocUpload"
                           className="card order-card"
@@ -1123,7 +1124,7 @@ function Order() {
                           <div
                             className="card-body"
                             onClick={
-                              data.payment_status === "0"
+                              data.payment_status === 0
                                 ? ""
                                 : (e) =>
                                   MyDocUpload(
@@ -1180,7 +1181,7 @@ function Order() {
                                     <i className="fa fa-wechat"></i>
                                   </button>
                                 </abbr>
-                                {data.payment_status === "0" ? (
+                                {data.payment_status === 0 ? (
                                   <button
                                     className="eye-button cursor-pointer"
                                     onClick={(e) => deleteOrder(data.id)}
@@ -1188,18 +1189,7 @@ function Order() {
                                     <img src={delete_document} alt="" />
                                   </button>
                                 ) : (
-                                  <abbr title="View Invoice">
-                                    <NavLink
-                                      to={{ pathname: "/OrderDetails" }}
-                                      state={{
-                                        order_id: data.id,
-                                      }}
-                                    >
-                                      <button className="eye-button cursor-pointer">
-                                        <img src={eyes} alt="" />
-                                      </button>
-                                    </NavLink>
-                                  </abbr>
+                                  ""
                                 )}
                               </div>
                             </div>
@@ -1214,13 +1204,14 @@ function Order() {
                                 </span>
                               </div>
                               <div className="col-md-6 col-6">
-                                {data.payment_status === "0" ? (
+                                {data.payment_status === 0 ? (
                                   ""
                                 ) : (
                                   <button
                                     className="OrderTrack"
                                     onClick={trackModal}
                                     data-id={data.id}
+                                    data-name={data.name}
                                   >
                                     Track Your Order
                                   </button>
@@ -1230,18 +1221,18 @@ function Order() {
                               <div className="col-md-6 col-6 textend">
                                 <button
                                   className={
-                                    data.payment_status === "1"
+                                    data.payment_status === 1
                                       ? "order-button-status"
-                                      : data.payment_status === "0"
+                                      : data.payment_status === 0
                                         ? "pending-color"
-                                        : data.payment_status === "2"
+                                        : data.payment_status === 2
                                           ? "cancel-color"
                                           : ""
                                   }
                                 >
                                   <span
                                     onClick={
-                                      data.payment_status === "0"
+                                      data.payment_status === 0
                                         ? (e) =>
                                           razorPay(
                                             data.total_amount,
@@ -1252,13 +1243,13 @@ function Order() {
                                         : ""
                                     }
                                   >
-                                    {data.payment_status === "1"
+                                    {data.payment_status === 1
                                       ? "Payment Done"
                                       : ""}
-                                    {data.payment_status === "0"
+                                    {data.payment_status === 0
                                       ? "Payment Pending"
                                       : ""}
-                                    {data.payment_status === "2"
+                                    {data.payment_status === 2
                                       ? "Payment Cencelled"
                                       : ""}
                                   </span>
@@ -1285,7 +1276,7 @@ function Order() {
                 {tab === "pendingOrder" ? (
                   <section data-aos="flip-down" className="paddingLeftDoc">
                     {orderD.map((data) =>
-                      data.payment_status === "0" ? (
+                      data.payment_status === 0 ? (
                         <div id="myDoc" className="card order-card pending_01">
                           <div
                             className="card-body"
@@ -1302,7 +1293,7 @@ function Order() {
                                 <i className="fa fa-wechat"></i>
                               </button> */}
 
-                                {data.payment_status === "0" ? (
+                                {data.payment_status === 0 ? (
                                   <abbr title="Delete Order">
                                     <button
                                       className="eye-button cursor-pointer"
@@ -1312,16 +1303,7 @@ function Order() {
                                     </button>
                                   </abbr>
                                 ) : (
-                                  <NavLink
-                                    to={{ pathname: "/OrderDetails" }}
-                                    state={{
-                                      order_id: data.id,
-                                    }}
-                                  >
-                                    <button className="eye-button cursor-pointer">
-                                      <img src={eyes} alt="" />
-                                    </button>
-                                  </NavLink>
+                                  ""
                                 )}
                               </div>
                             </div>
@@ -1336,13 +1318,14 @@ function Order() {
                                 </span>
                               </div>
                               <div className="col-md-6 col-6">
-                                {data.payment_status === "0" ? (
+                                {data.payment_status === 0 ? (
                                   ""
                                 ) : (
                                   <button
                                     className="OrderTrack"
                                     onClick={trackModal}
                                     data-id={data.id}
+                                    data-name={data.name}
                                   >
                                     Track Your Order
                                   </button>
@@ -1352,18 +1335,18 @@ function Order() {
                               <div className="col-md-6 col-6 textend">
                                 <button
                                   className={
-                                    data.payment_status === "1"
+                                    data.payment_status === 1
                                       ? "order-button-status"
-                                      : data.payment_status === "0"
+                                      : data.payment_status === 0
                                         ? "pending-color"
-                                        : data.payment_status === "2"
+                                        : data.payment_status === 2
                                           ? "cancel-color"
                                           : ""
                                   }
                                 >
                                   <abbr
                                     title={
-                                      data.payment_status === "0"
+                                      data.payment_status === 0
                                         ? "Just pay only Rs. " +
                                         data.total_amount
                                         : ""
@@ -1371,7 +1354,7 @@ function Order() {
                                   >
                                     <span
                                       onClick={
-                                        data.payment_status === "0"
+                                        data.payment_status === 0
                                           ? (e) =>
                                             razorPay(
                                               data.total_amount,
@@ -1382,7 +1365,7 @@ function Order() {
                                           : ""
                                       }
                                     >
-                                      {data.payment_status === "0"
+                                      {data.payment_status === 0
                                         ? "Payment Pending"
                                         : ""}
                                     </span>
@@ -1410,12 +1393,12 @@ function Order() {
                 {tab === "pastOrder" ? (
                   <section data-aos="flip-down" className="paddingLeftDoc">
                     {orderD.map((data) =>
-                      data.status === "13" ? (
+                      data.status === 13 ? (
                         <div id="myDoc" className="card order-card">
                           <div
                             className="card-body"
                             // onClick={
-                            //   data.payment_status === "0"
+                            //   data.payment_status === 0
                             //     ? ""
                             //     : (e) =>
                             //         MyDocUpload(
@@ -1474,13 +1457,14 @@ function Order() {
                                 </span>
                               </div>
                               <div className="col-md-6 col-6">
-                                {data.payment_status === "0" ? (
+                                {data.payment_status === 0 ? (
                                   ""
                                 ) : (
                                   <button
                                     className="OrderTrack"
                                     onClick={trackModal}
                                     data-id={data.id}
+                                    data-name={data.name}
                                   >
                                     Track Your Order
                                   </button>
@@ -1490,7 +1474,7 @@ function Order() {
                               <div className="col-md-6 col-6 textend">
                                 <button className="pending-color bg-info">
                                   <span>
-                                    {data.status === "13"
+                                    {data.status === 13
                                       ? "Order Fullfilled"
                                       : ""}
                                   </span>
@@ -1518,7 +1502,7 @@ function Order() {
                 {tab === "cancelOrder" ? (
                   <section data-aos="flip-down" className="paddingLeftDoc">
                     {orderD.map((data) =>
-                      data.payment_status === "2" ? (
+                      data.payment_status === 2 ? (
                         <div className="card order-card">
                           <div className="card-body">
                             <div className="row order-1st-row">
@@ -1570,23 +1554,23 @@ function Order() {
                                 <br />
                                 <button
                                   className={
-                                    data.payment_status === "1"
+                                    data.payment_status === 1
                                       ? "order-button-status"
-                                      : data.payment_status === "0"
+                                      : data.payment_status === 0
                                         ? "pending-color"
-                                        : data.payment_status === "2"
+                                        : data.payment_status === 2
                                           ? "cancel-color"
                                           : ""
                                   }
                                 >
                                   <span>
-                                    {data.payment_status === "1"
+                                    {data.payment_status === 1
                                       ? "Payment Done"
                                       : ""}
-                                    {data.payment_status === "0"
+                                    {data.payment_status === 0
                                       ? "Payment Pending"
                                       : ""}
-                                    {data.payment_status === "2"
+                                    {data.payment_status === 2
                                       ? "Payment Cencelled"
                                       : ""}
                                   </span>
@@ -1657,13 +1641,13 @@ function Order() {
                 ) : (
                   ""
                 )}
-                {tab === "support" ? (
+                {/* {tab === "support" ? (
                   <section data-aos="flip-down" className="paddingLeftDoc">
                     Support
                   </section>
                 ) : (
                   ""
-                )}
+                )} */}
                 {tab === "wallet" ? (
                   <section data-aos="flip-down" className="paddingLeftDoc">
                     <Wallet />
@@ -1697,8 +1681,6 @@ function Order() {
       </div>
 
       {/* <div id="calendar"></div> */}
-
-      <Footer />
 
       {/* <Modal
         show={showModal2}
@@ -1744,13 +1726,16 @@ function Order() {
           className="firstfiling_header firstFiling_modal"
         >
           <div className="col-md-7">
-            <h5 className="modal-title">Track your Order</h5>
+            <h5 className="modal-title">Track Your Order</h5>
           </div>
         </Modal.Header>
+
+        {trackOrder.CaseOnHold === "no" ?  
+
         <Modal.Body className="firstFiling_modal">
           <div className="row firstFiling_body">
             <div className="col-md-12 text-center">
-              <p>Taxcloud Subscription Plan</p>
+              <p>{trackServiceName}</p>
             </div>
             <div className="col-md-4 ">
               <span>Order Id : {trackOrder.order_no}</span>
@@ -1758,13 +1743,16 @@ function Order() {
             <div className="col-md-4">
               <span>
                 Order Status:{" "}
-                {trackOrder.work_done === false
+                {trackOrder.CaseOnHold === "no" ? 
+                trackOrder.work_done === false
                   ? trackOrder.caAssign === false
                     ? trackOrder.documentsCount === false
                       ? "Payment Done"
                       : "Documents Uploaded"
                     : "Expert Assigned"
-                  : "Work Done"}{" "}
+                  : "Work Done"
+                  : "Case On Hold"}
+                  {" "}
               </span>
             </div>
             <div className="col-md-4">
@@ -1879,6 +1867,17 @@ function Order() {
             <div className="col-md-2"></div>
           </div>
         </Modal.Body>
+
+        : <Modal.Body className="firstFiling_modal">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12 text-center p-5">   <img className="p-5" src={stopSign} width="50%" alt="" /></div>
+            </div>
+          </div>
+
+
+
+        </Modal.Body> }
       </Modal>
       <section style={{ display: webLodar }}>
         <section className="Lodarbackground">

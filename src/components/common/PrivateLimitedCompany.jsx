@@ -1,7 +1,5 @@
 import React from "react";
 import Enquiry from "../Enquiry/enquiry";
-import Footer from "./Footer";
-import Header from "./Header";
 import gere from "../common/Images/gere.png";
 import checkcircle1 from "../common/Images/checkCircle.svg";
 import checklist from "../common/Images/checklist.png";
@@ -16,7 +14,6 @@ import Faq from "../FAQ/Faq";
 const PrivateLimitedCompany = () => {
   return (
     <>
-      <Header />
       <div className="container">
         <ServiceName />
 
@@ -631,7 +628,6 @@ const PrivateLimitedCompany = () => {
       </div>
 
       <Faq />
-      <Footer />
     </>
   );
 };

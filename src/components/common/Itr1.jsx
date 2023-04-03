@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import IncometaxItr from "../common/Images/IncometaxItr.png";
 import outer from "../common/Images/outer.png";
 import clock6 from "../common/Images/clock6.png";
@@ -14,6 +12,7 @@ import Enquiry from "../Enquiry/enquiry";
 import { Helmet } from "react-helmet";
 import Services from "../Services/Services";
 import ServiceName from "../Services/NameOfService";
+import { NavLink } from "react-router-dom";
 function Itr1() {
   return (
     <>
@@ -25,7 +24,6 @@ function Itr1() {
       </Helmet>
       <div className="backgroundvideoplay">
         <section className="video_backcolor">
-          <Header />
           <div className="container">
             <ServiceName />
             <div className="row">
@@ -58,9 +56,9 @@ function Itr1() {
                   </div>
                 </div>
 
-                <button class="buynow_2 btn btn-secondary">
+              <NavLink to="/Contact" >  <button class="buynow_2 btn btn-secondary">
                   <span class="buytext">Schedule Free Consultation</span>
-                </button>
+                </button></NavLink>
               </div>
               <div className="col-md-1"></div>
               <div className="col-md-5 topEnquiry mt-3">
@@ -271,9 +269,9 @@ function Itr1() {
           <div className="col-md-5">
             <div className="incometax_img_5">
               <img src={incometax_men} alt="" />
-              <button class="buynow_2 btn btn-secondary">
+            <NavLink to="/Contact" >  <button class="buynow_2 btn btn-secondary">
                 <span class="buytext">Schedule Free Consultation</span>
-              </button>
+              </button></NavLink>
             </div>
           </div>
 
@@ -285,9 +283,9 @@ function Itr1() {
                 src={incometax_men2_register}
                 alt=""
               />
-              <button class="buynow_2 btn btn-secondary">
+           <NavLink to="/Contact" >    <button class="buynow_2 btn btn-secondary">
                 <span class="buytext">Schedule Free Consultation</span>
-              </button>
+              </button> </NavLink>
             </div>
           </div>
 
@@ -365,28 +363,28 @@ function Itr1() {
 
           <div className="col-md-6 mt-5 mb-5 douts_section">
             <img src={doubts_img} alt="" />
-            <button class="buynow_2 btn btn-secondary">
+            <NavLink to="/Contact" >   <button class="buynow_2 btn btn-secondary">
               <div class="loading" id="lodar">
                 <span></span>
                 <span></span>
                 <span></span>
               </div>
               <span class="buytext">Schedule Free Consultation</span>
-            </button>
+            </button> </NavLink>
           </div>
 
           <div className="col-md-5 IncometaxItr_img mt-5">
             <div className="incometax_img_">
               <img src={IncometaxItr} alt="" />
             </div>
-            <button class="buynow_2 btn btn-secondary">
+            <NavLink to="/Contact" >      <button class="buynow_2 btn btn-secondary">
               <div class="loading" id="lodar">
                 <span></span>
                 <span></span>
                 <span></span>
               </div>
               <span class="buytext">Schedule Free Consultation</span>
-            </button>
+            </button> </NavLink>
           </div>
           <div className="col-md-1"></div>
           <div className="col-md-6 incometaxreture_4 IncometaxItr_img mt-5 ">
@@ -462,14 +460,14 @@ function Itr1() {
             <div className="incometax_img_23">
               <img src={fine_1} alt="" />
             </div>
-            <button class="buynow_2 btn btn-secondary">
+            <NavLink to="/Contact" >  <button class="buynow_2 btn btn-secondary">
               <div class="loading" id="lodar">
                 <span></span>
                 <span></span>
                 <span></span>
               </div>
               <span class="buytext">Schedule Free Consultation</span>
-            </button>
+            </button> </NavLink>
           </div>
         </div>
 
@@ -669,8 +667,6 @@ function Itr1() {
       </div>
 
       <Faq />
-
-      <Footer />
     </>
   );
 }

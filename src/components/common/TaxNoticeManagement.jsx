@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Enquiry from "../Enquiry/enquiry";
 import ServiceType2 from "../Services/ServiceType2";
-import Footer from "./Footer";
-import Header from "./Header";
 import thinkingman2 from "../common/Images/thinkingman2.png";
 import checkcircle from "../common/Images/checkCircleWhite.png";
 import incometax_men2 from "../common/Images/docd1.png";
@@ -26,7 +24,6 @@ function TaxNoticeManagement() {
   });
   return (
     <>
-      <Header />
       <div className="container marginBottomForService">
         <ServiceName />
         <div className="row">
@@ -253,7 +250,7 @@ function TaxNoticeManagement() {
               <div className="incometax_img_6">
                 <img src={incometax_men2} width="100%" alt="" />
               </div>
-              <button className="btn itrFIleButton">Consult A Call</button>
+              <NavLink to="/Contact">    <button className="btn itrFIleButton">Consult A Call</button> </NavLink>
             </section>
           </div>
 
@@ -292,7 +289,7 @@ function TaxNoticeManagement() {
                 <li>Interest income certificate in Form 16A</li>
                 <li>Form 26AS</li>
               </ul>
-              <button className="btn itrFIleButton">Consult A Call</button>
+              <NavLink to="/Contact">     <button className="btn itrFIleButton">Consult A Call</button> </NavLink>
             </div>
           </div>
 
@@ -404,7 +401,7 @@ function TaxNoticeManagement() {
             you're in compliance with all applicable laws and regulations.
           </p>
 
-          <button className="btn itrbutton">Contact Us Today!</button>
+          <NavLink to="/Contact">   <button className="btn itrbutton">Contact Us Today!</button> </NavLink>
         </div>
 
         <div className="row itrrowcolor">
@@ -799,8 +796,6 @@ function TaxNoticeManagement() {
       </div>
 
       <Faq />
-
-      <Footer />
     </>
   );
 }

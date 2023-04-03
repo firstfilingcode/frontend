@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { loginUser } from "../common/services/user-services";
 import { toast } from "react-toastify";
 import { signUp } from "../common/services/signUp";
-import NewLogin from "../Login/newLogin";
+import { ReactSession } from 'react-client-session';
+import secureLocalStorage from "react-secure-storage";
+ReactSession.setStoreType("localStorage");
 
 const SignUp = () => {
     const handleShow = () =>
@@ -105,11 +107,6 @@ const SignUp = () => {
             );
         }
 
-        function isValidPassword(password) {
-            return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password);
-
-        }
-
         if (data.first_name === "") {
             setErrorFName("First Name Field Can't Be Null");
             setErrorColor("red");
@@ -141,8 +138,8 @@ const SignUp = () => {
             setErrorPass("Password Field Can't Be Null");
             setErrorColor("red");
             setBorder("red");
-        } else if (!isValidPassword(data.password)) {
-            setErrorPass("Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character");
+        } else if ((data.password.length < "8")) {
+            setErrorPass("Minimum eight characters Requeired");
             setErrorColor("red");
             setBorder("red");
         } else {
@@ -153,7 +150,22 @@ const SignUp = () => {
                     // console.log(resp);
                     if (resp.success) {
                         toast.success("SignUp Completed");
+                        document.getElementById("lodarsign").style.height = "0px";
                         document.getElementById("signUpPage").style.width = "0%";
+                        document.getElementById("signUPBtn").innerHTML = "Sign Up";
+                        localStorage.setItem("displayName", resp.data.name);
+                        localStorage.setItem("mobile", resp.data.mobile);
+                        localStorage.setItem("user_id", resp.data.id);
+                        ReactSession.set("user_id", resp.data.id);
+                        secureLocalStorage.setItem("wallet",resp.data.wallet);
+                        localStorage.setItem("email", resp.data.email);
+                        localStorage.setItem("photoURL", resp.data.photoURL);
+                        localStorage.setItem("mobile", resp.data.mobile);
+                        localStorage.setItem("address", resp.data.address);
+                        localStorage.setItem("aadhar_card", resp.data.aadhar_card);
+                        localStorage.setItem("pan_card", resp.data.pan_card);
+                        localStorage.setItem("doc_status", resp.data.doc_status);
+                           window.dispatchEvent(new Event("storage"));
                     } else {
                         setErrorColor("red");
                         setSerror(resp.message);
@@ -275,6 +287,7 @@ const SignUp = () => {
                                 name="paasword"
                                 className="form-control mt-3 form_control2"
                                 placeholder="Password"
+                                maxLength={"8"}
                                 onChange={(e) => handleChange(e, "password")}
                                 value={data.password}
                             />
@@ -315,16 +328,7 @@ const SignUp = () => {
                             </div>
                         </Button>
                     </form>
-
-                    <div className="my-3 slash_1">
-                        <span className="modal_subtitle">
-                            or connect with
-                        </span>
-                    </div>
-
                     <div className="my-3">
-
-                        <NewLogin />
                         <div className="my-3">
                             <span className="modal_subtitle">
                                 Already have an account?,

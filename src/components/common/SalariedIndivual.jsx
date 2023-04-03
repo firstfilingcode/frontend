@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Enquiry from "../Enquiry/enquiry";
 import ServiceType2 from "../Services/ServiceType2";
-import Footer from "./Footer";
-import Header from "./Header";
 import incometax_men from "../common/Images/incometax_men.png";
 import checkcircle from "../common/Images/checkCircleWhite.png";
 import incometax_men2 from "../common/Images/incometax_men2.png";
@@ -27,15 +25,17 @@ function SalariedIndivual() {
 
   return (
     <>
-      <Header />
       <div className="container marginBottomForService">
         <div className="row">
           <div className="col-md-6">
             <span className=" itrPageHeading">Income Tax For Individuals</span>
             <p className="itrPageDescription">
-              Income Tax For Individuals Express Plan / Income Tax For
-              Individuals Easy Plan. Salaried Individual Return (less than 50
-              lacs). Get Your Taxes Filed Within the Same Day.
+            Income tax is a Direct tax levied by the government on the income of individuals, 
+            corporations, and other entities. Income refers to any money earned from a job,
+             investments, or any other source. Individuals are subject to income tax on their
+              earnings from a variety of sources, including salaries, wages, bonuses, commissions, 
+              and investment profits.
+              Worry not when First Filing is at your service!
             </p>
 
             <section className="backgroundAnimationItr">
@@ -76,7 +76,8 @@ function SalariedIndivual() {
             you're in compliance with all applicable laws and regulations.
           </p>
 
-          <button className="btn itrbutton"> Contact Us Today! </button>
+          <NavLink  to="/Contact" onClick={()=>localStorage.setItem("setEmailAdress","contact@firstfiling.in")}>
+          <button className="btn itrbutton"> Contact Us Today! fff</button></NavLink>
         </div>
 
         <div className="row itrrowcolor">
@@ -457,7 +458,9 @@ function SalariedIndivual() {
               <div className="">
                 <img src={incometax_men2} width="70%" alt="" />
               </div>
+              <NavLink to="/Contact" onClick={()=>localStorage.setItem("setEmailAdress","consult@firstfiling.in")}>
               <button className="btn itrFIleButton">Consult A Call</button>
+              </NavLink>
             </section>
           </div>
 
@@ -884,7 +887,6 @@ function SalariedIndivual() {
       </div>
 
       <Faq />
-      <Footer />
     </>
   );
 }

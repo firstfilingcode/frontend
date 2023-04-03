@@ -14,6 +14,7 @@ import Enquiry from "../Enquiry/enquiry";
 import { Helmet } from "react-helmet";
 import Services from "../Services/Services";
 import ServiceName from "../Services/NameOfService";
+import { NavLink } from "react-router-dom";
 function Itr3() {
   return (
     <>
@@ -25,7 +26,6 @@ function Itr3() {
       </Helmet>
       <div className="backgroundvideoplay">
         <section className="video_backcolor">
-          <Header />
           <div className="container">
             <ServiceName />
             <div className="row">
@@ -58,9 +58,9 @@ function Itr3() {
                   </div>
                 </div>
 
-                <button class="buynow_2 btn btn-secondary">
+               <NavLink to="/Contact"> <button class="buynow_2 btn btn-secondary">
                   <span class="buytext">Schedule Free Consultation</span>
-                </button>
+                </button></NavLink>
               </div>
               <div className="col-md-1"></div>
               <div className="col-md-5 topEnquiry mt-3">
@@ -265,9 +265,9 @@ function Itr3() {
           <div className="col-md-5">
             <div className="incometax_img_5">
               <img src={incometax_men} alt="" />
-              <button class="buynow_2 btn btn-secondary">
+              <NavLink to="/Contact">   <button class="buynow_2 btn btn-secondary">
                 <span class="buytext">Schedule Free Consultation</span>
-              </button>
+              </button> </NavLink>
             </div>
           </div>
 
@@ -279,9 +279,9 @@ function Itr3() {
                 src={incometax_men2_register}
                 alt=""
               />
-              <button class="buynow_2 btn btn-secondary">
+        <NavLink to="/Contact">       <button class="buynow_2 btn btn-secondary">
                 <span class="buytext">Schedule Free Consultation</span>
-              </button>
+              </button> </NavLink>
             </div>
           </div>
 
@@ -359,28 +359,28 @@ function Itr3() {
 
           <div className="col-md-6 mt-5 mb-5 douts_section">
             <img src={doubts_img} alt="" />
-            <button class="buynow_2 btn btn-secondary">
+            <NavLink to="/Contact">   <button class="buynow_2 btn btn-secondary">
               <div class="loading" id="lodar">
                 <span></span>
                 <span></span>
                 <span></span>
               </div>
               <span class="buytext">Schedule Free Consultation</span>
-            </button>
+            </button> </NavLink>
           </div>
 
           <div className="col-md-5 IncometaxItr_img mt-5">
             <div className="incometax_img_">
               <img src={IncometaxItr} alt="" />
             </div>
-            <button class="buynow_2 btn btn-secondary">
+            <NavLink to="/Contact">   <button class="buynow_2 btn btn-secondary">
               <div class="loading" id="lodar">
                 <span></span>
                 <span></span>
                 <span></span>
               </div>
               <span class="buytext">Schedule Free Consultation</span>
-            </button>
+            </button> </NavLink>
           </div>
           <div className="col-md-1"></div>
           <div className="col-md-6 incometaxreture_4 IncometaxItr_img mt-5 ">
@@ -456,14 +456,14 @@ function Itr3() {
             <div className="incometax_img_23">
               <img src={fine_1} alt="" />
             </div>
-            <button class="buynow_2 btn btn-secondary">
+            <NavLink to="/Contact">  <button class="buynow_2 btn btn-secondary">
               <div class="loading" id="lodar">
                 <span></span>
                 <span></span>
                 <span></span>
               </div>
               <span class="buytext">Schedule Free Consultation</span>
-            </button>
+            </button> </NavLink>
           </div>
         </div>
       </div>

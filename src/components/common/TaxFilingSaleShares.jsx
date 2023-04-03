@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import ServiceType2 from "../Services/ServiceType2";
-import Footer from "./Footer";
-import Header from "./Header";
 import backgroundForPresumptive1 from "../common/Images/backgroundForPresumptive1.gif";
-import incometax_men2 from "../common/Images/canPremtive.png";
+import incometax_men2 from "../common/Images/questionMark10.png";
 import Presumptive12 from "../common/Images/Presumptive12.png";
-import Presumptive11 from "../common/Images/Presumptive11.png";
-import Presumptive10 from "../common/Images/Presumptive10.png";
-import Presumptive9 from "../common/Images/Presumptive9.png";
+import Presumptive11 from "../common/Images/calculator10.png";
+import Presumptive10 from "../common/Images/Thumsup10.png";
+import Presumptive9 from "../common/Images/TAX10.png";
 import checkcircle1 from "../common/Images/checkCircle.svg";
 import ServiceName from "../Services/NameOfService";
 import secureLocalStorage from "react-secure-storage";
@@ -15,7 +13,7 @@ import { NavLink } from "react-router-dom";
 import Faq from "../FAQ/Faq";
 import Enquiry2 from "../Enquiry/enquiry2";
 
-function TaxFilingSaleShares() {  
+function TaxFilingSaleShares() {
   const [buyNow, setbuyNow] = useState("");
   window.addEventListener("itr_service", () => {
     setbuyNow(
@@ -24,7 +22,6 @@ function TaxFilingSaleShares() {
   });
   return (
     <>
-      <Header />
       <div className="container">
         <ServiceName />
         <div className="row">
@@ -32,7 +29,7 @@ function TaxFilingSaleShares() {
             <span className=" itrPageHeading">
               Presumptive / Freelancing Income{" "}
             </span>
-            <section className="backgroundPresumptive">
+            <section className="Teamwork10">
               <div className="fixwidthPremtive">
                 <p className="itrPageDescription">
                   Freelancing in India has a bright future. As per the Income
@@ -123,57 +120,6 @@ function TaxFilingSaleShares() {
 
       <div className="container">
         <div className="row mt-3">
-          <div className="col-md-6 itrnomatter">
-            <p className="itrnomatterp">Do freelancers have to pay tax?</p>
-
-            <p className="partnershiptollp_p">
-              In India, there are 15 million freelancers. Around 40% of all
-              freelance jobs offered around the world are done by freelancers
-              from India (1). According to industry estimates the Indian
-              'freelancers' market size is likely to grow to a whopping $20-$30
-              billion by 2025(1).
-            </p>
-
-            <p className="partnershiptollp_p">
-              Freelancers are the people who prefer working for themselves,
-              mostly from home and not a registered company. They get hired to
-              work on specific tasks for a specific duration and get paid upon
-              the completion of their assignment.
-            </p>
-
-            <p className="partnershiptollp_p">
-              But all of this comfort comes at a cost, and like other salaries
-              of business professionals, freelancers also have to pay tax on
-              whatever they earn.
-            </p>
-          </div>
-          <div className="col-md-1"></div>
-          <div className="col-md-5 itrnomatter">
-            <p className="itrnomatterp">Presumptive Taxation</p>
-
-            <p className="partnershiptollp_p">
-              Sec 44ADA contains the provision for computing gains from
-              profession on a presumptive basis.
-            </p>
-
-            <span className="boldTextItr">
-              “A sum equal to or higher than 50 % of the total gross receipts”
-            </span>
-            <p className="partnershiptollp_p">
-              shall be deemed to be the gain from such profession under the head
-              "Profits and gains of business or profession.”In simple words, if
-              a person is a specified professional and having gross receipts
-              less than or equal to Rs. 50 lakhs then sec 44ADA is for him!
-            </p>
-
-            <p className="partnershiptollp_p">
-              As per sec 44ADA, he has to offer at least 50% of his gross
-              receipts as profit i.e. the amount on which tax shall be levied.
-              or, we can say out of your gross receipts, government considers
-              50% as expenses and 50 % as profit.
-            </p>
-          </div>
-
           <div className="col-md-12">
             <p className="titleOfFirstFilling">
               Applicability of Taxes and ITR Filing for Freelancers
@@ -265,7 +211,7 @@ function TaxFilingSaleShares() {
           </div>
 
           <div className="col-md-4">
-            <section className="marginOfImage ">
+            <section className="marginOfImage text-center">
               <div>
                 <img
                   src={incometax_men2}
@@ -274,9 +220,9 @@ function TaxFilingSaleShares() {
                   alt="incometax_men2"
                 />
               </div>
-              <button className="btn itrFIleButton">
+              <NavLink to="/Contact">    <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button> </NavLink>
             </section>
           </div>
 
@@ -308,6 +254,56 @@ function TaxFilingSaleShares() {
               is estimated on the basis of 8% of turnover (or 6% in the case of
               digital receipts and payments) and the taxpayer is not required to
               maintain books of accounts.
+            </p>
+          </div>
+          <div className="col-md-6 itrnomatter">
+            <p className="itrnomatterp">Do freelancers have to pay tax?</p>
+
+            <p className="partnershiptollp_p">
+              In India, there are 15 million freelancers. Around 40% of all
+              freelance jobs offered around the world are done by freelancers
+              from India (1). According to industry estimates the Indian
+              'freelancers' market size is likely to grow to a whopping $20-$30
+              billion by 2025(1).
+            </p>
+
+            <p className="partnershiptollp_p">
+              Freelancers are the people who prefer working for themselves,
+              mostly from home and not a registered company. They get hired to
+              work on specific tasks for a specific duration and get paid upon
+              the completion of their assignment.
+            </p>
+
+            <p className="partnershiptollp_p">
+              But all of this comfort comes at a cost, and like other salaries
+              of business professionals, freelancers also have to pay tax on
+              whatever they earn.
+            </p>
+          </div>
+          <div className="col-md-1"></div>
+          <div className="col-md-5 itrnomatter">
+            <p className="itrnomatterp">Presumptive Taxation</p>
+
+            <p className="partnershiptollp_p">
+              Sec 44ADA contains the provision for computing gains from
+              profession on a presumptive basis.
+            </p>
+
+            <span className="boldTextItr">
+              “A sum equal to or higher than 50 % of the total gross receipts”
+            </span>
+            <p className="partnershiptollp_p">
+              shall be deemed to be the gain from such profession under the head
+              "Profits and gains of business or profession.”In simple words, if
+              a person is a specified professional and having gross receipts
+              less than or equal to Rs. 50 lakhs then sec 44ADA is for him!
+            </p>
+
+            <p className="partnershiptollp_p">
+              As per sec 44ADA, he has to offer at least 50% of his gross
+              receipts as profit i.e. the amount on which tax shall be levied.
+              or, we can say out of your gross receipts, government considers
+              50% as expenses and 50 % as profit.
             </p>
           </div>
         </div>
@@ -478,9 +474,9 @@ function TaxFilingSaleShares() {
                 alt="backgroundForPresumptive"
                 className="mobileImg"
               />
-              <button className="btn itrFIleButton">
+           <NavLink to="/Contact">    <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button> </NavLink>
             </section>
           </div>
 
@@ -556,9 +552,9 @@ function TaxFilingSaleShares() {
           <div className="col-md-5">
             <section className="text-center">
               <img src={Presumptive11} alt="Presumptive11" />
-              <button className="btn itrFIleButton btnreletive">
+              <NavLink to="/Contact">   <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button> </NavLink>
             </section>
           </div>
         </div>
@@ -643,10 +639,10 @@ function TaxFilingSaleShares() {
 
           <div className="col-md-5">
             <section className="text-center">
-              <img src={Presumptive10} alt="Presumptive10" />
-              <button className="btn itrFIleButton">
+              <img src={Presumptive10} alt="Presumptive10" width={"100%"} />
+              <NavLink to="/Contact">     <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button> </NavLink>
             </section>
           </div>
 
@@ -913,7 +909,6 @@ function TaxFilingSaleShares() {
       </div>
 
       <Faq />
-      <Footer />
     </>
   );
 }

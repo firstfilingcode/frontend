@@ -1,6 +1,4 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import gstreg from "../common/Images/gstreg.png";
 import gstreg2 from "../common/Images/gstreg2.png";
 import Services from "../Services/Services";
@@ -11,7 +9,6 @@ import ServiceName from "../Services/NameOfService";
 function DirectorKyc() {
   return (
     <>
-      <Header />
       <div className="container">
         <ServiceName />
         <div className="row">
@@ -287,7 +284,6 @@ function DirectorKyc() {
         <Faq />
       </div>
 
-      <Footer />
     </>
   );
 }

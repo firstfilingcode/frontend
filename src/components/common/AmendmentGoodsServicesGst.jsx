@@ -1,9 +1,7 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import gstreg from "../common/Images/gstreg.png";
-import gstreg2 from "../common/Images/gstreg2.png";
-import Services from "../Services/Services";
+import gstreg from "../common/Images/TAX3.png";
+import gstreg2 from "../common/Images/TAX2.png";
+import ServiceType2 from "../Services/ServiceType2";
 import Enquiry from "../Enquiry/enquiry";
 import Faq from "../FAQ/Faq";
 import ServiceName from "../Services/NameOfService";
@@ -11,95 +9,90 @@ import ServiceName from "../Services/NameOfService";
 function AmendmentGoodsServicesGst() {
   return (
     <>
-      <Header />
+     
       <div className="container">
         <ServiceName />
         <div className="row">
           <div className="col-md-7">
             <Enquiry />
-            <div
-              className="describe"
-              data-aos="fade-right"
-              data-aos-delay="800"
-            >
-              <span className="secondrowheading slash_right">
-                What is Change Capital Of Company?
-              </span>
-              <p className="Tax">
-                Under Goods And Services Tax (Change Capital Of Company),
-                businesses whose turnover exceeds the threshold limitof Rs.40
-                lakh or Rs.20 lakh or Rs.10 lakh as the case may be, must
-                register as a normal taxable person. It is called Change Capital
-                Of Company.
-              </p>
-              <p>
-                For certain businesses, Fillings under Change Capital Of Company
-                is mandatory. If the organization carries on business without
-                registering under Change Capital Of Company, it is an offence
-                under Change Capital Of Company and heavy penalties will apply.
-              </p>
-              obtain Change Capital Of Company faster in 3 easy steps.
-              <p />
-              <p>
-                Change Capital Of Company usually takes between 2-6 working
-                days. Team Clear can help you obtain Change Capital Of Company
-                faster in 3 easy steps.
-              </p>
-            </div>
           </div>
           <div className="col-md-5">
             <img src={gstreg} width="100%" />
+          </div>
+
+          <div className="col-md-12">
+            <div
+            >
+              <span className="secondrowheading slash_right">
+                What is GST Registration?
+              </span>
+              <p className="partnershiptollp_p">
+                GST registration is a process by which businesses register for
+                the Goods and Services Tax (GST). It is an indirect tax, which
+                is applicable to the sale of all goods and services. The GST
+                registration process requires businesses to obtain a unique
+                15-digit Goods and Services Tax Identification Number (GSTIN)
+                from the government. The registration is mandatory for
+                businesses making taxable supplies and whose annual turnover
+                exceeds the specified limit. Businesses are required to register
+                their business name, address, contact information, and other
+                details with the relevant tax authority. GST registration is
+                simple, seamless, and can be completed online within a few
+                minutes. It enables businesses to track, manage and pay
+                applicable taxes. It also helps businesses to avail the various
+                benefits offered by the government. Businesses must ensure that
+                they keep their GST registration updated with the latest
+                information.
+              </p>
+            </div>
           </div>
         </div>
         <div className="row whatisgst">
           <div
             className="col-md-6 gstregis_p"
-            data-aos="fade-right"
-            data-aos-delay="500"
           >
             <h3 className="firstrowheadind slash_right">
-              Change Capital Of Company Online
+              TDS/TCS Return Online
             </h3>
             <p className="textdetail1">
               Complete Online Document Submission &amp; Application Tracking
             </p>
             <div className="gstlist_">
               <ul className="listing_second">
-                <li>Filing of Application for Change Capital Of Company</li>
-                <li>Secure Change Capital Of Company Identification Number</li>
+                <li>Filing of Application for TDS/TCS Return</li>
+                <li>Secure TDS/TCS Return Identification Number</li>
                 <li>
-                  Dedicated manager to process your Change Capital Of Company
-                  end to end
+                  Dedicated manager to process your TDS/TCS Return end to end
                 </li>
                 <li>Completely Online – No need to visit office</li>
                 <li>
-                  CA Assisted Change Capital Of Company Filing for all your
-                  Change Capital Of Company needs
+                  CA Assisted TDS/TCS Return Filing for all your TDS/TCS Return
+                  needs
                 </li>
                 <li>
-                  CA Assisted Change Capital Of Company Filing for all your
-                  Change Capital Of Company needs
+                  CA Assisted TDS/TCS Return Filing for all your TDS/TCS Return
+                  needs
                 </li>
                 <li>
-                  CA Assisted Change Capital Of Company Filing for all your
-                  Change Capital Of Company needs
+                  CA Assisted TDS/TCS Return Filing for all your TDS/TCS Return
+                  needs
                 </li>
               </ul>
             </div>
             <p className="textdetail">
-              * Get Clear Change Capital Of Company invoicing and digital khata
-              app free with this service
+              * Get Clear TDS/TCS Return invoicing and digital khata app free
+              with this service
             </p>
           </div>
-          <div className="col-md-6" data-aos="fade-left" data-aos-delay="500">
+          <div className="col-md-6">
             <sapn className="secondrowheading slash_right">
-              Who should obtain the Change Capital Of Company?
+              Who should obtain the TDS/TCS Return?
             </sapn>
             <div className="gstlist_">
               <ul className="listing_second">
                 <li>
-                  Individuals registered under the Pre-Change Capital Of Company
-                  law (i.e., Excise, VAT, Service Tax etc.)
+                  Individuals registered under the Pre-TDS/TCS Return law (i.e.,
+                  Excise, VAT, Service Tax etc.)
                 </li>
                 <li>
                   Businesses with turnover above the threshold limit of Rs.40
@@ -124,15 +117,13 @@ function AmendmentGoodsServicesGst() {
           <h3>
             <div
               className="slash_1 web-color"
-              data-aos="fade-bottom"
-              data-aos-delay="500"
             >
-              <span>All About The Change Capital Of Company Process</span>
+              <span>All About The TDS/TCS Return Process</span>
             </div>
           </h3>
         </div>
 
-        <div className="row gstRow" data-aos="fade-right" data-aos-delay="500">
+        <div className="row gstRow">
           <div className="col-md-2 gstbg-1">
             <span className="circle">1</span>
             <p>Purchase of Plan</p>
@@ -155,13 +146,13 @@ function AmendmentGoodsServicesGst() {
           </div>
           <div className="col-md-2 gstbg-6">
             <span className="circle">6</span>
-            <p>Change Capital Of CompanyIN Received</p>
+            <p>TDS/TCS ReturnIN Received</p>
           </div>
         </div>
 
-        <div className="row g-0">
+        {/* <div className="row g-0">
           <div className="col-md-6">
-            {/* <iframe
+            <iframe
               src="https://www.youtube.com/embed/S28JDAJq864"
               width="100%"
               height="100%"
@@ -169,40 +160,38 @@ function AmendmentGoodsServicesGst() {
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-            ></iframe> */}
+            ></iframe>
           </div>
-          {/* <div
+          <div
             className="col-md-6 gstRegistrationBack"
-            data-aos="fade-left"
-            data-aos-delay="500"
           >
             <section className="gst-registration-padding">
               <p className="web-color gsttext">Lorem ipsum dolor sit amet</p>
 
               <p className="web-color gsttext2">
-                Change Capital Of Company can be obtained on the Change Capital Of Company portal. One must
-                apply for Change Capital Of Company in Form REG-01 on the Change Capital Of Company portal
-                following steps outlined in our article “How to apply for Change Capital Of Company
-                Fillings?”. However, the Change Capital Of Company services at
-                ClearTax helps you to get your business Change Capital Of Company registered and
-                obtain your Change Capital Of CompanyIN. Clear Change Capital Of Company experts will guide you on the
-                applicability and compliances under Change Capital Of Company for your business and
-                get your business registered under Change Capital Of Company.
+                TDS/TCS Return can be obtained on the TDS/TCS Return portal. One must
+                apply for TDS/TCS Return in Form REG-01 on the TDS/TCS Return portal
+                following steps outlined in our article “How to apply for TDS/TCS Return
+                Fillings?”. However, the TDS/TCS Return services at
+                ClearTax helps you to get your business TDS/TCS Return registered and
+                obtain your TDS/TCS ReturnIN. Clear TDS/TCS Return experts will guide you on the
+                applicability and compliances under TDS/TCS Return for your business and
+                get your business registered under TDS/TCS Return.
               </p>
 
               <p className="web-color gsttext3">
-                Change Capital Of Company can be obtained on the Change Capital Of Company portal. One must
-                apply for Change Capital Of Company in Form REG-01 on the Change Capital Of Company portal
-                following steps outlined in our article “How to apply for Change Capital Of Company
-                Fillings?”. However, the Change Capital Of Company services at
-                ClearTax helps you to get your business Change Capital Of Company registered and
-                obtain your Change Capital Of CompanyIN. Clear Change Capital Of Company experts will guide you on the
-                applicability and compliances under Change Capital Of Company for your business and
-                get your business registered under Change Capital Of Company.
+                TDS/TCS Return can be obtained on the TDS/TCS Return portal. One must
+                apply for TDS/TCS Return in Form REG-01 on the TDS/TCS Return portal
+                following steps outlined in our article “How to apply for TDS/TCS Return
+                Fillings?”. However, the TDS/TCS Return services at
+                ClearTax helps you to get your business TDS/TCS Return registered and
+                obtain your TDS/TCS ReturnIN. Clear TDS/TCS Return experts will guide you on the
+                applicability and compliances under TDS/TCS Return for your business and
+                get your business registered under TDS/TCS Return.
               </p>
             </section>
-          </div> */}
-        </div>
+          </div>
+        </div> */}
 
         <div
           className="row"
@@ -212,13 +201,11 @@ function AmendmentGoodsServicesGst() {
             <img src={gstreg2} alt="gst-men" />
           </div>
           <div
-            className="col-md-6 mt-5 gstman-text"
-            data-aos="fade-left"
-            data-aos-delay="500"
+            className="col-md-6 mt-3 gstman-text"
           >
             <h4>
               <span className="slash_right">
-                Documents Required for Change Capital Of Company
+                Documents Required for TDS/TCS Return
               </span>
             </h4>
             <div className="gstlist">
@@ -240,30 +227,25 @@ function AmendmentGoodsServicesGst() {
               </ul>
             </div>
             <h4>
-              <span className="slash_right">
-                Change Capital Of Company Fees
-              </span>
+              <span className="slash_right">TDS/TCS Return Fees</span>
             </h4>
             <p>
-              Change Capital Of Company is a tedious 11 step process that
-              involves the submission of many business details and scanned
-              documents.
+              TDS/TCS Return is a tedious 11 step process that involves the
+              submission of many business details and scanned documents.
             </p>
             <p>
-              Although there are no fees prescribed under the Change Capital Of
-              Company law for obtaining Change Capital Of Company on the Change
-              Capital Of Company portal on your own, you can save a huge time
-              and effort by purchasing the Change Capital Of Company plan with
-              ClearTax.
+              Although there are no fees prescribed under the TDS/TCS Return law
+              for obtaining TDS/TCS Return on the TDS/TCS Return portal on your
+              own, you can save a huge time and effort by purchasing the TDS/TCS
+              Return plan with ClearTax.
             </p>
             <p>
-              You can opt for Clear Change Capital Of Company services where a
-              Change Capital Of Company Expert will assist you, end to end with
-              Change Capital Of Company.
+              You can opt for Clear TDS/TCS Return services where a TDS/TCS
+              Return Expert will assist you, end to end with TDS/TCS Return.
             </p>
             <h4>
               <span className="slash_right">
-                Penalty for not obtaining Change Capital Of Company
+                Penalty for not obtaining TDS/TCS Return
               </span>
             </h4>
             <p>
@@ -278,34 +260,10 @@ function AmendmentGoodsServicesGst() {
           </div>
         </div>
       </div>
-      <Services />
-      <div className="container">
-        <div
-          className="col-md-12 mt-5 gstman-text  text-center"
-          data-aos="fade-top"
-          data-aos-delay="500"
-        >
-          <h3>
-            <div className="slash_1 web-color">
-              <span>FAQ..! Need Help</span>
-            </div>
-          </h3>
-        </div>
-        <div className="col-md-12" data-aos="fade-bottom" data-aos-delay="500">
-          <div className="form-group gst-input">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Search"
-              name="search"
-            />
-          </div>
-        </div>
-
-        <Faq />
-      </div>
-
-      <Footer />
+      <section className="sevicesBack20">
+        <ServiceType2 />
+      </section>
+      <Faq />
     </>
   );
 }

@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import { NavLink, useLocation } from "react-router-dom";
 import HeaderLeftLogo1 from "../common/Images/HeaderLeftLogo1.png";
-import { myAxios } from "../common/services/Helper";
+import { BASE_URL, myAxios } from "../common/services/Helper";
 import invoiceEnd from "../common/Images/invoiceEnd.png";
 import INVOICEtext from "../common/Images/INVOICEtext.png";
-import rupee1 from "../common/Images/rupee1.jpeg";
+import moment from "moment";
 
 import { pdfFromReact } from "generate-pdf-from-react-html";
 
@@ -20,7 +18,7 @@ const OrderDetails = () => {
     formData.append("order_id", location.state.order_id);
     myAxios({
       method: "post",
-      url: "https://accounts.rusoft.in/api/orderDetail",
+      url: BASE_URL + "/orderDetail",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })
@@ -34,19 +32,29 @@ const OrderDetails = () => {
       });
   };
 
+  const [setting, setSetting] = useState([]);
+  const getSetting = async () => {
+    await fetch(BASE_URL + "/getSetting")
+      .then((res) => res.json())
+      .then((json) => {
+        // alert(JSON.stringify(json.data));
+        setSetting(json.data);
+      })
+      .catch();
+  };
+
   useEffect(() => {
     window.scroll({
       top: 0,
-      left: 1000,
       behavior: "smooth",
       block: "end",
       inline: "end",
     });
     getOrderInfo();
+    getSetting();
   }, []);
   return (
     <>
-      <Header />
 
       {/* <div className="container" id="divToPrint">
        <div className="row">
@@ -156,7 +164,7 @@ const OrderDetails = () => {
           <button
             className="btn btn-primary invoicebtn"
             onClick={() =>
-              pdfFromReact("#divToPrint", "My-file", "p", true, false)
+              pdfFromReact("#divToPrint", "Invoice", "p", true, false)
             }
           >
             Download Invoice
@@ -164,7 +172,7 @@ const OrderDetails = () => {
         </div>
       </div>
 
-      <div id="divToPrint" className="invoiceFLex">
+      <div id="divToPrint" className="invoiceFLex mb-3">
         <section className="invoiceContainer">
           <section className="invoicefixWidth">
             <table className="invoiceTable">
@@ -181,7 +189,7 @@ const OrderDetails = () => {
                     />
                   </th>
                   <th colSpan={4} className="NormalInvoiceTax">
-                    Date: 02 June, 2023
+                    <b>Date:</b> {moment(orderD.created_at).format("DD-MM-Y")}
                   </th>
                 </tr>
               </thead>
@@ -193,7 +201,7 @@ const OrderDetails = () => {
                             textalignCenter"
                     style={{ paddingTop: "15px" }}
                   >
-                    No. 000001
+                    <b> No.</b> {orderD.order_no}
                   </td>
                 </tr>
                 <tr>
@@ -201,35 +209,23 @@ const OrderDetails = () => {
                     <div>
                       <b className="NormalInvoiceTax">Billed to:</b>
                       <br />
-                      <span className="NormalInvoiceTax">Thynk Unlimited</span>
-                      <br />
-                      <span className="NormalInvoiceTax">
-                        23 Anywhere St., Any City, ST 12345
-                      </span>
-                      <br />
-                      <span className="NormalInvoiceTax">
-                        www.reallygreatsite.com
-                      </span>
+                      <span className="NormalInvoiceTax">{orderD.address}</span>
+                     
                     </div>
                   </td>
                   <td colSpan={4} />
                   <td colSpan={4}>
-                    <b className="NormalInvoiceTax">From: </b>
-                    <br />
+                    <span className="NormalInvoiceTax"><b>From: </b></span>
                     <span className="NormalInvoiceTax">
-                      MAAVALAN CONSULTANCY PRIVATE LIMITED
+                      {setting.address}
                     </span>
                     <br />
                     <span className="NormalInvoiceTax">
-                      B-302, Jaipur, JAIPUR, 302004,JANTA COLONYRajasthan
+                      <b>Email:</b> {setting.email}
                     </span>
                     <br />
                     <span className="NormalInvoiceTax">
-                      Email: shubham.jsco@gmail.com
-                    </span>
-                    <br />
-                    <span className="NormalInvoiceTax">
-                      Mobile: +91 9549815565
+                      <b>Mobile:</b> +91 {setting.phone}
                     </span>
                   </td>
                 </tr>
@@ -279,46 +275,19 @@ const OrderDetails = () => {
               <tbody>
                 <tr>
                   <td className="NormalInvoiceTax leftBorderNone">1</td>
-                  <td className="NormalInvoiceTax">ITR1</td>
-                  <td className="NormalInvoiceTax">998231</td>
+                  <td className="NormalInvoiceTax">{orderD.service_name}</td>
+                  <td className="NormalInvoiceTax"></td>
                   <td className="NormalInvoiceTax">1</td>
-                  <td className="NormalInvoiceTax">500</td>
+                  <td className="NormalInvoiceTax">{orderD.amount}</td>
+                  <td className="NormalInvoiceTax">{orderD.coupon_discount}</td>
+                  <td className="NormalInvoiceTax" >{orderD.amount}</td>
                   <td className="NormalInvoiceTax" />
+                  <td className="NormalInvoiceTax" >9%</td>
+                  <td className="NormalInvoiceTax" >9%</td>
                   <td className="NormalInvoiceTax" />
-                  <td className="NormalInvoiceTax" />
-                  <td className="NormalInvoiceTax" />
-                  <td className="NormalInvoiceTax" />
-                  <td className="NormalInvoiceTax" />
-                  <td className="NormalInvoiceTax">$500</td>
+                  <td className="NormalInvoiceTax">{orderD.total_amount}</td>
                 </tr>
-                <tr>
-                  <td className="NormalInvoiceTax leftBorderNone">2</td>
-                  <td className="NormalInvoiceTax">ITR2</td>
-                  <td className="NormalInvoiceTax">998231</td>
-                  <td className="NormalInvoiceTax">2</td>
-                  <td className="NormalInvoiceTax">700</td>
-                  <td className="NormalInvoiceTax" />
-                  <td className="NormalInvoiceTax" />
-                  <td className="NormalInvoiceTax" />
-                  <td className="NormalInvoiceTax" />
-                  <td className="NormalInvoiceTax" />
-                  <td className="NormalInvoiceTax" />
-                  <td className="NormalInvoiceTax">$90</td>
-                </tr>
-                <tr>
-                  <td className="NormalInvoiceTax leftBorderNone">3</td>
-                  <td className="NormalInvoiceTax">ITR3</td>
-                  <td className="NormalInvoiceTax">998231</td>
-                  <td className="NormalInvoiceTax">3</td>
-                  <td className="NormalInvoiceTax">1000</td>
-                  <td className="NormalInvoiceTax" />
-                  <td className="NormalInvoiceTax" />
-                  <td className="NormalInvoiceTax" />
-                  <td className="NormalInvoiceTax" />
-                  <td className="NormalInvoiceTax" />
-                  <td className="NormalInvoiceTax" />
-                  <td className="NormalInvoiceTax">$165</td>
-                </tr>
+                
               </tbody>
               <tfoot>
                 <tr>
@@ -334,14 +303,14 @@ const OrderDetails = () => {
                   <td colspan="2" className="NormalInvoiceTax">
                     Total amount
                   </td>
-                  <td className="NormalInvoiceTax">$755</td>
+                  <td className="NormalInvoiceTax"> {orderD.total_amount}</td>
                 </tr>
               </tfoot>
             </table>
 
             <section className="mt-3">
               <div className="paymentText">
-                <b>Payment Method : </b> Cash
+                <b>Payment Method : </b> {orderD.payment_mode}
               </div>
               <div className="paymentText">
                 <b>Note:</b>Thank you for choosing us!
@@ -351,8 +320,6 @@ const OrderDetails = () => {
           </section>
         </section>
       </div>
-
-      <Footer />
     </>
   );
 };

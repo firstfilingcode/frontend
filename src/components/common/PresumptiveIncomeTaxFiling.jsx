@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import ServiceType2 from "../Services/ServiceType2";
-import Footer from "./Footer";
-import Header from "./Header";
 import backgroundForPresumptive1 from "../common/Images/backgroundForPresumptive1.gif";
 import incometax_men2 from "../common/Images/canPremtive.png";
 import Presumptive12 from "../common/Images/Presumptive12.png";
@@ -24,7 +22,6 @@ function PresumptiveIncomeTaxFiling() {
   });
   return (
     <>
-      <Header />
       <div className="container">
         <ServiceName />
         <div className="row">
@@ -274,9 +271,9 @@ function PresumptiveIncomeTaxFiling() {
                   alt="incometax_men2"
                 />
               </div>
-              <button className="btn itrFIleButton">
+              <NavLink to="/Contact">    <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button> </NavLink>
             </section>
           </div>
 
@@ -478,9 +475,9 @@ function PresumptiveIncomeTaxFiling() {
                 alt="backgroundForPresumptive"
                 className="mobileImg"
               />
-              <button className="btn itrFIleButton">
+            <NavLink to="/Contact">   <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button> </NavLink>
             </section>
           </div>
 
@@ -556,9 +553,9 @@ function PresumptiveIncomeTaxFiling() {
           <div className="col-md-5">
             <section className="text-center">
               <img src={Presumptive11} alt="Presumptive11" />
-              <button className="btn itrFIleButton btnreletive">
+              <NavLink to="/Contact">    <button className="btn itrFIleButton btnreletive">
                 Schedule Free Consultation
-              </button>
+              </button> </NavLink>
             </section>
           </div>
         </div>
@@ -643,10 +640,10 @@ function PresumptiveIncomeTaxFiling() {
 
           <div className="col-md-5">
             <section className="text-center">
-              <img src={Presumptive10} alt="Presumptive10" />
-              <button className="btn itrFIleButton">
+              <img src={Presumptive10} alt="Presumptive10" className="mobileImg" />
+              <NavLink to="/Contact">     <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button> </NavLink>
             </section>
           </div>
 
@@ -913,7 +910,6 @@ function PresumptiveIncomeTaxFiling() {
       </div>
 
       <Faq />
-      <Footer />
     </>
   );
 }

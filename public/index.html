@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <!-- <meta charset="utf-8" /> -->
     <link rel="icon" href="%PUBLIC_URL%/FirstFiling.png" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="App Description"
-      data-react-helmet="true"
-    />
-    <meta name="theme-color" content="#008f68" data-react-helmet="true" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+  <meta name="description" content="Den historie hjemmesiden for Norges Golfforbund" data-react-helmet="true"/> 
+   
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/FirstFiling.png" />
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -32,12 +28,9 @@
 
 <script src="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/js/evo-calendar.min.js"></script>
 <script>
- document
-    .getElementsByTagName('meta')
-    .namedItem('description')
-    .setAttribute('content','My Meta Description Here')
 
 window.addEventListener("calender", () => {
+ 
   $.getJSON("https://accounts.rusoft.in/api/getCalender", function(data){
    var array = data.data;
 
@@ -49,28 +42,32 @@ window.addEventListener("calender", () => {
 
   </script>
   <!--Start of Tawk.to Script-->
-<script type="text/javascript">
+
+
+
+
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+
+</script>
+
+<script >
   var Tawk_API = Tawk_API || {},
       Tawk_LoadStart = new Date();
   (function() {
       var s1 = document.createElement("script"),
           s0 = document.getElementsByTagName("script")[0];
       s1.async = true;
-      s1.src = 'https://embed.tawk.to/6217c0a7a34c2456412808e1/1fsmch4q4';
+      s1.src = 'https://embed.tawk.to/606d6d88067c2605c0bffdd3/1f2ln7o80';
       s1.charset = 'UTF-8';
       s1.setAttribute('crossorigin', '*');
       s0.parentNode.insertBefore(s1, s0);
   })();
 </script>
-
-<script src="https://accounts.google.com/gsi/client" async defer></script>
-
-</script>
 <!--End of Tawk.to Script-->
 
   
 
-    <title>First Filing</title>
+   
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

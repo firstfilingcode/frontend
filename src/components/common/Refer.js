@@ -10,16 +10,24 @@ function Refer() {
   const navigate = useNavigate();
   let formData = new FormData();
   const [referCode, setReferCode] = useState(window.location.pathname.split("/")[1]);
+ 
+  
   const [error, setError] = useState(false);
-
+  const array= referCode.split("@")[1];
 
   useEffect(() => {
 
     const myInterval = setInterval(myTimer, 4000);
 
     function myTimer() {
+      if(array === undefined)
+{
       navigate("/")
       myStopFunction()
+}
+else{
+  myStopFunction()
+}
     }
 
     function myStopFunction() {
@@ -29,7 +37,11 @@ function Refer() {
   }, [error])
   useEffect(() => {
 
-    formData.append("referral_code", referCode);
+  
+
+if(array === undefined)
+{
+formData.append("referral_code", referCode);
     myAxios({
       method: "post",
       url: BASE_URL + "/getReferral",
@@ -47,14 +59,23 @@ function Refer() {
         else {
           sessionStorage.setItem("referral_id", response.data.data[0].id);
           sessionStorage.setItem("referral_code", response.data.data[0].referral_code);
-          navigate("/");
+           navigate("/");
         }
 
       })
       .catch(function (response) {
         console.log("");
+
         //   
       });
+}
+else{
+  sessionStorage.setItem("subscription_token", array);
+  navigate("/UnsubscribeNewsLetter");
+
+}
+
+    
   }, [referCode]);
   return (
     <>
@@ -73,9 +94,9 @@ function Refer() {
                 </div>
               </div>
               <div className="foot-message">
-                <p className="text-white">You are being redirected to <a className="text-warning" href="https://firstfilling.rusoft.in/">https://firstfilling.rusoft.in</a></p><a className="text-warning" href="https://firstfilling.rusoft.in/">
-                </a></div><a className="text-warning" href="https://firstfilling.rusoft.in/">
-              </a></div><a className="text-warning" href="https://firstfilling.rusoft.in/">
+                <p className="text-white">You are being redirected to <a className="text-warning" href="https://firstfilling.in/">https://firstfilling.in</a></p><a className="text-warning" href="https://firstfilling.in/">
+                </a></div><a className="text-warning" href="https://firstfilling.in/">
+              </a></div><a className="text-warning" href="https://firstfilling.in/">
             </a></div>
 
           :
@@ -91,9 +112,9 @@ function Refer() {
                 </div>
               </div>
               <div className="foot-message">
-                <p className="text-white">You are being redirected to <a className="text-warning" href="https://firstfilling.rusoft.in/">https://firstfilling.rusoft.in</a></p><a className="text-warning" href="https://firstfilling.rusoft.in/">
-                </a></div><a className="text-warning" href="https://firstfilling.rusoft.in/">
-              </a></div><a className="text-warning" href="https://firstfilling.rusoft.in/">
+                <p className="text-white">You are being redirected to <a className="text-warning" href="https://firstfilling.in/">https://firstfilling.in</a></p><a className="text-warning" href="https://firstfilling.in/">
+                </a></div><a className="text-warning" href="https://firstfilling.in/">
+              </a></div><a className="text-warning" href="https://firstfilling.in/">
             </a></div>
 
       }

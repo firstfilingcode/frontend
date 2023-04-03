@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import ServiceType2 from "../Services/ServiceType2";
-import Footer from "./Footer";
-import Header from "./Header";
 import digital3 from "../common/Images/digital3.png";
 import digital2 from "../common/Images/digital2.png";
 import ProcessBackArrow from "../common/Images/ProcessBackArrow.png";
 import DigitalSign from "../common/Images/DigitalSign.png";
 import DigitalSign2 from "../common/Images/DigitalSign2.png";
-import Presumptive9 from "../common/Images/Presumptive9.png";
 import checkcircle1 from "../common/Images/checkCircle.svg";
 import ServiceName from "../Services/NameOfService";
 import secureLocalStorage from "react-secure-storage";
@@ -24,7 +21,6 @@ function DigitalSignatureIndianClass3() {
   });
   return (
     <>
-      <Header />
       <div className="container">
         <ServiceName />
         <div className="row">
@@ -55,7 +51,7 @@ function DigitalSignatureIndianClass3() {
         </div>
       </div>
       <section>
-        <section className="sevicesBack22">
+        <section className="sevicesBack10">
           <ServiceType2 />
         </section>
       </section>
@@ -759,7 +755,6 @@ function DigitalSignatureIndianClass3() {
       </div>
 
       <Faq />
-      <Footer />
     </>
   );
 }

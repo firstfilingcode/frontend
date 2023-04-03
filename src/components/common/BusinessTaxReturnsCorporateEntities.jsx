@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import ServiceType2 from "../Services/ServiceType2";
-import Footer from "./Footer";
-import Header from "./Header";
 import Rebates2 from "../common/Images/Rebates2.png";
 import calculate from "../common/Images/calculate.png";
 import Persent from "../common/Images/Persent.png";
@@ -23,7 +21,6 @@ function IncorporateSubsidiary() {
   });
   return (
     <>
-      <Header />
       <div className="container">
         <ServiceName />
         <div className="row">
@@ -390,9 +387,9 @@ function IncorporateSubsidiary() {
           <div className="col-md-6">
             <section className="text-center">
               <img src={Rebates} alt="Rebates" className="mobileImg" />
-              <button className="btn itrFIleButton">
+             <NavLink to= "/Contact">  <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button></NavLink>
             </section>
           </div>
           <div className="col-md-6">
@@ -519,9 +516,9 @@ function IncorporateSubsidiary() {
           <div className="col-md-4">
             <section className="text-center">
               <img src={Rebates2} alt="Rebates2" className="mobileImg" />
-              <button className="btn itrFIleButton">
+             <NavLink to="/Contact"><button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button></NavLink> 
             </section>
           </div>
 
@@ -642,7 +639,6 @@ function IncorporateSubsidiary() {
       </div>
 
       <Faq />
-      <Footer />
     </>
   );
 }

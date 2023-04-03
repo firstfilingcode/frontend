@@ -197,7 +197,6 @@ function Blogdetails() {
         }}
       >
         <section className="video_backcolor2">
-          <Header />
           <div className="container">
             <div className="row">
               <div className="col-md-2 blogpage_imgbtn1">
@@ -473,8 +472,6 @@ function Blogdetails() {
           </div>
         </form>
       </div>
-
-      <Footer />
 
       <Modal
         show={showModal}

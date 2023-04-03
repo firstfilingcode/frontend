@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import { NavLink } from "react-router-dom";
 import { BASE_URL } from "./services/Helper";
 
 function Blog() {
   const [data, setData] = useState([]);
   const [allData, setAllData] = useState([]);
-  const [popular, setPopular] = useState([]);
   const [takes, setTakes] = useState(2);
   const [topBlog, setTopBlog] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -80,15 +77,22 @@ function Blog() {
     setTopBlog(data[0]);
   }
 
+  // const names = ["Blog", "Blogdetails"];
+  let PageName = window.location.pathname.split("/")[1];
   useEffect(() => {
     setTab("AllBlog")
+    // if (names.indexOf(PageName) > -1) {
+    //   document.body.style = "background: #313645";
+    // } else {
+    //   document.body.style = "background: #FCFCFC;";
+    // }
   }, []);
 
   let background = topBlog.photo;
 
   if (isLoaded === false) {
     return (
-      <><Header />
+      <>
         <div className="container">
           <div className="row">
             <div className="col-md-12 order-list2">
@@ -162,7 +166,6 @@ function Blog() {
   else {
     return (
       <>
-        <Header />
         <div className="container">
           <div className="row">
             <div className="col-md-12 order-list2">
@@ -351,12 +354,6 @@ function Blog() {
           </div>
         </div>
 
-
-
-
-
-
-        <Footer />
       </>
     );
   }

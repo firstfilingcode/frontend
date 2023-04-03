@@ -29,7 +29,12 @@ const UserBank = (props) => {
 
     return errors;
   };
-
+  const [userBank1, setUserBank1] = useState([
+    "ifsc",
+    "bank_name",
+    "bank_account_no",
+  ]);
+  const [found, setFound] = useState(false);
   const [viewUserInfo, setViewUserInfo] = useState("");
   const [response, setResponse] = useState(false);
   let location = useLocation();
@@ -39,6 +44,12 @@ const UserBank = (props) => {
       .then((json) => {
         //alert(JSON.stringify(json.allowed_input[0]));
         setAllowed_input(json.allowed_input);
+        for (var i = 0; i < (json.allowed_input).length; i++) {
+          if (userBank1.indexOf(json.allowed_input[i]) > -1) {
+            setFound(true);
+            break;
+          }
+        }
         setResponse(true);
         setViewUserInfo(location.state.view_user_info);
       });
@@ -141,8 +152,17 @@ const UserBank = (props) => {
 
   return (
     <>
+      <div className="col-md-12">
+        <span className="UserInfo_Heading_title">
+          {found === false ? (
+            <h4 className="text-center">No Required Fields </h4>
+          ) : (
+            " Your refund will be issued to this account"
+          )}
+        </span>
+      </div>
       <form onSubmit={formik.handleSubmit}>
-        <fieldset disabled={viewUserInfo === "1" ? true : false}>
+        <fieldset disabled={viewUserInfo === 1 ? true : false}>
           <div className="row">
             {allowed_input.indexOf("ifsc") > -1 ? (
               <div className="col-md-4 info_input_padding inputLabel">
@@ -239,7 +259,7 @@ const UserBank = (props) => {
             )}
             {response ? (
               <div className="col-md-12 info_input_padding">
-                {viewUserInfo === "1" ? (
+                {viewUserInfo === 1 ? (
                   ""
                 ) : (
                   <button

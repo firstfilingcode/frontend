@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Form, FormGroup, Label, Input, Container, Button } from "reactstrap";
+import React, { useState } from "react";
 import { toast } from "react-toastify";
 import Modal from "react-bootstrap/Modal";
 import { news } from "../common/services/newsLetter";
-import BarLoader from 'react-bar-loader';
 
 const NewsLetter = () => {
   const [newsletter,setNewsletter]=useState("");
@@ -80,7 +78,6 @@ const NewsLetter = () => {
 
   return (
     <>
-      <BarLoader color="#1D8BF1" className="barL" height={bar} style={{ width: 350 }} />
       <div className="input-group newleterinputgroup"
       >
         <input

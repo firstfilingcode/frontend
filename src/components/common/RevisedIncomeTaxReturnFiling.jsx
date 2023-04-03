@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import ServiceType2 from "../Services/ServiceType2";
-import Footer from "./Footer";
-import Header from "./Header";
 import backgroundForPresumptive1 from "../common/Images/backgroundForPresumptive1.gif";
-import incometax_men2 from "../common/Images/canPremtive.png";
+import incometax_men2 from "../common/Images/questionMark4.png";
 import Presumptive12 from "../common/Images/Presumptive12.png";
-import Presumptive11 from "../common/Images/Presumptive11.png";
-import Presumptive10 from "../common/Images/Presumptive10.png";
-import Presumptive9 from "../common/Images/Presumptive9.png";
+import Presumptive11 from "../common/Images/calculator4.png";
+import Presumptive10 from "../common/Images/Thumsup4.png";
+import Presumptive9 from "../common/Images/TAX4.png";
 import checkcircle1 from "../common/Images/checkCircle.svg";
 import ServiceName from "../Services/NameOfService";
 import secureLocalStorage from "react-secure-storage";
@@ -24,7 +22,6 @@ function RevisedIncomeTaxReturnFiling() {
   });
   return (
     <>
-      <Header />
       <div className="container">
         <ServiceName />
         <div className="row">
@@ -32,7 +29,7 @@ function RevisedIncomeTaxReturnFiling() {
             <span className=" itrPageHeading">
               Presumptive / Freelancing Income{" "}
             </span>
-            <section className="backgroundPresumptive">
+            <section className="Teamwork4">
               <div className="fixwidthPremtive">
                 <p className="itrPageDescription">
                   Freelancing in India has a bright future. As per the Income
@@ -122,6 +119,222 @@ function RevisedIncomeTaxReturnFiling() {
       </section>
 
       <div className="container">
+        <div className="row backgroundrowPresumtive mb-3">
+          <p className="titleOfFirstFilling">
+            How can freelancers calculate their advance tax
+          </p>
+
+          <p className="partnershiptollp_p">
+            If you earn income from clients who are based overseas, you may
+            receive the money as a direct remittance to your bank account or via
+            such services like PayPal. Two cases are to be noted here:
+          </p>
+
+          <div class="partnershiptollpli">
+            <ul>
+              <li>
+                If the money you have received was already subject to a tax
+                deduction at source, then you will not have to charge it as
+                taxable income. This is because of the provision of the Double
+                Tax Avoidance Agreement (DTAA). If the receipt you get has
+                already been treated for tax at source and then you end up
+                paying tax in India too, it will get taxed twice. The DTAA is
+                signed between India and 80 countries to prevent this from
+                happening. All in all, your money has to be taxed either in the
+                source country or in the country of residence. So, if there’s a
+                DTAA between the two countries, you might not have to add it to
+                taxable income if TDS was deducted in the source country.
+              </li>
+              <li>
+                In case the TDS was not deducted in the remittance, you will
+                treat this income just like you would treat any other income you
+                earn as a freelancer, irrespective of the geographic boundary it
+                is being transferred from. Thus, your professional fees from the
+                foreign client are to be treated just like any money you earn
+                locally.
+              </li>
+            </ul>
+          </div>
+
+          <p className="partnershiptollp_p">
+            As a rule, the process involves adding up all the revenue - whether
+            from clients in India or abroad and adjusting for expenses incurred
+            in freelancing to arrive at the final figure of your freelance
+            income.
+          </p>
+        </div>
+
+        <div className="row">
+          <p className="titleOfFirstFilling">Tax Deductions for Freelancers</p>
+
+          <div className="col-md-7">
+            <p className="partnershiptollp_p">
+              Freelancers can also reap tax deduction benefits as individuals
+              and business owners. As individuals, they can claim tax-saving
+              deductions available to salaried individuals and as freelancers,
+              they can claim deductions available to business owners. There are
+              multiple expenses for freelancers to claim as deductions. The only
+              requirement is that these expenses must be related and directly
+              linked to the work they’re doing with the following conditions:
+            </p>
+
+            <div class="partnershiptollpli">
+              <ul>
+                <li>
+                  The expenses should only be for the purpose of freelancing
+                  work
+                </li>
+                <li>
+                  Money that is spent exclusively for the purpose of the
+                  freelancing work
+                </li>
+                <li>Expenses incurred during the financial year</li>
+                <li>
+                  Expenses should not be related to the capital expenditure of
+                  the freelancer
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="col-md-5">
+            <section className="text-center">
+              <img src={Presumptive10} alt="Presumptive10" width={"100%"} />
+              <button className="btn itrFIleButton">
+                Schedule Free Consultation
+              </button>
+            </section>
+          </div>
+
+          <div className="col-md-12">
+            <p className="titleOfFirstFilling">
+              Expenses that Freelancers can Claim as Tax Deduction
+            </p>
+
+            <p className="partnershiptollp_p">
+              As a rule, the process involves adding up all the revenue -
+              whether from clients in India or abroad and adjusting for expenses
+              incurred in freelancing to arrive at the final figure of your
+              freelance income.
+            </p>
+          </div>
+
+          <div className="col-md-6">
+            <div className="itrliNEw">
+              <img src={checkcircle1} alt="checkcircle1" />
+              <p>Property Rent:</p>
+            </div>
+
+            <p className="fearItrp">
+              Simply put, if a freelancer rents a property for work, the rent
+              amounts are tax-deductible. So, if you rent a desk, co-working
+              space, or office space, you can deduct said amount from your
+              income. If you work from your rented home, you can claim a part of
+              the rent amount as deductions.
+            </p>
+            <div className="itrliNEw">
+              <img src={checkcircle1} alt="checkcircle1" />
+              <p>Repairs Undertaken:</p>
+            </div>
+
+            <p className="fearItrp">
+              By agreeing to pay for repairs on a rented property, those costs
+              can also be deducted. Even repair costs on the business properties
+              such as laptops or printers you own are allowed deductions.
+            </p>
+            <div className="itrliNEw">
+              <img src={checkcircle1} alt="checkcircle1" />
+              <p>Expenses on Meals, Entertainment, and Hospitality:</p>
+            </div>
+
+            <p className="fearItrp">
+              If you conduct meetings with clients, particularly taking them out
+              for meals or outings, any money spent to that end can be claimed
+              as deductions. The money spent must be for the sole intention of
+              winning new business deals or maintaining existing contracts.
+            </p>
+          </div>
+
+          <div className="col-md-1"></div>
+          <div className="col-md-5">
+            <div className="itrliNEw">
+              <img src={checkcircle1} alt="checkcircle1" />
+              <p>Office Expenses:</p>
+            </div>
+
+            <p className="fearItrp">
+              Expenses you incur to do your work, such as purchasing
+              electronics, office supplies, telecommunication bills, and
+              transportation expenses can be claimed as deductions.
+            </p>
+            <div className="itrliNEw">
+              <img src={checkcircle1} alt="checkcircle1" />
+              <p>Depreciation of Assets:</p>
+            </div>
+
+            <p className="fearItrp">
+              When a freelancer purchases capital assets, benefits can last for
+              a while. As assets are used, their value depreciates. These
+              portions of the asset value can be claimed as deductions from
+              taxable income every year. Even vehicles used for commuting to
+              work are assets that you can claim depreciation on. The rate and
+              methods of depreciation vary across assets.
+            </p>
+            <div className="itrliNEw">
+              <img src={checkcircle1} alt="checkcircle1" />
+              <p>Contracting Costs:</p>
+            </div>
+
+            <p className="fearItrp">
+              Certain projects require freelancers to enlist the services of
+              another person or firm. Such payments made on a long-term
+              contractual basis are also deductible.
+            </p>
+          </div>
+        </div>
+
+        <div className="row backgroundImagesPrimstive">
+          <p className="titleOfFirstFilling">
+            Expenses that Freelancers CANNOT Claim as Tax Deduction
+          </p>
+          <div className="col-md-7">
+            <p className="partnershiptollp_p">
+              The following expenses cannot be claimed by freelancers as tax
+              deduction:
+            </p>
+
+            <div class="partnershiptollpli">
+              <ul>
+                <li>
+                  Those expenses which have been carried out for personal
+                  purposes are explicitly invalid for deductions. For instance,
+                  phone bills or meals expenditure for personal reasons are
+                  invalid. In the case of phone bills, if the phone has been
+                  used for business as well as personal purposes, only the
+                  proportionate business expenditure will be allowed for
+                  deduction.
+                </li>
+                <li>
+                  Money paid to relatives in exchange for products and services
+                  which aren’t crucial to the business cannot be deducted. For
+                  instance, if someone rents a house from their sister and pays
+                  more than market rent to avail higher deduction, such an
+                  expense can’t be deducted as an expense.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="col-md-5">
+            <section className="text-center">
+              <img
+                src={Presumptive9}
+                alt="Presumptive9"
+                className="mobileImg"
+              />
+            </section>
+          </div>
+        </div>
         <div className="row mt-3">
           <div className="col-md-6 itrnomatter">
             <p className="itrnomatterp">Do freelancers have to pay tax?</p>
@@ -265,7 +478,7 @@ function RevisedIncomeTaxReturnFiling() {
           </div>
 
           <div className="col-md-4">
-            <section className="marginOfImage ">
+            <section className="marginOfImage text-center">
               <div>
                 <img
                   src={incometax_men2}
@@ -555,227 +768,10 @@ function RevisedIncomeTaxReturnFiling() {
 
           <div className="col-md-5">
             <section className="text-center">
-              <img src={Presumptive11} alt="Presumptive11" />
-              <button className="btn itrFIleButton btnreletive">
-                Schedule Free Consultation
-              </button>
-            </section>
-          </div>
-        </div>
-
-        <div className="row backgroundrowPresumtive mb-3">
-          <p className="titleOfFirstFilling">
-            How can freelancers calculate their advance tax
-          </p>
-
-          <p className="partnershiptollp_p">
-            If you earn income from clients who are based overseas, you may
-            receive the money as a direct remittance to your bank account or via
-            such services like PayPal. Two cases are to be noted here:
-          </p>
-
-          <div class="partnershiptollpli">
-            <ul>
-              <li>
-                If the money you have received was already subject to a tax
-                deduction at source, then you will not have to charge it as
-                taxable income. This is because of the provision of the Double
-                Tax Avoidance Agreement (DTAA). If the receipt you get has
-                already been treated for tax at source and then you end up
-                paying tax in India too, it will get taxed twice. The DTAA is
-                signed between India and 80 countries to prevent this from
-                happening. All in all, your money has to be taxed either in the
-                source country or in the country of residence. So, if there’s a
-                DTAA between the two countries, you might not have to add it to
-                taxable income if TDS was deducted in the source country.
-              </li>
-              <li>
-                In case the TDS was not deducted in the remittance, you will
-                treat this income just like you would treat any other income you
-                earn as a freelancer, irrespective of the geographic boundary it
-                is being transferred from. Thus, your professional fees from the
-                foreign client are to be treated just like any money you earn
-                locally.
-              </li>
-            </ul>
-          </div>
-
-          <p className="partnershiptollp_p">
-            As a rule, the process involves adding up all the revenue - whether
-            from clients in India or abroad and adjusting for expenses incurred
-            in freelancing to arrive at the final figure of your freelance
-            income.
-          </p>
-        </div>
-
-        <div className="row">
-          <p className="titleOfFirstFilling">Tax Deductions for Freelancers</p>
-
-          <div className="col-md-7">
-            <p className="partnershiptollp_p">
-              Freelancers can also reap tax deduction benefits as individuals
-              and business owners. As individuals, they can claim tax-saving
-              deductions available to salaried individuals and as freelancers,
-              they can claim deductions available to business owners. There are
-              multiple expenses for freelancers to claim as deductions. The only
-              requirement is that these expenses must be related and directly
-              linked to the work they’re doing with the following conditions:
-            </p>
-
-            <div class="partnershiptollpli">
-              <ul>
-                <li>
-                  The expenses should only be for the purpose of freelancing
-                  work
-                </li>
-                <li>
-                  Money that is spent exclusively for the purpose of the
-                  freelancing work
-                </li>
-                <li>Expenses incurred during the financial year</li>
-                <li>
-                  Expenses should not be related to the capital expenditure of
-                  the freelancer
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="col-md-5">
-            <section className="text-center">
-              <img src={Presumptive10} alt="Presumptive10" />
+              <img src={Presumptive11} alt="Presumptive11" width={"100%"} />
               <button className="btn itrFIleButton">
                 Schedule Free Consultation
               </button>
-            </section>
-          </div>
-
-          <div className="col-md-12">
-            <p className="titleOfFirstFilling">
-              Expenses that Freelancers can Claim as Tax Deduction
-            </p>
-
-            <p className="partnershiptollp_p">
-              As a rule, the process involves adding up all the revenue -
-              whether from clients in India or abroad and adjusting for expenses
-              incurred in freelancing to arrive at the final figure of your
-              freelance income.
-            </p>
-          </div>
-
-          <div className="col-md-6">
-            <div className="itrliNEw">
-              <img src={checkcircle1} alt="checkcircle1" />
-              <p>Property Rent:</p>
-            </div>
-
-            <p className="fearItrp">
-              Simply put, if a freelancer rents a property for work, the rent
-              amounts are tax-deductible. So, if you rent a desk, co-working
-              space, or office space, you can deduct said amount from your
-              income. If you work from your rented home, you can claim a part of
-              the rent amount as deductions.
-            </p>
-            <div className="itrliNEw">
-              <img src={checkcircle1} alt="checkcircle1" />
-              <p>Repairs Undertaken:</p>
-            </div>
-
-            <p className="fearItrp">
-              By agreeing to pay for repairs on a rented property, those costs
-              can also be deducted. Even repair costs on the business properties
-              such as laptops or printers you own are allowed deductions.
-            </p>
-            <div className="itrliNEw">
-              <img src={checkcircle1} alt="checkcircle1" />
-              <p>Expenses on Meals, Entertainment, and Hospitality:</p>
-            </div>
-
-            <p className="fearItrp">
-              If you conduct meetings with clients, particularly taking them out
-              for meals or outings, any money spent to that end can be claimed
-              as deductions. The money spent must be for the sole intention of
-              winning new business deals or maintaining existing contracts.
-            </p>
-          </div>
-
-          <div className="col-md-1"></div>
-          <div className="col-md-5">
-            <div className="itrliNEw">
-              <img src={checkcircle1} alt="checkcircle1" />
-              <p>Office Expenses:</p>
-            </div>
-
-            <p className="fearItrp">
-              Expenses you incur to do your work, such as purchasing
-              electronics, office supplies, telecommunication bills, and
-              transportation expenses can be claimed as deductions.
-            </p>
-            <div className="itrliNEw">
-              <img src={checkcircle1} alt="checkcircle1" />
-              <p>Depreciation of Assets:</p>
-            </div>
-
-            <p className="fearItrp">
-              When a freelancer purchases capital assets, benefits can last for
-              a while. As assets are used, their value depreciates. These
-              portions of the asset value can be claimed as deductions from
-              taxable income every year. Even vehicles used for commuting to
-              work are assets that you can claim depreciation on. The rate and
-              methods of depreciation vary across assets.
-            </p>
-            <div className="itrliNEw">
-              <img src={checkcircle1} alt="checkcircle1" />
-              <p>Contracting Costs:</p>
-            </div>
-
-            <p className="fearItrp">
-              Certain projects require freelancers to enlist the services of
-              another person or firm. Such payments made on a long-term
-              contractual basis are also deductible.
-            </p>
-          </div>
-        </div>
-
-        <div className="row backgroundImagesPrimstive">
-          <p className="titleOfFirstFilling">
-            Expenses that Freelancers CANNOT Claim as Tax Deduction
-          </p>
-          <div className="col-md-7">
-            <p className="partnershiptollp_p">
-              The following expenses cannot be claimed by freelancers as tax
-              deduction:
-            </p>
-
-            <div class="partnershiptollpli">
-              <ul>
-                <li>
-                  Those expenses which have been carried out for personal
-                  purposes are explicitly invalid for deductions. For instance,
-                  phone bills or meals expenditure for personal reasons are
-                  invalid. In the case of phone bills, if the phone has been
-                  used for business as well as personal purposes, only the
-                  proportionate business expenditure will be allowed for
-                  deduction.
-                </li>
-                <li>
-                  Money paid to relatives in exchange for products and services
-                  which aren’t crucial to the business cannot be deducted. For
-                  instance, if someone rents a house from their sister and pays
-                  more than market rent to avail higher deduction, such an
-                  expense can’t be deducted as an expense.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="col-md-5">
-            <section className="text-center">
-              <img
-                src={Presumptive9}
-                alt="Presumptive9"
-                className="mobileImg"
-              />
             </section>
           </div>
         </div>
@@ -913,7 +909,6 @@ function RevisedIncomeTaxReturnFiling() {
       </div>
 
       <Faq />
-      <Footer />
     </>
   );
 }

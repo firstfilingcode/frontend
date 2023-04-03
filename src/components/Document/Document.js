@@ -33,7 +33,7 @@ const Document = (props) => {
     const [value1, setValue1] = useState("");
     const [order_no, setOrder_no] = useState("");
     const [workStatus, setWorkStatus] = useState("");
-
+    const [caseOnHold, setCaseOnHold] = useState("no");
     const [trackOrder, setTrackOrder] = useState("");
 
     const handleTrackOrder = async () => {
@@ -69,6 +69,7 @@ const Document = (props) => {
                 .then((json) => {
                     setOrder_no(json.data[0].order_no)
                     setWorkStatus(json.data[0].work_status)
+                    setCaseOnHold(json.data[0].CaseOnHold)
                     localStorage.setItem("ca_assigned", json.expert_assigned_ca.mobile)
                     localStorage.setItem("ca_assigned_name", json.expert_assigned_ca.name)
                     localStorage.setItem("rm_assigned", json.expert_assigned_rm.mobile)
@@ -572,15 +573,18 @@ const Document = (props) => {
                         <div className="col-md-4">
                             <span className="textA1">Order Id :</span> <span className="textA1 "><b>{order_no}</b></span>
                             <br />
-                            <span className="textA1">Order Status :</span> <span className="textA2 text-success">
-                                {/* {trackOrder !== "" ? trackOrder.work_done === false
-                                ? trackOrder.caAssign === false
-                                    ? trackOrder.documentsCount === false
-                                        ? "Payment Done"
+                            <span className="textA1">Order Status :</span> <span 
+                               className= {caseOnHold === "no" ? "textA2 text-success" :  "textA2 text-warning" }
+                            >
+                               {} 
+                               {caseOnHold === "no" ? trackOrder !== "" ? 
+                                 trackOrder.caAssign === false ? "Expert Not Assigned" :
+                                 trackOrder.work_done === false
+                                ?  trackOrder.documentsCount === false
+                                        ? "Expert Assigned"
                                         : "Documents Uploaded"
-                                    : "Expert Assigned"
-                                : "Work Done" : ""} */}
-                                {workStatus}
+                                    
+                                : "Work Done" : "" :  "Case On Hold" }
                             </span>
                         </div>
                     </div>
@@ -602,8 +606,9 @@ const Document = (props) => {
                                                                 <div className="fix">
                                                                     <div className="chat_costumer_3_border">
                                                                         <span>
-                                                                            {item.role_id == 5 ? "You" : ""}{item.role_id == 2 ? "RM" : ""}{item.role_id == 1 ? "AD" : ""}
-                                                                        </span>
+                                                                        {item.role_id == 5 ? "You" : ""}{item.role_id == 2 ? "RM" : ""}{item.role_id == 1 ? "AD" : ""}
+                                                                            {item.role_id == 3 ? "CA" : ""}
+                                                                              </span>
                                                                     </div>
                                                                 </div>
                                                                 <div className="mx-3">
@@ -621,7 +626,7 @@ const Document = (props) => {
                                                         </>
                                                     ) : (
                                                         <>
-                                                            <section className="flexsection">
+                                                            <section className="flexsection" style={{justifyContent:"end"}}>
                                                                 <div className="mx-3">
                                                                     <section className="chat_costumer">
                                                                         <span dangerouslySetInnerHTML={{ __html: item.message }}></span>
@@ -636,8 +641,9 @@ const Document = (props) => {
                                                                 <div className="fix">
                                                                     <div className="chat_costumer_3_border">
                                                                         <span>
-                                                                            {item.role_id == 5 ? "You" : ""}{item.role_id == 2 ? "RM" : ""}{item.role_id == 1 ? "AD" : ""}
-                                                                        </span>
+                                                                        {item.role_id == 5 ? "You" : ""}{item.role_id == 2 ? "RM" : ""}{item.role_id == 1 ? "AD" : ""}
+                                                                            {item.role_id == 3 ? "CA" : ""}
+                                                                              </span>
                                                                     </div>
                                                                 </div>
                                                             </section>

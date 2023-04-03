@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import ServiceType2 from "../Services/ServiceType2";
-import Footer from "./Footer";
-import Header from "./Header";
 import backgroundForPresumptive1 from "../common/Images/backgroundForPresumptive1.gif";
-import incometax_men2 from "../common/Images/canPremtive.png";
+import incometax_men2 from "../common/Images/questionMark6.png";
 import Presumptive12 from "../common/Images/Presumptive12.png";
-import Presumptive11 from "../common/Images/Presumptive11.png";
-import Presumptive10 from "../common/Images/Presumptive10.png";
-import Presumptive9 from "../common/Images/Presumptive9.png";
+import Presumptive11 from "../common/Images/calculator7.png";
+import Presumptive10 from "../common/Images/Thumsup6.png";
+import Presumptive9 from "../common/Images/TAX6.png";
 import checkcircle1 from "../common/Images/checkCircle.svg";
 import ServiceName from "../Services/NameOfService";
 import secureLocalStorage from "react-secure-storage";
@@ -15,7 +13,7 @@ import { NavLink } from "react-router-dom";
 import Faq from "../FAQ/Faq";
 import Enquiry2 from "../Enquiry/enquiry2";
 
-function TaxFillingCryptocurrencyTrading() {  
+function TaxFillingCryptocurrencyTrading() {
   const [buyNow, setbuyNow] = useState("");
   window.addEventListener("itr_service", () => {
     setbuyNow(
@@ -24,7 +22,6 @@ function TaxFillingCryptocurrencyTrading() {
   });
   return (
     <>
-      <Header />
       <div className="container">
         <ServiceName />
         <div className="row">
@@ -32,7 +29,7 @@ function TaxFillingCryptocurrencyTrading() {
             <span className=" itrPageHeading">
               Presumptive / Freelancing Income{" "}
             </span>
-            <section className="backgroundPresumptive">
+            <section className="Teamwork6">
               <div className="fixwidthPremtive">
                 <p className="itrPageDescription">
                   Freelancing in India has a bright future. As per the Income
@@ -123,57 +120,6 @@ function TaxFillingCryptocurrencyTrading() {
 
       <div className="container">
         <div className="row mt-3">
-          <div className="col-md-6 itrnomatter">
-            <p className="itrnomatterp">Do freelancers have to pay tax?</p>
-
-            <p className="partnershiptollp_p">
-              In India, there are 15 million freelancers. Around 40% of all
-              freelance jobs offered around the world are done by freelancers
-              from India (1). According to industry estimates the Indian
-              'freelancers' market size is likely to grow to a whopping $20-$30
-              billion by 2025(1).
-            </p>
-
-            <p className="partnershiptollp_p">
-              Freelancers are the people who prefer working for themselves,
-              mostly from home and not a registered company. They get hired to
-              work on specific tasks for a specific duration and get paid upon
-              the completion of their assignment.
-            </p>
-
-            <p className="partnershiptollp_p">
-              But all of this comfort comes at a cost, and like other salaries
-              of business professionals, freelancers also have to pay tax on
-              whatever they earn.
-            </p>
-          </div>
-          <div className="col-md-1"></div>
-          <div className="col-md-5 itrnomatter">
-            <p className="itrnomatterp">Presumptive Taxation</p>
-
-            <p className="partnershiptollp_p">
-              Sec 44ADA contains the provision for computing gains from
-              profession on a presumptive basis.
-            </p>
-
-            <span className="boldTextItr">
-              “A sum equal to or higher than 50 % of the total gross receipts”
-            </span>
-            <p className="partnershiptollp_p">
-              shall be deemed to be the gain from such profession under the head
-              "Profits and gains of business or profession.”In simple words, if
-              a person is a specified professional and having gross receipts
-              less than or equal to Rs. 50 lakhs then sec 44ADA is for him!
-            </p>
-
-            <p className="partnershiptollp_p">
-              As per sec 44ADA, he has to offer at least 50% of his gross
-              receipts as profit i.e. the amount on which tax shall be levied.
-              or, we can say out of your gross receipts, government considers
-              50% as expenses and 50 % as profit.
-            </p>
-          </div>
-
           <div className="col-md-12">
             <p className="titleOfFirstFilling">
               Applicability of Taxes and ITR Filing for Freelancers
@@ -264,50 +210,54 @@ function TaxFillingCryptocurrencyTrading() {
             </p>
           </div>
 
-          <div className="col-md-4">
-            <section className="marginOfImage ">
-              <div>
-                <img
-                  src={incometax_men2}
-                  width={"217px"}
-                  height="396px"
-                  alt="incometax_men2"
-                />
-              </div>
-              <button className="btn itrFIleButton">
-                Schedule Free Consultation
-              </button>
-            </section>
+          <div className="col-md-6 itrnomatter">
+            <p className="itrnomatterp">Do freelancers have to pay tax?</p>
+
+            <p className="partnershiptollp_p">
+              In India, there are 15 million freelancers. Around 40% of all
+              freelance jobs offered around the world are done by freelancers
+              from India (1). According to industry estimates the Indian
+              'freelancers' market size is likely to grow to a whopping $20-$30
+              billion by 2025(1).
+            </p>
+
+            <p className="partnershiptollp_p">
+              Freelancers are the people who prefer working for themselves,
+              mostly from home and not a registered company. They get hired to
+              work on specific tasks for a specific duration and get paid upon
+              the completion of their assignment.
+            </p>
+
+            <p className="partnershiptollp_p">
+              But all of this comfort comes at a cost, and like other salaries
+              of business professionals, freelancers also have to pay tax on
+              whatever they earn.
+            </p>
           </div>
+          <div className="col-md-1"></div>
+          <div className="col-md-5 itrnomatter">
+            <p className="itrnomatterp">Presumptive Taxation</p>
 
-          <div className="col-md-8 itrnomatter">
-            <p className="itrnomatterp">
-              How can presumptive taxation benefit freelancers?
+            <p className="partnershiptollp_p">
+              Sec 44ADA contains the provision for computing gains from
+              profession on a presumptive basis.
+            </p>
+
+            <span className="boldTextItr">
+              “A sum equal to or higher than 50 % of the total gross receipts”
+            </span>
+            <p className="partnershiptollp_p">
+              shall be deemed to be the gain from such profession under the head
+              "Profits and gains of business or profession.”In simple words, if
+              a person is a specified professional and having gross receipts
+              less than or equal to Rs. 50 lakhs then sec 44ADA is for him!
             </p>
 
             <p className="partnershiptollp_p">
-              As a relief to freelancers, the government added them to the
-              presumptive taxation category under Section 44AD of the Income Tax
-              Act in 2016.
-            </p>
-            <p className="partnershiptollp_p">
-              In order to relieve small taxpayers with a revenue of less than ₹
-              2 crores from maintaining books of accounts, Section 44AD was
-              enacted. The presumptive income system relieves the taxpayer from
-              the requirement to maintain the books of accounts by allowing them
-              to assume the minimum profits at a defined rate of the entire
-              turnover.
-            </p>
-
-            <p className="itrnomatterp">
-              How to calculate tax under section 44AD?
-            </p>
-
-            <p className="partnershiptollp_p">
-              Section 44AD is a presumptive taxation scheme under which income
-              is estimated on the basis of 8% of turnover (or 6% in the case of
-              digital receipts and payments) and the taxpayer is not required to
-              maintain books of accounts.
+              As per sec 44ADA, he has to offer at least 50% of his gross
+              receipts as profit i.e. the amount on which tax shall be levied.
+              or, we can say out of your gross receipts, government considers
+              50% as expenses and 50 % as profit.
             </p>
           </div>
         </div>
@@ -409,6 +359,94 @@ function TaxFillingCryptocurrencyTrading() {
             </section>
           </div>
 
+          <div className="col-md-4">
+            <section className="marginOfImage text-center">
+              <div>
+                <img
+                  src={incometax_men2}
+                  width={"217px"}
+                  height="396px"
+                  alt="incometax_men2"
+                />
+              </div>
+              <NavLink to="/Contact">   <button className="btn itrFIleButton">
+                Schedule Free Consultation
+              </button> </NavLink>
+            </section>
+          </div>
+
+          <div className="col-md-8 itrnomatter">
+            <p className="itrnomatterp">
+              How can presumptive taxation benefit freelancers?
+            </p>
+
+            <p className="partnershiptollp_p">
+              As a relief to freelancers, the government added them to the
+              presumptive taxation category under Section 44AD of the Income Tax
+              Act in 2016.
+            </p>
+            <p className="partnershiptollp_p">
+              In order to relieve small taxpayers with a revenue of less than ₹
+              2 crores from maintaining books of accounts, Section 44AD was
+              enacted. The presumptive income system relieves the taxpayer from
+              the requirement to maintain the books of accounts by allowing them
+              to assume the minimum profits at a defined rate of the entire
+              turnover.
+            </p>
+
+            <p className="itrnomatterp">
+              How to calculate tax under section 44AD?
+            </p>
+
+            <p className="partnershiptollp_p">
+              Section 44AD is a presumptive taxation scheme under which income
+              is estimated on the basis of 8% of turnover (or 6% in the case of
+              digital receipts and payments) and the taxpayer is not required to
+              maintain books of accounts.
+            </p>
+          </div>
+
+          <div className="col-md-12 mt-3">
+            <p className="titleOfFirstFilling">
+              How can freelancers calculate their advance tax
+            </p>
+          </div>
+
+          <div className="col-md-7">
+            <p className="partnershiptollp_p">
+              The following steps should be followed to calculate advance tax:
+            </p>
+
+            <div class="partnershiptollpli">
+              <ul>
+                <li>
+                  Calculate your total taxable income by adding up all of your
+                  earnings.
+                </li>
+                <li>
+                  Calculate your tax liability by learning which tax bracket you
+                  fall under.
+                </li>
+                <li>
+                  Any TDS deducted can be reduced from the tax liability in
+                  order to calculate remaining tax to be paid.
+                </li>
+                <li>
+                  You are supposed to pay advance tax by the set deadlines if
+                  the amount is more than Rs. 10,000.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="col-md-5">
+            <section className="text-center">
+              <img src={Presumptive11} alt="Presumptive11" width={"100%"} />
+              <NavLink to="/Contact">    <button className="btn itrFIleButton">
+                Schedule Free Consultation
+              </button> </NavLink>
+            </section>
+          </div>
           <div className="col-md-12 mt-3">
             <p className="titleOfFirstFilling">
               What are the TDS rates for freelancers?
@@ -478,9 +516,9 @@ function TaxFillingCryptocurrencyTrading() {
                 alt="backgroundForPresumptive"
                 className="mobileImg"
               />
-              <button className="btn itrFIleButton">
+         <NavLink to="/Contact">      <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button> </NavLink>
             </section>
           </div>
 
@@ -520,47 +558,6 @@ function TaxFillingCryptocurrencyTrading() {
             </div>
           </div>
 
-          <div className="col-md-12 mt-3">
-            <p className="titleOfFirstFilling">
-              How can freelancers calculate their advance tax
-            </p>
-          </div>
-
-          <div className="col-md-7">
-            <p className="partnershiptollp_p">
-              The following steps should be followed to calculate advance tax:
-            </p>
-
-            <div class="partnershiptollpli">
-              <ul>
-                <li>
-                  Calculate your total taxable income by adding up all of your
-                  earnings.
-                </li>
-                <li>
-                  Calculate your tax liability by learning which tax bracket you
-                  fall under.
-                </li>
-                <li>
-                  Any TDS deducted can be reduced from the tax liability in
-                  order to calculate remaining tax to be paid.
-                </li>
-                <li>
-                  You are supposed to pay advance tax by the set deadlines if
-                  the amount is more than Rs. 10,000.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="col-md-5">
-            <section className="text-center">
-              <img src={Presumptive11} alt="Presumptive11" />
-              <button className="btn itrFIleButton btnreletive">
-                Schedule Free Consultation
-              </button>
-            </section>
-          </div>
         </div>
 
         <div className="row backgroundrowPresumtive mb-3">
@@ -643,10 +640,10 @@ function TaxFillingCryptocurrencyTrading() {
 
           <div className="col-md-5">
             <section className="text-center">
-              <img src={Presumptive10} alt="Presumptive10" />
-              <button className="btn itrFIleButton">
+              <img src={Presumptive10} alt="Presumptive10" width={"200px"} height={"300px"} className="mobileImg" />
+              <NavLink to="/Contact">   <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button> </NavLink>
             </section>
           </div>
 
@@ -913,7 +910,6 @@ function TaxFillingCryptocurrencyTrading() {
       </div>
 
       <Faq />
-      <Footer />
     </>
   );
 }

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Enquiry from "../Enquiry/enquiry";
 import ServiceType2 from "../Services/ServiceType2";
-import Footer from "./Footer";
-import Header from "./Header";
 import thinkingman3 from "../common/Images/thinkingman3.png";
 import checkcircle from "../common/Images/checkCircleWhite.png";
 import incometax_men2 from "../common/Images/docd2.png";
@@ -35,7 +33,6 @@ function AdvanceTaxCalculation() {
 
   return (
     <>
-      <Header />
       <div className="container marginBottomForService">
         <ServiceName />
         <div className="row">
@@ -126,7 +123,8 @@ function AdvanceTaxCalculation() {
               <div className="incometax_img_6">
                 <img src={incometax_men2} width="100%" alt="" />
               </div>
-              <button className="btn itrFIleButton">Consult A Call</button>
+              <NavLink to="/Contact"> 
+              <button className="btn itrFIleButton">Consult A Call</button></NavLink>
             </section>
           </div>
 
@@ -356,8 +354,8 @@ function AdvanceTaxCalculation() {
             preparation and planning, and we'll work with you to ensure that
             you're in compliance with all applicable laws and regulations.
           </p>
-
-          <button className="btn itrbutton">Contact Us Today!</button>
+          <NavLink to="/Contact"> 
+          <button className="btn itrbutton">Contact Us Today!</button></NavLink>
         </div>
 
         <div className="row itrrowcolor">
@@ -670,7 +668,7 @@ function AdvanceTaxCalculation() {
                 <li>
                   Once the registration is complete, individuals must provide
                   all the necessary information to the IRS, such as income,
-                  deductions, and any other applicable information. After the
+                  deductions, and any other applicable information. Afteconsult a clr the
                   information is collected, the IRS will review it and issue a
                   tax return form.
                 </li>
@@ -752,7 +750,6 @@ function AdvanceTaxCalculation() {
       </div>
 
       <Faq />
-      <Footer />
     </>
   );
 }

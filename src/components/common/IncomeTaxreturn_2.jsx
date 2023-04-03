@@ -1,9 +1,8 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import Enquiry from "../Enquiry/enquiry";
 import { Helmet } from "react-helmet";
 import ServiceName from "../Services/NameOfService";
+import { NavLink } from "react-router-dom";
 function IncomeTaxreturn() {
   return (
     <>
@@ -15,7 +14,6 @@ function IncomeTaxreturn() {
       </Helmet>
 
       <section>
-        <Header />
         {/* <video className="videoplaysdff" autoPlay loop muted>
           <source src={background_video} type="video/mp4" />
         </video> */}
@@ -51,9 +49,9 @@ function IncomeTaxreturn() {
                 </div>
               </div>
 
-              <button class="buynow_2 btn btn-secondary">
+         <NavLink to="/Contact">     <button class="buynow_2 btn btn-secondary">
                 <span class="buytext">Schedule Free Consultation</span>
-              </button>
+              </button></NavLink>
             </div>
             <div className="col-md-1"></div>
             <div className="col-md-5 topEnquiry mt-3">
@@ -207,8 +205,6 @@ function IncomeTaxreturn() {
           </div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 }

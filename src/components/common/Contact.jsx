@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import rightArrow from "../common/Images/rightArrow.png";
 import Contact_map from "../common/Images/Contact_map.png";
 import Contact_phone from "../common/Images/Contact_phone.png";
@@ -9,7 +7,7 @@ import { useFormik } from "formik";
 import { ContactUs } from "./services/ContactUs";
 import { ReactSession } from "react-client-session";
 import { BASE_URL, Timeout } from "./services/Helper";
-import { NavLink } from "react-router-dom";
+import Modal from "react-bootstrap/Modal";
 const Contacts = (valData) => {
   const errors = {};
 
@@ -39,7 +37,10 @@ const Contacts = (valData) => {
 
   return errors;
 };
+
 function Contact() {
+  const [show, setShow] = useState(false);
+  const [emailAddress, setEmailAddress] = useState("");
   const [lodar, setLodar] = useState("");
   const [lodarText, setLodarText] = useState("block");
 
@@ -49,6 +50,7 @@ function Contact() {
     email: "",
     message: "",
     mobile: "",
+    
   });
 
   const formik = useFormik({
@@ -59,6 +61,10 @@ function Contact() {
       setLodar("20px");
       ContactUs(values).then((resp) => {
         if (resp.success) {
+          setShow(true);
+          setTimeout(() => {
+            setShow(false);
+          }, 3000);
           setLodar("0px");
           setLodarText("block");
           resetForm();
@@ -73,6 +79,7 @@ function Contact() {
   const [setting, setSetting] = useState([]);
   useEffect(() => {
     getSetting();
+    setEmailAddress(localStorage.getItem("setEmailAddress"))
   }, []);
 
   const getSetting = async () => {
@@ -89,7 +96,6 @@ function Contact() {
 
   return (
     <>
-      <Header />
       <div className="container">
         <section className="gst" data-aos="fade-right" data-aos-delay="600">
           <ul className="listing">
@@ -109,14 +115,25 @@ function Contact() {
             <span>Contact Us</span>
             <h5>Are you looking for financial solutions?</h5>
             <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-              nonumy eirmod tempor invidunt ut labore et dolore mag.
+              We are dedicated to providing the best financial advice and services to our clients. If you have any questions or concerns, please do not hesitate to contact us
             </p>
           </div>
           <div className="col-md-6 firstfiling_us">
             <h5>Leave us a message</h5>
             <p>And we will get back to you soon.</p>
             <form onSubmit={formik.handleSubmit}>
+              <input
+                type="text"
+                className="form-control mt-3"
+                placeholder="Full Name"
+                name="setEmailAddress"
+                value={emailAddress}
+                onChange={(e) => {
+                  formik.handleChange(e);
+                }}
+
+                onBlur={formik.handleBlur}
+              />
               <input
                 type="text"
                 className="form-control mt-3"
@@ -283,7 +300,7 @@ function Contact() {
           <div className="row">
             <div className="col-md-12">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3556.515311324409!2d75.76921781482443!3d26.95057606494753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db376d6d4382b%3A0xc7a9a2ebb6dcbf1e!2sRukmani%20Software!5e0!3m2!1sen!2sin!4v1671770705700!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.718463414802!2d75.80311411482376!3d26.912428766581584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db3ad83776e6f%3A0xa55cf112867561bf!2sFirstFiling!5e0!3m2!1sen!2sin!4v1679585454453!5m2!1sen!2sin"
                 width="100%"
                 height="450px"
                 style={{ border: "0px" }}
@@ -296,7 +313,31 @@ function Contact() {
         </div>
       </div>
 
-      <Footer />
+      <Modal
+        show={show}
+        id="success_tic"
+        onHide={() => setShow(false)}
+        dialogClassName="modal-90w"
+        backdrop="static"
+        aria-labelledby="example-custom-modal-styling-title"
+      >
+        <Modal.Body className="p-5">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12 text-center">
+                <div className="checkmark-circle">
+                  <div className="background_check" />
+                  <div className="checkmark draw" />
+                </div>
+              </div>
+
+              <div className="col-md-12 text-center">
+                <h3 className="mt-3">Your Details Send Successfully</h3>
+              </div>
+            </div>
+          </div>
+        </Modal.Body>
+      </Modal>
     </>
   );
 }

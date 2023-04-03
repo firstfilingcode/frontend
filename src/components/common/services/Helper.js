@@ -1,5 +1,5 @@
 import axios from "axios";
-export const BASE_URL = 'https://accounts.rusoft.in/api';
+export const BASE_URL = 'https://admin.firstfiling.in/api';
 
 export const Timeout = (time) => {
     let controller = new AbortController();

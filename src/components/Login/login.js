@@ -66,6 +66,7 @@ const Login = () => {
                     loginUser(data).then((resp) => {
                         if (resp.success) {
                             localStorage.setItem("displayName", resp.data.name);
+                            localStorage.setItem("mobile", resp.data.mobile);
                             localStorage.setItem("user_id", resp.data.id);
                             ReactSession.set("user_id", resp.data.id);
                             secureLocalStorage.setItem("wallet",resp.data.wallet);

@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Footer from "./Footer";
-import Header from "./Header";
 import { useLocation } from "react-router-dom";
 import { GetOrderSummary } from "../common/services/GetOrderSummary";
 import { GetCoupon } from "../common/services/getCoupon";
-import Modal from "react-bootstrap/Modal";
 import { OrderPurchased } from "../common/services/GetOrderSummary";
 import { ReactSession } from "react-client-session";
 import { UserGstin } from "../common/services/UserGstin";
@@ -83,6 +80,7 @@ const OrderSummary2 = () => {
   const [baseAmount, setBaseAmount] = useState(0);
   const [lodar2, setLodar2] = useState("");
   const [lodarText2, setLodarText2] = useState("block");
+  const [userWalletDiscount, setUserWalletDiscount] = useState([]);
 
   const [razorPayActive, setRazorpayActive] = useState(true);
 
@@ -163,7 +161,7 @@ const OrderSummary2 = () => {
   }, [quantity]);
 
   const handleWallet = () => {
-    var percent = quantity * ((walletAmount * 20) / 100);
+    var percent = quantity * ((walletAmount * userWalletDiscount) / 100);
     var event_id = document.getElementById("walletTrue");
     setBaseAmount(percent);
     //alert(percent)
@@ -303,7 +301,10 @@ const OrderSummary2 = () => {
       payment_mode: "Razorpay",
       coupon_id: couponId,
       coupon_code: coupon,
-      coupon_discount: couponDiscount,
+      // coupon_discount: couponDiscount,
+      coupon_discount: up_to_discount === null
+        ? parseFloat((item.price * couponDiscount) / 100)
+        : up_to_discount,
       ca_share: item.ca_share,
       up_to_discount: up_to_discount,
       plan_qty: quantity,
@@ -382,12 +383,9 @@ const OrderSummary2 = () => {
     }
 
     function razorPay(value, amt) {
-     
-      
       if (amt === "") {
         alert("Please enter amount");
-       }
-       else {
+      } else {
         setLodarText("none");
         setCreateOrder("...Creating Order... ");
         setDisable(true);
@@ -396,7 +394,7 @@ const OrderSummary2 = () => {
           key_secret: "f4FmWs2haU2V12myXvKFp3nJ",
           amount: 1 * 100,
           currency: "INR",
-          name: "MAAVALAN CONSULTANCY PRIVATE LIMITED",
+          name: "First Filing",
           description: "Live Transaction",
           handler: function (response) {
             // alert("payment done");
@@ -429,9 +427,9 @@ const OrderSummary2 = () => {
             },
           },
           prefill: {
-            name: "prashant sharma",
-            email: "pspc18@gmail.com",
-            contact: "8079094990",
+            name: localStorage.getItem("displayName"),
+            email: email,
+            contact: localStorage.getItem("mobile"),
           },
           notes: {
             address: "Razorpay corporate office",
@@ -511,7 +509,8 @@ const OrderSummary2 = () => {
     })
       .then(function (response) {
         setWalletAmount(response.data.data[0].amount);
-        // alert(JSON.stringify(response.data.data[0].amount));
+        setUserWalletDiscount(response.data.UserWallet[0].user_use_by);
+        //  alert(JSON.stringify(response.data.UserWallet[0].user_use_by));
       })
       .catch(function (response) {
         // console.log("");
@@ -520,14 +519,12 @@ const OrderSummary2 = () => {
   };
   return (
     <>
-      <Header />
 
       <div className="container p-0">
         <div className="col-md-12 text-center OrderSummery2 mt-2 ">
           <span>Order Summary</span>
           <p className="mt-4 mb-4">
-            Capital Gains or Tax Relief under Section 89) Updated / Revised
-            Income Tax Return Filing ( ITR-U ) (PlanId: ITR-CAP-009)
+            {item.name}
           </p>
         </div>
         <div className="row gx-0 gy-0 mb-5 borderItr">
@@ -558,10 +555,10 @@ const OrderSummary2 = () => {
                       {applyWallet === false
                         ? walletAmount
                         : (
-                            parseFloat(walletAmount) - parseFloat(baseAmount)
-                          ).toFixed(2) < 0
-                        ? 0
-                        : (
+                          parseFloat(walletAmount) - parseFloat(baseAmount)
+                        ).toFixed(2) < 0
+                          ? 0
+                          : (
                             parseFloat(walletAmount) - parseFloat(baseAmount)
                           ).toFixed(2)}
                     </b>
@@ -858,14 +855,14 @@ const OrderSummary2 = () => {
                       ₹{" "}
                       {up_to_discount === null
                         ? (
-                            ((parseFloat(item.price) -
-                              parseFloat((item.price * couponDiscount) / 100)) *
-                              18) /
-                            100
-                          ).toFixed(2)
+                          ((parseFloat(item.price) -
+                            parseFloat((item.price * couponDiscount) / 100)) *
+                            18) /
+                          100
+                        ).toFixed(2)
                         : ((parseFloat(item.price) - up_to_discount) * 18) /
-                          100}
-                      {}
+                        100}
+                      { }
                     </span>
                   </div>
                   <div className="col-md-6 mt-3" style={{ display: display }}>
@@ -1012,7 +1009,7 @@ const OrderSummary2 = () => {
                             className="text-danger"
                             style={{ fontSize: "9px" }}
                           >
-                            You Can Use Only 20% of Your Wallet Amount
+                            You Can Use Only {userWalletDiscount}% of Your Wallet Amount
                           </span>
                           <input
                             check
@@ -1025,25 +1022,25 @@ const OrderSummary2 = () => {
                                 e,
                                 up_to_discount === null
                                   ? quantity *
-                                      (
-                                        parseFloat(item.price) -
-                                        parseFloat(
-                                          (item.price * couponDiscount) / 100
-                                        ) +
-                                        ((parseFloat(item.price) -
-                                          parseFloat(
-                                            (item.price * couponDiscount) / 100
-                                          )) *
-                                          18) /
-                                          100
-                                      ).toFixed(2)
+                                  (
+                                    parseFloat(item.price) -
+                                    parseFloat(
+                                      (item.price * couponDiscount) / 100
+                                    ) +
+                                    ((parseFloat(item.price) -
+                                      parseFloat(
+                                        (item.price * couponDiscount) / 100
+                                      )) *
+                                      18) /
+                                    100
+                                  ).toFixed(2)
                                   : quantity *
-                                      (parseFloat(item.price) -
-                                        up_to_discount +
-                                        ((parseFloat(item.price) -
-                                          up_to_discount) *
-                                          18) /
-                                          100)
+                                  (parseFloat(item.price) -
+                                    up_to_discount +
+                                    ((parseFloat(item.price) -
+                                      up_to_discount) *
+                                      18) /
+                                    100)
                               )
                             }
                             style={{ marginTop: "2px" }}
@@ -1057,44 +1054,44 @@ const OrderSummary2 = () => {
                       {applyWallet === false
                         ? up_to_discount === null
                           ? quantity *
-                            (
-                              parseFloat(item.price) -
-                              parseFloat((item.price * couponDiscount) / 100) +
+                          (
+                            parseFloat(item.price) -
+                            parseFloat((item.price * couponDiscount) / 100) +
+                            ((parseFloat(item.price) -
+                              parseFloat(
+                                (item.price * couponDiscount) / 100
+                              )) *
+                              18) /
+                            100
+                          ).toFixed(2)
+                          : quantity *
+                          (parseFloat(item.price) -
+                            up_to_discount +
+                            ((parseFloat(item.price) - up_to_discount) * 18) /
+                            100)
+                        : up_to_discount === null
+                          ? Math.abs(
+                            baseAmount -
+                            quantity *
+                            (parseFloat(item.price) -
+                              parseFloat(
+                                (item.price * couponDiscount) / 100
+                              ) +
                               ((parseFloat(item.price) -
                                 parseFloat(
                                   (item.price * couponDiscount) / 100
                                 )) *
                                 18) /
-                                100
-                            ).toFixed(2)
-                          : quantity *
+                              100)
+                          ).toFixed(2)
+                          : Math.abs(
+                            baseAmount -
+                            quantity *
                             (parseFloat(item.price) -
                               up_to_discount +
-                              ((parseFloat(item.price) - up_to_discount) * 18) /
-                                100)
-                        : up_to_discount === null
-                        ? Math.abs(
-                            baseAmount -
-                              quantity *
-                                (parseFloat(item.price) -
-                                  parseFloat(
-                                    (item.price * couponDiscount) / 100
-                                  ) +
-                                  ((parseFloat(item.price) -
-                                    parseFloat(
-                                      (item.price * couponDiscount) / 100
-                                    )) *
-                                    18) /
-                                    100)
-                          ).toFixed(2)
-                        : Math.abs(
-                            baseAmount -
-                              quantity *
-                                (parseFloat(item.price) -
-                                  up_to_discount +
-                                  ((parseFloat(item.price) - up_to_discount) *
-                                    18) /
-                                    100)
+                              ((parseFloat(item.price) - up_to_discount) *
+                                18) /
+                              100)
                           ).toFixed(2)}
                     </p>
                   </div>
@@ -1139,51 +1136,51 @@ const OrderSummary2 = () => {
                             applyWallet === false
                               ? up_to_discount === null
                                 ? quantity *
+                                Math.round(
+                                  parseFloat(item.price) -
+                                  parseFloat(
+                                    (item.price * couponDiscount) / 100
+                                  ) +
+                                  ((parseFloat(item.price) -
+                                    parseFloat(
+                                      (item.price * couponDiscount) / 100
+                                    )) *
+                                    18) /
+                                  100
+                                )
+                                : quantity *
+                                (parseFloat(item.price) -
+                                  up_to_discount +
+                                  ((parseFloat(item.price) - up_to_discount) *
+                                    18) /
+                                  100)
+                              : up_to_discount === null
+                                ? Math.abs(
+                                  baseAmount -
+                                  quantity *
                                   Math.round(
                                     parseFloat(item.price) -
+                                    parseFloat(
+                                      (item.price * couponDiscount) / 100
+                                    ) +
+                                    ((parseFloat(item.price) -
                                       parseFloat(
-                                        (item.price * couponDiscount) / 100
-                                      ) +
-                                      ((parseFloat(item.price) -
-                                        parseFloat(
-                                          (item.price * couponDiscount) / 100
-                                        )) *
-                                        18) /
+                                        (item.price * couponDiscount) /
                                         100
+                                      )) *
+                                      18) /
+                                    100
                                   )
-                                : quantity *
+                                )
+                                : Math.abs(
+                                  baseAmount -
+                                  quantity *
                                   (parseFloat(item.price) -
                                     up_to_discount +
-                                    ((parseFloat(item.price) - up_to_discount) *
+                                    ((parseFloat(item.price) -
+                                      up_to_discount) *
                                       18) /
-                                      100)
-                              : up_to_discount === null
-                              ? Math.abs(
-                                  baseAmount -
-                                    quantity *
-                                      Math.round(
-                                        parseFloat(item.price) -
-                                          parseFloat(
-                                            (item.price * couponDiscount) / 100
-                                          ) +
-                                          ((parseFloat(item.price) -
-                                            parseFloat(
-                                              (item.price * couponDiscount) /
-                                                100
-                                            )) *
-                                            18) /
-                                            100
-                                      )
-                                )
-                              : Math.abs(
-                                  baseAmount -
-                                    quantity *
-                                      (parseFloat(item.price) -
-                                        up_to_discount +
-                                        ((parseFloat(item.price) -
-                                          up_to_discount) *
-                                          18) /
-                                          100)
+                                    100)
                                 )
                           );
                         }}
@@ -1210,7 +1207,6 @@ const OrderSummary2 = () => {
           </div>
         </div>
       </div>
-      <Footer />
 
       {/* <Modal
         show={show}

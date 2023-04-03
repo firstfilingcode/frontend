@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Enquiry from "../Enquiry/enquiry";
 import ServiceType2 from "../Services/ServiceType2";
-import Footer from "./Footer";
-import Header from "./Header";
 import thinkingman1 from "../common/Images/thinkingman1.png";
 import checkcircle from "../common/Images/checkCircleWhite.png";
 import checkcircle1 from "../common/Images/checkCircle.svg";
@@ -26,7 +24,6 @@ function SalariedIndivual() {
   });
   return (
     <>
-      <Header />
       <div className="container marginBottomForService">
         <ServiceName />
         <div className="row">
@@ -76,7 +73,7 @@ function SalariedIndivual() {
             you're in compliance with all applicable laws and regulations.
           </p>
 
-          <button className="btn itrbutton">Contact Us Today!</button>
+         <NavLink to="/Contact" > <button className="btn itrbutton">Contact Us Today!</button></NavLink>
         </div>
 
         <div className="row itrrowcolor">
@@ -669,7 +666,6 @@ function SalariedIndivual() {
       </div>
 
       <Faq />
-      <Footer />
     </>
   );
 }

@@ -57,6 +57,7 @@ function NewLogin() {
     }
 
     useEffect(() => {
+        window.onGoogleLibraryLoad = () => {
         /* global google */
 
         google.accounts.id.initialize({
@@ -75,6 +76,7 @@ function NewLogin() {
         )
 
         // google.accounts.id.prompt();
+        }
     }, [])
     return (
         <>

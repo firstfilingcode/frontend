@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import Header from "../components/common/Header";
-import Footer from "./common/Footer";
 import FirstFillingSlider from "../components/common/Images/FirstFillingSlider.png";
 import arrow from "../components/common/Images/arrow.png";
 import support from "../components/common/Images/support.png";
@@ -127,7 +125,6 @@ class Index extends Component {
     const blog = this.state.topBlog;
     return (
       <>
-        <Header />
         <div className="container">
           <div className="row paddingtopBottom">
             <div className="col-md-6 col-6">
@@ -183,7 +180,7 @@ class Index extends Component {
                   </div>
                 </p>
                 <h5 className="aboutH4">
-                  We Are Calculating The Best Opportunities For You
+                  Helping You Navigate the Complex World of Financial services
                 </h5>
                 <div
                   dangerouslySetInnerHTML={{ __html: about.short_description }}
@@ -210,7 +207,7 @@ class Index extends Component {
                 </div>
                 <div>
                   <span className="best-text">
-                    100% Free Online Self Service ITR Filing
+                    User-friendly Platform
                   </span>
                 </div>
               </div>
@@ -220,8 +217,7 @@ class Index extends Component {
                 </div>
                 <div>
                   <span className="best-text">
-                    Authorised ERI, Integrated with Indian IT Department to
-                    pre-fill, eFile your ITR
+                    Easy to navigate
                   </span>
                 </div>
               </div>
@@ -231,7 +227,7 @@ class Index extends Component {
                 </div>
                 <div>
                   <span className="best-text">
-                    Affordable Assisted Tax Expert Services
+                    Range of services catering different needs
                   </span>
                 </div>
               </div>
@@ -240,7 +236,7 @@ class Index extends Component {
                   <img src={arrow} alt="arrowRight" className="arrowRight" />
                 </div>
                 <div>
-                  <span className="best-text">Accurate Tax Calculations</span>
+                  <span className="best-text"> Strong customer and error-free services</span>
                 </div>
               </div>
               <div className="d-flex">
@@ -249,17 +245,7 @@ class Index extends Component {
                 </div>
                 <div>
                   <span className="best-text">
-                    Creative Audit - Reduces Potential IT Notices
-                  </span>
-                </div>
-              </div>
-              <div className="d-flex">
-                <div className="arrowMargin">
-                  <img src={arrow} alt="arrowRight" className="arrowRight" />
-                </div>
-                <div>
-                  <span className="best-text">
-                    Comprehensive Analytical PDF Report with every Filing
+                    Team of experts from various disciples
                   </span>
                 </div>
               </div>
@@ -269,7 +255,7 @@ class Index extends Component {
                 </div>
                 <div>
                   <span className="best-text">
-                    Best Experience - IT Platform works on any PC, Smart Mobile
+                    Proactive response
                   </span>
                 </div>
               </div>
@@ -279,8 +265,67 @@ class Index extends Component {
                 </div>
                 <div>
                   <span className="best-text">
-                    Comprehensive end-end service provider in Taxation covering
-                    IT, GST through Software Expert Services
+                    Budget-friendly Immediate solutions by the experts
+                  </span>
+                </div>
+              </div>
+              <div className="d-flex">
+                <div className="arrowMargin">
+                  <img src={arrow} alt="arrowRight" className="arrowRight" />
+                </div>
+                <div>
+                  <span className="best-text">
+                    Accurate tax calculations
+                  </span>
+                </div>
+              </div>
+              <div className="d-flex">
+                <div className="arrowMargin">
+                  <img src={arrow} alt="arrowRight" className="arrowRight" />
+                </div>
+                <div>
+                  <span className="best-text">
+                    One platform for 50+ services
+                  </span>
+                </div>
+              </div>
+              <div className="d-flex">
+                <div className="arrowMargin">
+                  <img src={arrow} alt="arrowRight" className="arrowRight" />
+                </div>
+                <div>
+                  <span className="best-text">
+                    Hassle free e-filing services
+                  </span>
+                </div>
+              </div>
+              <div className="d-flex">
+                <div className="arrowMargin">
+                  <img src={arrow} alt="arrowRight" className="arrowRight" />
+                </div>
+                <div>
+                  <span className="best-text">
+                    100% free online self-service ITR Filing
+                  </span>
+                </div>
+              </div>
+              <div className="d-flex">
+                <div className="arrowMargin">
+                  <img src={arrow} alt="arrowRight" className="arrowRight" />
+                </div>
+                <div>
+                  <span className="best-text">
+                    Constant business-related updates
+                  </span>
+                </div>
+              </div>
+              <div className="d-flex">
+                <div className="arrowMargin">
+                  <img src={arrow} alt="arrowRight" className="arrowRight" />
+                </div>
+                <div>
+                  <span className="best-text">
+                    Best One-for-all platform
                   </span>
                 </div>
               </div>
@@ -457,10 +502,23 @@ class Index extends Component {
                   <span>Our Team</span>
                 </div>
               </p>
-              <p className="team-text">
-                Our dedicated team comprises of competent people with extensive
-                knowledge and experience. Our professionalism and expertise
-                helps us to service our clients to their satisfaction.
+              <span className="team-text">
+                Our team at First Filing Company, founded by CA Shubham Chordia, Founder</span> <b className="boldTextTeam">Certified
+                  FORENSIC Auditor, Certified CCCA by ICAI, Chartered Accountant </b>
+              <span className="team-text">with experience in Real
+                Estate Regulation Act (RERA) 2016, Statutory Audit, ABC Audit, Taxation and Accounting is
+                dedicated to providing exceptional services and support to businesses of all sizes. With
+                an unwavering commitment to quality, we strive to consistently exceed client expectations.
+                As leaders in our field, we leverage our extensive knowledge and experience to navigate
+                complex financial landscapes and assist businesses in achieving their financial objectives.
+                Through close collaboration and innovative solutions, we set the foundation for lasting
+                partnerships and continued success.
+              </span>
+
+              <p className="team-text mt-3">
+                We are a team of varied, youthful, industrious professionals - who are united by
+                equality. Our team is made up of seasoned experts with graduate degrees in accounting,
+                law, engineering, and economics.
               </p>
             </div>
           </div>
@@ -476,23 +534,22 @@ class Index extends Component {
 
                 <section className="itr-e-filling-description">
                   <p>
-                    The primary purpose of an about us page is to inform the
-                    reader about the company and its operations.
-                  </p>
-
-                  <p>
-                    This is a straightforward goal that nearly all businesses
-                    have to fulfill in some fashion or another.
-                  </p>
-
-                  <p>
-                    However, there are other reasons why about us pages are
-                    common fixtures on business websites.
-                  </p>
-
-                  <p>
-                    However, there are other reasons why about us pages are
-                    common fixtures on business websites.
+                    Our services at First Filing encompass a comprehensive range of financial and legal
+                    solutions, creating a one-stop solution for company incorporation and legal compliance.
+                    By integrating the latest industry insights and best practices into our service offerings,
+                    we empower our clients to efficiently establish and maintain their legal and financial
+                    foundations. By leveraging our in-depth knowledge and diverse skillset, we provide our
+                    clients with unparalleled support for company incorporation, legal compliance, and
+                    financial management. With First Filing Company by their side, businesses can rest assured
+                    that they are well-equipped to thrive in the competitive landscape, building upon the
+                    foundation created by our comprehensive service offerings. From Company Incorporation
+                    tailored to individual business requirements, to Compliance with relevant laws, GST
+                    Services, Tax Return Filings, Government Registrations, Digital Signatures, And IPR
+                    Related Services, our comprehensive suite of offerings empowers businesses to focus on
+                    what truly matters – growth and success. By entrusting First Filing Company with these
+                    essential tasks, startups and established firms alike can cultivate their industry
+                    presence and drive innovation, whilst maintaining peace of mind knowing that they are
+                    aligned with legal and regulatory expectations.
                   </p>
                 </section>
               </section>
@@ -511,20 +568,18 @@ class Index extends Component {
                       </section>
                       <section className="descripion-filling">
                         <p>
-                          The primary purpose of an about us page is to inform
-                          the reader about the company and its operations.
+                          "ITR filing is not just a legal obligation, it's a responsibility towards
+                          your country and a step towards your financial stability." – Unknown
                         </p>
                         <p>
-                          This is a straightforward goal that nearly all
-                          businesses have to fulfill in some fashion or another.
-                        </p>
-                        <p>
-                          The primary purpose of an about us page is to inform
-                          the reader about the company and its operations.
-                        </p>
-                        <p>
-                          This is a straightforward goal that nearly all
-                          businesses have to fulfill in some fashion or another.
+                          Tax filing is a tedious process, but it doesn't have to be. With the ITR e-filing
+                          service by First Filing, you can easily file your income tax returns (ITR) online in
+                          just a few clicks. This service helps taxpayers save time and effort by eliminating
+                          the need to manually fill out forms and submit documents. It also provides various
+                          features such as auto-fill of information, document uploads, and automated tax
+                          calculations to make filing taxes easier and more efficient. With its user-friendly
+                          interface and secure platform, First Filing's ITR e-filing service is the perfect
+                          solution for those looking to file their taxes quickly and accurately
                         </p>
 
                         <section className="link-filling text-right">
@@ -811,8 +866,6 @@ class Index extends Component {
             </div>
           </div>
         </div>
-
-        <Footer />
       </>
     );
   }

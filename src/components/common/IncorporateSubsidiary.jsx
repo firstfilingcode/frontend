@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import ServiceType2 from "../Services/ServiceType2";
-import Footer from "./Footer";
-import Header from "./Header";
 import Benifits from "../common/Images/Benifits.png";
 import subsi from "../common/Images/subsi.png";
 import Subs from "../common/Images/Subs.png";
@@ -21,7 +19,6 @@ function IncorporateSubsidiary() {
   });
   return (
     <>
-      <Header />
       <div className="container">
         <ServiceName />
         <div className="row">
@@ -122,9 +119,9 @@ function IncorporateSubsidiary() {
           <div className="col-md-6">
             <section className="text-center">
               <img src={subsi} alt="subsi" className="mobileImg" />
-              <button className="btn itrFIleButton">
+            <NavLink to="/Contact" >  <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button> </NavLink>
             </section>
           </div>
         </div>
@@ -194,9 +191,9 @@ function IncorporateSubsidiary() {
           <div className="col-md-6">
             <section className="text-center">
               <img src={Subs} alt="Subs" className="mobileImg" />
-              <button className="btn itrFIleButton">
+              <NavLink to="/Contact" >  <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button></NavLink>
             </section>
           </div>
         </div>
@@ -217,9 +214,9 @@ function IncorporateSubsidiary() {
           <div className="col-md-4">
             <section className="text-center">
               <img src={Benifits} alt="IncometaxItr" width={"100%"} />
-              <button className="btn itrFIleButton">
+              <NavLink to="/Contact" >  <button className="btn itrFIleButton">
                 Schedule Free Consultation
-              </button>
+              </button> </NavLink>
             </section>
           </div>
           <div className="col-md-1"></div>
@@ -375,7 +372,6 @@ function IncorporateSubsidiary() {
       </div>
 
       <Faq />
-      <Footer />
     </>
   );
 }

@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import pancard1 from "../common/Images/pancard1.png";
 import Faq from "../FAQ/Faq";
 import { useFormik } from "formik";
 import { panApplication } from "./services/panApplication";
-import Services from "../Services/Services";
 import ServiceName from "../Services/NameOfService";
+import ServiceType2 from "../Services/ServiceType2";
 
 const validateBank = (valData) => {
   const errors = {};
@@ -84,7 +82,6 @@ function PanApplication() {
 
   return (
     <>
-      <Header />
       <div className="container">
         <ServiceName />
         <h1
@@ -119,7 +116,7 @@ function PanApplication() {
                     <option value="3">Photoshop</option>
                   </select>
                   {formik.touched.application_type &&
-                    formik.errors.application_type ? (
+                  formik.errors.application_type ? (
                     <span style={{ color: "red", fontSize: "12px" }}>
                       {formik.errors.application_type}
                     </span>
@@ -313,7 +310,6 @@ function PanApplication() {
                     in the privacy policy or as mandated by law.
                   </span>
                 </div>
-
               </div>
             </div>
           </div>
@@ -339,52 +335,71 @@ function PanApplication() {
           >
             <h3 className="whatispan slash_right">What is a PAN Card?</h3>
             <p>
-              The income tax department of India issues a laminated card which
-              states the unique Permanent Account Number (PAN) and other
-              identity details of any person who has applied to obtain a PAN
-              Card.
+              The Income Tax Department of India issues PAN (Permanent Account
+              Number) cards in India, having unique 10-digit alphanumeric
+              identity numbers. According to Indian law, all people, businesses,
+              and corporations that receive taxable income in India must have a
+              PAN card.
             </p>
             <p>
-              A PAN number is a unique, 10 digit alphanumeric code that is used
-              to club all transactions of an individual with the IT department.
-              These transactions involve tax payments, TDS/TCS credits, etc.
+              For many financial operations, including opening a bank account,
+              investing in stocks and mutual funds, buying property, and
+              submitting income tax returns, a PAN card is a required form of
+              identification. Additionally, it aids in tracing a person's or an
+              entity's financial transactions and helps the government prevent
+              tax evasion.
             </p>
             <p>
-              All taxpayers in India, are mandatorily required to furnish their
-              Permanent Account Number (PAN). So, it is compulsory to obtain a
-              PAN card because it should be necessarily quoted in all
-              communications with the Income Tax Department.
+              The PAN card contains the holder's name, date of birth,
+              photograph, and signature. It also includes the PAN number, which
+              is a unique identifier for the cardholder. The PAN card can be
+              obtained by submitting an application form to the authorized
+              agencies, along with the necessary documents and fees.
             </p>
             <h3 className="Structure_of_PAN slash_right">
               Structure of a PAN Number
             </h3>
-            <div className="row ">
+            <p className="partnershiptollp_p">
+              The card has a unique 10-character alphanumeric code, which serves
+              as the PAN number, printed on it in black ink. The PAN number is a
+              combination of letters and numbers in the following format:
+              AAAPL1234C. The first five characters of the PAN number are
+              letters, followed by four numbers, and then another letter. The
+              card also includes the name, picture, birthdate, and signature of
+              the holder. The card's magnetic strip and barcode for
+              machine-readable identification are located on the back.
+            </p>
+            <div className="row">
               <div className="col-md-6 Structure_of_PAN_col ">
                 <h5 className="Character">Character(s) of the PAN Number</h5>
                 <div className="Character_ul">
                   <ul>
-                    <li className="firstli">First Three Characters</li>
-                    <li>Fourth Character</li>
-                    <li className="Fifth_Character_li">Fifth Character</li>
-                    <li>Next four characters</li>
-                    <li>Last character</li>
+                    <li className="firstli">Three initial characters</li>
+                    <li>The fourth character</li>
+                    <li className="Fifth_Character_li">The fifth character</li>
+                    <li>The next four digits</li>
+                    <li>The last character</li>
                   </ul>
                 </div>
               </div>
               <div className="col-md-6 Structure_of_PAN_col">
-                <h5 className="Character">What does it represent?</h5>
+                <h5 className="Character">what it stands for</h5>
                 <div className="Structure_of_PAN_ul">
                   <ul>
                     <li className="firstli">
-                      Alphabetical series that run from AAA to ZZZ
+                      an alphabetical list going from AAA to ZZZ
                     </li>
                     <li>
-                      It represents the status of a PAN holder. For exam ple,
-                      “P” represents an Individual, “F” represents a firm.
+                      the type of cardholder, i.e., P for person, F for
+                      corporation, C for business, A for group of people, T for
+                      trust, and H for HUF (Hindu Undivided Family).
                     </li>
-                    <li>Initial letter of the PAN holder’s last name</li>
-                    <li>Numerical series running from 0001 to 9999</li>
-                    <li>An alphabetic check digit</li>
+                    <li>the initial letter of the owner's last or surname.</li>
+                    <li>a sequence running from 0001 to 9999</li>
+                    <li>
+                      calculation of the check digit using a mathematical
+                      method.
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -462,25 +477,35 @@ function PanApplication() {
             data-aos-delay="500"
           >
             <h4>
-              <span className="slash_right">
-                Why does an individual need a PAN Card
-              </span>
+              <span className="slash_right">Need of pan card</span>
             </h4>
             <p>
-              PAN is a unique identification number that enables tax-paying in
-              India and can act as the following
+              A PAN card is necessary for a person for a number of reasons,
+              including:
             </p>
             <div className="panlist">
               <ul>
-                <li>Mandatory for Filing Taxes</li>
-                <li>Proof of Identity</li>
-                <li>Eligibility to open and operate Bank Accounts</li>
-                <li>Financial transactions</li>
-                <li>Proof of Address</li>
-                <li>Registration of Business</li>
-                <li>Phone Connection</li>
-                <li>Gas Connection</li>
-                <li>Mutual Funds</li>
+                <li>Valid identity proof for individuals in India.</li>
+                <li>filing income tax returns</li>
+                <li>paying taxes</li>
+                <li>Necessary financial transactions</li>
+                <li>Opening bank account</li>
+                <li>
+                  Investing in financial products (mutual funds, stocks, and
+                  bonds)
+                </li>
+                <li>Buying/selling property</li>
+                <li>Availing government schemes</li>
+                <li>Cash transactions</li>
+                <li>Foreign travel</li>
+                <li>
+                  Business purposes (registering a business, obtaining business
+                  loans, etc.)
+                </li>
+                <li>
+                  Other purposes like new mobile phone connection, applying for
+                  a passport, etc.
+                </li>
               </ul>
             </div>
           </div>
@@ -490,68 +515,48 @@ function PanApplication() {
             data-aos-delay="500"
           >
             <h4>
-              <span className="slash_right">
-                Documents Required for PAN Card
-              </span>
+              <span className="slash_right">Documents required</span>
             </h4>
             <div className="panlist">
               <ul>
-                <li>PAN of the Applicant</li>
-                <li>Aadhaar card</li>
+                <li>Identity Proof of the Authorized Signatory</li>
+                <p>
+                  (Aadhaar Card issued by UIDAI/ Voter ID Card/ Driving License/
+                  Passport/ Photo ID Card issued by the Central Government or
+                  State Government or Public Sector Undertaking (PSU))
+                </p>
+                <li>Address Proof of the Authorized Signatory</li>
+                <p>
+                  (Aadhaar Card issued by UIDAI/ Voter ID Card/ Driving License/
+                  Passport/Electricity Bill (not more than three months
+                  old)/Telephone Bill (not more than three months old)/ Bank
+                  Account Statement/ Credit Card Statement/ Depository Account
+                  Statement/ Rent Agreement)
+                </p>
+                <li>Proof of Business Registration</li>
+                <p>
+                  (Certificate of Incorporation issued by ROC/ Partnership Deed
+                  in case of a partnership firm/ Trust Deed in case of a trust/
+                  Registration Certificate issued by the Registrar of Firms in
+                  case of a proprietorship firm)
+                </p>
                 <li>
-                  Proof of business registration or Incorporation certificate
-                </li>
-                <li>
-                  Identity and Address proof of Promoters/Director with
-                  Photographs
-                </li>
-                <li>Address proof of the place of business</li>
-                <li>Bank Account statement/Cancelled cheque</li>
-                <li>Digital Signature</li>
-                <li>
-                  Letter of Authorization/Board Resolution for Authorized
-                  Signatory
+                  Photograph of the Authorized Signatory: Two recent passport
+                  size photographs
                 </li>
               </ul>
             </div>
           </div>
 
           <div className="col-md-1"></div>
-          <div className="col-md-12">
-            <Services />
-          </div>
-
-          <div className="col-md-12 mt-5 gstman-text  text-center">
-            <h3>
-              <div
-                class="slash_1 web-color"
-                data-aos="fade-top"
-                data-aos-delay="500"
-              >
-                <span>FAQ..! Need Help</span>
-              </div>
-            </h3>
-          </div>
-          <div
-            className="col-md-12"
-            data-aos="fade-bottom"
-            data-aos-delay="500"
-          >
-            <div className="form-group gst-input">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Search"
-                name="search"
-              />
-            </div>
-          </div>
         </div>
-
-        <Faq />
       </div>
 
-      <Footer />
+      <section className="sevicesBack15">
+        <ServiceType2 />
+      </section>
+
+      <Faq />
     </>
   );
 }

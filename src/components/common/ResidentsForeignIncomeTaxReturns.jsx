@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import ServiceType2 from "../Services/ServiceType2";
-import Footer from "./Footer";
-import Header from "./Header";
 import backgroundForPresumptive1 from "../common/Images/backgroundForPresumptive1.gif";
-import incometax_men2 from "../common/Images/canPremtive.png";
+import incometax_men2 from "../common/Images/questionMark8.png";
 import Presumptive12 from "../common/Images/Presumptive12.png";
-import Presumptive11 from "../common/Images/Presumptive11.png";
-import Presumptive10 from "../common/Images/Presumptive10.png";
-import Presumptive9 from "../common/Images/Presumptive9.png";
+import Presumptive11 from "../common/Images/calculator9.png";
+import Presumptive10 from "../common/Images/Thumsup8.png";
+import Presumptive9 from "../common/Images/TAX8.png";
 import checkcircle1 from "../common/Images/checkCircle.svg";
 import ServiceName from "../Services/NameOfService";
 import secureLocalStorage from "react-secure-storage";
@@ -15,7 +13,7 @@ import { NavLink } from "react-router-dom";
 import Faq from "../FAQ/Faq";
 import Enquiry2 from "../Enquiry/enquiry2";
 
-function ResidentsForeignIncomeTaxReturns() {  
+function ResidentsForeignIncomeTaxReturns() {
   const [buyNow, setbuyNow] = useState("");
   window.addEventListener("itr_service", () => {
     setbuyNow(
@@ -24,7 +22,6 @@ function ResidentsForeignIncomeTaxReturns() {
   });
   return (
     <>
-      <Header />
       <div className="container">
         <ServiceName />
         <div className="row">
@@ -32,7 +29,7 @@ function ResidentsForeignIncomeTaxReturns() {
             <span className=" itrPageHeading">
               Presumptive / Freelancing Income{" "}
             </span>
-            <section className="backgroundPresumptive">
+            <section className="Teamwork8">
               <div className="fixwidthPremtive">
                 <p className="itrPageDescription">
                   Freelancing in India has a bright future. As per the Income
@@ -123,6 +120,48 @@ function ResidentsForeignIncomeTaxReturns() {
 
       <div className="container">
         <div className="row mt-3">
+          <div className="col-md-12 mt-3">
+            <p className="titleOfFirstFilling">
+              What are the TDS rates for freelancers?
+            </p>
+          </div>
+
+          <div className="col-md-7">
+            <p className="partnershiptollp_p">
+              Tax Deducted at Source (TDS) is the amount of money deducted as
+              tax by the payer before making a payment for any service. TDS is a
+              part of your tax obligation to the government on your income. The
+              only difference is that it is deducted before you receive payment.
+            </p>
+
+            <p className="partnershiptollp_p">
+              In case of professional services, TDS is applicable at a rate of
+              10% under Section 194J whenever a professional/ organisation pays
+              a freelancer more than Rs 30,000 (per transaction or in total for
+              the financial year). The deducted tax must be deposited with the
+              government.
+            </p>
+
+            <p className="partnershiptollp_p">
+              For instance, let us assume that you are a freelancer and have
+              invoiced a client for ₹40,000. The client will subtract ₹4,000
+              (10% of your invoiced amount) and pay you the remainder of
+              ₹36,000. The client is responsible for depositing the deducted
+              amount with the government as Tax Deducted at Source (TDS).
+            </p>
+          </div>
+
+          <div className="col-md-5">
+            <section className="backgroundForPresumptive">
+              <img
+                src={backgroundForPresumptive1}
+                alt="backgroundForPresumptive"
+              />
+              <button className="btn itrFIleButton">
+                Schedule Free Consultation
+              </button>
+            </section>
+          </div>
           <div className="col-md-6 itrnomatter">
             <p className="itrnomatterp">Do freelancers have to pay tax?</p>
 
@@ -265,7 +304,7 @@ function ResidentsForeignIncomeTaxReturns() {
           </div>
 
           <div className="col-md-4">
-            <section className="marginOfImage ">
+            <section className="marginOfImage text-center">
               <div>
                 <img
                   src={incometax_men2}
@@ -410,49 +449,6 @@ function ResidentsForeignIncomeTaxReturns() {
           </div>
 
           <div className="col-md-12 mt-3">
-            <p className="titleOfFirstFilling">
-              What are the TDS rates for freelancers?
-            </p>
-          </div>
-
-          <div className="col-md-7">
-            <p className="partnershiptollp_p">
-              Tax Deducted at Source (TDS) is the amount of money deducted as
-              tax by the payer before making a payment for any service. TDS is a
-              part of your tax obligation to the government on your income. The
-              only difference is that it is deducted before you receive payment.
-            </p>
-
-            <p className="partnershiptollp_p">
-              In case of professional services, TDS is applicable at a rate of
-              10% under Section 194J whenever a professional/ organisation pays
-              a freelancer more than Rs 30,000 (per transaction or in total for
-              the financial year). The deducted tax must be deposited with the
-              government.
-            </p>
-
-            <p className="partnershiptollp_p">
-              For instance, let us assume that you are a freelancer and have
-              invoiced a client for ₹40,000. The client will subtract ₹4,000
-              (10% of your invoiced amount) and pay you the remainder of
-              ₹36,000. The client is responsible for depositing the deducted
-              amount with the government as Tax Deducted at Source (TDS).
-            </p>
-          </div>
-
-          <div className="col-md-5">
-            <section className="backgroundForPresumptive">
-              <img
-                src={backgroundForPresumptive1}
-                alt="backgroundForPresumptive"
-              />
-              {/* <button className="btn itrFIleButton">
-                Schedule Free Consultation
-              </button> */}
-            </section>
-          </div>
-
-          <div className="col-md-12 mt-3">
             <p className="partnershiptollp_p">
               Once the quarter ends, the client will provide you with Form 16A,
               which will state that ₹4,000 was deducted as tax from your
@@ -556,7 +552,7 @@ function ResidentsForeignIncomeTaxReturns() {
           <div className="col-md-5">
             <section className="text-center">
               <img src={Presumptive11} alt="Presumptive11" />
-              <button className="btn itrFIleButton btnreletive">
+              <button className="btn itrFIleButton">
                 Schedule Free Consultation
               </button>
             </section>
@@ -643,7 +639,7 @@ function ResidentsForeignIncomeTaxReturns() {
 
           <div className="col-md-5">
             <section className="text-center">
-              <img src={Presumptive10} alt="Presumptive10" />
+              <img src={Presumptive10} alt="Presumptive10" width={"100%"} />
               <button className="btn itrFIleButton">
                 Schedule Free Consultation
               </button>
@@ -913,7 +909,6 @@ function ResidentsForeignIncomeTaxReturns() {
       </div>
 
       <Faq />
-      <Footer />
     </>
   );
 }

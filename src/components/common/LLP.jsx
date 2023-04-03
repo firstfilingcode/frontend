@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import rightArrow from "../common/Images/rightArrow.png";
 import gstreg from "../common/Images/gstreg.png";
 import gstreg2 from "../common/Images/gstreg2.png";
@@ -12,7 +10,6 @@ import ServiceName from "../Services/NameOfService";
 function LLP() {
   return (
     <>
-      <Header />
       <div className="container">
         <ServiceName />
         <div className="row">
@@ -251,33 +248,7 @@ function LLP() {
         </div>
       </div>
       <Services />
-      <div className="container">
-        <div
-          className="col-md-12 mt-5 gstman-text  text-center"
-          data-aos="fade-top"
-          data-aos-delay="500"
-        >
-          <h3>
-            <div className="slash_1 web-color">
-              <span>FAQ..! Need Help</span>
-            </div>
-          </h3>
-        </div>
-        <div className="col-md-12" data-aos="fade-bottom" data-aos-delay="500">
-          <div className="form-group gst-input">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Search"
-              name="search"
-            />
-          </div>
-        </div>
-
-        <Faq />
-      </div>
-
-      <Footer />
+      <Faq />
     </>
   );
 }

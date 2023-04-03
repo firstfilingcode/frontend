@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import IncometaxItr from "../common/Images/IncometaxItr.png";
 import outer from "../common/Images/outer.png";
 import clock6 from "../common/Images/clock6.png";
@@ -25,7 +23,6 @@ function RevisedIncomeTaxReturnFiling2() {
       </Helmet>
       <div className="backgroundvideoplay">
         <section className="video_backcolor">
-          <Header />
           <div className="container">
             <ServiceName />
             <div className="row">
@@ -663,8 +660,6 @@ function RevisedIncomeTaxReturnFiling2() {
       </div>
 
       <Faq />
-
-      <Footer />
     </>
   );
 }

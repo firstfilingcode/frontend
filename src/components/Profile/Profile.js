@@ -13,8 +13,6 @@ const Profile = () => {
     let formData1 = new FormData();
     let formData = new FormData();
 
-
-
     const onFileChange = (e) => {
         // console.log(e.target.files[0]);
         formData1.append("photo", e.target.files[0]);
@@ -135,6 +133,9 @@ const Profile = () => {
         else if (data.pan_no === "") {
             setErrorPan("Pan Number can't be null")
             setErrorColor("red");
+        } else if (data.pan_no.length < 10) {
+            setErrorPan("Invalid Pan Number")
+            setErrorColor("red");
         }
 
         else {
@@ -177,6 +178,72 @@ const Profile = () => {
                     toast.error("Something went wrong");
                 });
 
+        }
+    };
+
+    const checkPancard = (event) => {
+        if (event.target.value.length === 10) {
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3NzkyMDYzNiwianRpIjoiODAzYjEzMTAtM2IzMC00YTg1LWE0Y2YtMDNhYTIzMjUwNWM1IiwidHlwZSI6ImFjY2VzcyIsImlkZW50aXR5IjoiZGV2Lm1hYXZhbGFuY29uc3VsdGFuY3lAc3VyZXBhc3MuaW8iLCJuYmYiOjE2Nzc5MjA2MzYsImV4cCI6MTk5MzI4MDYzNiwidXNlcl9jbGFpbXMiOnsic2NvcGVzIjpbInVzZXIiXX19.cbNvI0QnMDHW-xEouN87-BAheo8yWEnzP5w29IJjoN8");
+
+            var raw = JSON.stringify({
+                "id_number": event.target.value
+            });
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+            fetch("https://KYC-API.surepass.io/api/v1/pan/pan", requestOptions)
+                .then(response => response.json())
+                .then((json) => {
+                    // alert(JSON.stringify(json.data.remarks))
+                    if (json.success === true) {
+                    } else {
+                        setErrorPan("Invalid Pan Number")
+                        setErrorColor("red");
+                    }
+                })
+                .catch(error => console.log('error', error));
+        } else {
+            setErrorPan("Invalid Pan Number");
+            setErrorColor("red");
+        }
+    };
+
+    const handleAdhar = (e) => {
+        if (e.target.value.length == 12) {
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3NzkyMDYzNiwianRpIjoiODAzYjEzMTAtM2IzMC00YTg1LWE0Y2YtMDNhYTIzMjUwNWM1IiwidHlwZSI6ImFjY2VzcyIsImlkZW50aXR5IjoiZGV2Lm1hYXZhbGFuY29uc3VsdGFuY3lAc3VyZXBhc3MuaW8iLCJuYmYiOjE2Nzc5MjA2MzYsImV4cCI6MTk5MzI4MDYzNiwidXNlcl9jbGFpbXMiOnsic2NvcGVzIjpbInVzZXIiXX19.cbNvI0QnMDHW-xEouN87-BAheo8yWEnzP5w29IJjoN8");
+
+            var raw = JSON.stringify({
+                "id_number": e.target.value
+            });
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+            fetch("https://KYC-API.surepass.io/api/v1/aadhaar-validation/aadhaar-validation", requestOptions)
+                .then((response) => response.json())
+                .then((json) => {
+                    if (json.data.remarks === "success") {
+                    } else {
+                        setErrorAadhar("Invalid Aadhar Number")
+                        setErrorColor("red");
+                    }
+                })
+        } else {
+            setErrorAadhar("Invalid Aadhar Number");
+            setErrorColor("red");
         }
     };
 
@@ -357,7 +424,10 @@ const Profile = () => {
                         <Col md={8} className="profileDetails">
                             <FormGroup>
                                 <input
-                                    onChange={(e) => handleChange(e, "aadhar_no")}
+                                    onChange={(e) => {
+                                        handleChange(e, "aadhar_no");
+                                        handleAdhar(e, "aadhar_no");
+                                    }}
                                     type="text"
                                     placeholder="Your Aadhar Card Number"
                                     className="editprofileintup"
@@ -375,9 +445,13 @@ const Profile = () => {
                         <Col md={8} className="profileDetails">
                             <FormGroup>
                                 <input
-                                    onChange={(e) => handleChange(e, "pan_no")}
+                                    onChange={(e) => {
+                                        handleChange(e, "pan_no");
+                                        checkPancard(e, "pan_no");
+                                    }}
                                     type="text  "
                                     placeholder="Your Pen Card Number"
+                                    maxLength={10}
                                     className="editprofileintup"
                                     value={data.pan_no}
                                 />

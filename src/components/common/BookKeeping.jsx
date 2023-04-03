@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import Enquiry2 from "../Enquiry/enquiry2";
 import ServiceType2 from "../Services/ServiceType2";
-import Footer from "./Footer";
-import Header from "./Header";
 import incometax_men2 from "../common/Images/Bookkeeping2.png";
 import checkcircle1 from "../common/Images/checkCircle.svg";
 import Bookkeeping3 from "../common/Images/Bookkeeping3.png";
 import Bookkeeping4 from "../common/Images/Bookkeeping4.png";
 import bookkeeping1 from "../common/Images/bookkeeping1.png";
-import ServiceName from "../Services/NameOfService";
 import secureLocalStorage from "react-secure-storage";
 import Faq from "../FAQ/Faq";
+import { NavLink } from "react-router-dom";
 
 function PartnershipFirmtoLLP() {
   const [buyNow, setbuyNow] = useState("");
@@ -21,9 +19,19 @@ function PartnershipFirmtoLLP() {
   });
   return (
     <>
-      <Header />
       <div className="container">
-        <ServiceName />
+        <div className="col-md-12 order-list">
+          <ul>
+            <li>
+              <span>Home</span>
+              <i className="fa fa-angle-right order-arrow-right"></i>
+            </li>
+            <li>
+              <span>BookKeeping</span>
+            </li>
+          </ul>
+        </div>
+
         <div className="row mb-3">
           <div className="col-md-5">
             <img src={bookkeeping1} alt="bookkeeping1" width={"100%"} />
@@ -117,7 +125,9 @@ function PartnershipFirmtoLLP() {
                 <img src={incometax_men2} width="100%" alt="incometax_men2" />
               </div>
               <button className="btn itrFIleButton">
-                Schedule Free Consultation
+                <NavLink to="/Contact" className="nav-link">
+                  Schedule Free Consultation
+                </NavLink>
               </button>
             </section>
           </div>
@@ -267,7 +277,9 @@ function PartnershipFirmtoLLP() {
                 <img src={Bookkeeping3} alt="Bookkeeping3" />
               </div>
               <button className="btn itrFIleButton">
-                Schedule Free Consultation
+                <NavLink to="/Contact" className="nav-link">
+                  Schedule Free Consultation
+                </NavLink>
               </button>
             </section>
           </div>
@@ -290,7 +302,9 @@ function PartnershipFirmtoLLP() {
                 <img src={Bookkeeping4} alt="Bookkeeping4" />
               </div>
               <button className="btn itrFIleButton">
-                Schedule Free Consultation
+                <NavLink to="/Contact" className="nav-link">
+                  Schedule Free Consultation
+                </NavLink>
               </button>
             </section>
           </div>
@@ -450,7 +464,6 @@ function PartnershipFirmtoLLP() {
       </div>
 
       <Faq />
-      <Footer />
     </>
   );
 }

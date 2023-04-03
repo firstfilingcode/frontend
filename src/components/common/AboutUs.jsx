@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Footer from "./Footer";
-import Header from "./Header";
 import { BASE_URL } from "./services/Helper";
-
+import { Helmet } from "react-helmet";  
 const AboutUs = () => {
   const [data, setData] = useState([]);
   const [isLoded, setIsLoded] = useState(false);
@@ -21,7 +19,11 @@ const AboutUs = () => {
 
   return (
     <>
-      <Header />
+    <Helmet>  
+        <title>FirstFiling-Aboutus</title>  
+        <meta name="description" content="First Filing Aboutus Page" />  
+       
+      </Helmet>  
 
       {isLoded === false ? (
         <div className="container">
@@ -40,7 +42,6 @@ const AboutUs = () => {
         </div>
       )}
 
-      <Footer />
     </>
   );
 };

@@ -1,6 +1,4 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import gstreg from "../common/Images/gstreg.png";
 import gstreg2 from "../common/Images/gstreg2.png";
 import ServiceType2 from "../Services/ServiceType2";
@@ -11,37 +9,40 @@ import ServiceName from "../Services/NameOfService";
 function GoodsAndServiceGST() {
   return (
     <>
-      <Header />
       <div className="container">
         <ServiceName />
         <div className="row">
           <div className="col-md-7">
             <Enquiry />
-            <div
-              className="describe"
-              data-aos="fade-right"
-              data-aos-delay="800"
-            >
+            <div className="describe">
               <span className="secondrowheading slash_right">
                 What is GST Registration?
               </span>
               <p className="Tax">
-                GST registration is a process by which businesses register for
-                the Goods and Services Tax (GST). It is an indirect tax, which
-                is applicable to the sale of all goods and services. The GST
-                registration process requires businesses to obtain a unique
-                15-digit Goods and Services Tax Identification Number (GSTIN)
-                from the government. The registration is mandatory for
-                businesses making taxable supplies and whose annual turnover
-                exceeds the specified limit. Businesses are required to register
-                their business name, address, contact information, and other
-                details with the relevant tax authority. GST registration is
-                simple, seamless, and can be completed online within a few
-                minutes. It enables businesses to track, manage and pay
-                applicable taxes. It also helps businesses to avail the various
-                benefits offered by the government. Businesses must ensure that
-                they keep their GST registration updated with the latest
-                information.
+                Goods and Services Tax (GST) is an indirect tax levied on the
+                supply of goods and services, which is applicable in India. GST
+                registration is a crucial step for businesses in streamlining
+                their financial processes and ensuring compliance with the Goods
+                and Services Tax framework. This registration allows businesses
+                to collect GST from their customers and pass it on to the
+                government while claiming input credit on their own purchases,
+                ultimately benefiting the supply chain. For many, the concept of
+                GST registration may seem complex at first; however,
+                understanding its significance and the process involved can
+                greatly benefit businesses, big or small, and facilitate
+                seamless financial transactions. Furthermore, timely
+                registration and adherence to the GST guidelines ensures a
+                smooth-running business, preventing any legal complications or
+                penalties.
+              </p>
+              <p className="Tax">
+                It is a mandatory requirement for businesses whose turnover
+                exceeds a certain threshold, which varies from state to state.
+                The registration process involves filing an application with the
+                relevant authorities, providing necessary documents and
+                obtaining a GSTIN (Goods and Services Tax Identification
+                Number). Once registered, businesses are required to file
+                periodic returns and pay taxes as per their turnover.
               </p>
             </div>
           </div>
@@ -50,11 +51,7 @@ function GoodsAndServiceGST() {
           </div>
         </div>
         <div className="row whatisgst">
-          <div
-            className="col-md-6 gstregis_p"
-            data-aos="fade-right"
-            data-aos-delay="500"
-          >
+          <div className="col-md-6 gstregis_p">
             <h3 className="firstrowheadind slash_right">
               TDS/TCS Return Online
             </h3>
@@ -88,7 +85,7 @@ function GoodsAndServiceGST() {
               with this service
             </p>
           </div>
-          <div className="col-md-6" data-aos="fade-left" data-aos-delay="500">
+          <div className="col-md-6">
             <sapn className="secondrowheading slash_right">
               Who should obtain the TDS/TCS Return?
             </sapn>
@@ -119,46 +116,54 @@ function GoodsAndServiceGST() {
 
         <div className="col-md-12 text-center mt-3">
           <h3>
-            <div
-              className="slash_1 web-color"
-              data-aos="fade-bottom"
-              data-aos-delay="500"
-            >
-              <span>All About The TDS/TCS Return Process</span>
+            <div className="slash_1">
+              <span className="web-color">GST registration process</span>
+
+              <p className="partnershiptollp_p mt-3">
+                Breaking the walls of complexity when it comes to GST
+                Registration! First Filing is here to make the process smooth
+                and straightforward. Here's how First Filing can assist you with
+                GST registration:
+              </p>
             </div>
           </h3>
         </div>
 
-        <div className="row gstRow" data-aos="fade-right" data-aos-delay="500">
+        <div className="row gstRow">
           <div className="col-md-2 gstbg-1">
             <span className="circle">1</span>
-            <p>Purchase of Plan</p>
+            <p>Expert guidance on GST Registration.</p>
           </div>
           <div className="col-md-2 gstbg-2">
             <span className="circle">2</span>
-            <p>Expert Assigned</p>
+            <p>
+              Submit and verify all the necessary documents for GST registration
+            </p>
           </div>
           <div className="col-md-2 gstbg-3">
             <span className="circle">3</span>
-            <p>Upload Documents</p>
+            <p>Quick and easy Online registration</p>
           </div>
           <div className="col-md-2 gstbg-4">
             <span className="circle">4</span>
-            <p>Submission on Portal</p>
+            <p>
+              Submission of GST registration application online through the GST
+              portal
+            </p>
           </div>
           <div className="col-md-2 gstbg-5">
             <span className="circle">5</span>
-            <p>ARN Number Gen</p>
+            <p>Track your GST registration application status</p>
           </div>
           <div className="col-md-2 gstbg-6">
             <span className="circle">6</span>
-            <p>TDS/TCS ReturnIN Received</p>
+            <p>Get regular updates through First Filing</p>
           </div>
         </div>
 
-        <div className="row g-0">
+        {/* <div className="row g-0">
           <div className="col-md-6">
-            {/* <iframe
+            <iframe
               src="https://www.youtube.com/embed/S28JDAJq864"
               width="100%"
               height="100%"
@@ -166,12 +171,10 @@ function GoodsAndServiceGST() {
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-            ></iframe> */}
+            ></iframe>
           </div>
-          {/* <div
+          <div
             className="col-md-6 gstRegistrationBack"
-            data-aos="fade-left"
-            data-aos-delay="500"
           >
             <section className="gst-registration-padding">
               <p className="web-color gsttext">Lorem ipsum dolor sit amet</p>
@@ -198,8 +201,8 @@ function GoodsAndServiceGST() {
                 get your business registered under TDS/TCS Return.
               </p>
             </section>
-          </div> */}
-        </div>
+          </div>
+        </div> */}
 
         <div
           className="row"
@@ -208,11 +211,7 @@ function GoodsAndServiceGST() {
           <div className="col-md-6 gstman">
             <img src={gstreg2} alt="gst-men" />
           </div>
-          <div
-            className="col-md-6 mt-5 gstman-text"
-            data-aos="fade-left"
-            data-aos-delay="500"
-          >
+          <div className="col-md-6 mt-3 gstman-text">
             <h4>
               <span className="slash_right">
                 Documents Required for TDS/TCS Return
@@ -220,52 +219,113 @@ function GoodsAndServiceGST() {
             </h4>
             <div className="gstlist">
               <ul>
-                <li>PAN of the Applicant</li>
-                <li>Aadhaar card</li>
-                <li>Proof of business Fillings or Incorporation certificate</li>
+                <li>PAN Card of the Applicant</li>
+                <li>Aadhaar Card (mandatory for individuals)</li>
+                <li>Business Registration Documents:</li>
+                <p className="fearItrp">
+                  For Proprietorship: PAN card, Aadhaar card, and address proof
+                  of the proprietor
+                </p>
+                <p className="fearItrp">
+                  For Partnership Firms: Partnership deed and address proof of
+                  the partners
+                </p>
+                <p className="fearItrp">
+                  For Company: Certificate of Incorporation, MOA, AOA, and
+                  address proof of the directors
+                </p>
                 <li>
-                  Identity and Address proof of Promoters/Director with
-                  Photographs
+                  Bank Account Details: Bank account statement, canceled cheque,
+                  or passbook with the name of the account holder, account
+                  number, and IFSC code.
                 </li>
-                <li>Address proof of the place of business</li>
-                <li>Bank Account statement/Cancelled cheque</li>
-                <li>Digital Signature</li>
                 <li>
-                  Letter of Authorization/Board Resolution for Authorized
-                  Signatory
+                  Address Proof: such as electricity bill, rent agreement, or
+                  property deed
+                </li>
+                <li>
+                  Digital Signature Certificate (DSC) (mandatory for companies
+                  and LLPs)
+                </li>
+                <li>
+                  Photographs: Recent passport size photographs of the
+                  applicant.
                 </li>
               </ul>
+
+              <p className="itrPageDescription">
+                Please be aware that depending on the nature of the business or
+                other particular needs, extra documents can be needed. To avoid
+                any delays or rejections during the GST registration process, it
+                is crucial to make sure that all documents are exact,
+                comprehensive, and up to date.
+              </p>
             </div>
             <h4>
-              <span className="slash_right">TDS/TCS Return Fees</span>
+              <span className="slash_right">Fees for GST registration</span>
             </h4>
             <p>
-              TDS/TCS Return is a tedious 11 step process that involves the
-              submission of many business details and scanned documents.
+              Due to the government's decision to forego the registration costs,
+              there is no cost to register for GST in India. However, any fees
+              related to the registration procedure, including the cost of
+              acquiring Digital Signature Certificates (DSC) may be incurred by
+              the applicant.
             </p>
             <p>
-              Although there are no fees prescribed under the TDS/TCS Return law
-              for obtaining TDS/TCS Return on the TDS/TCS Return portal on your
-              own, you can save a huge time and effort by purchasing the TDS/TCS
-              Return plan with ClearTax.
+              GST registration can be a daunting process, but with First Filing,
+              you can purchase an easy and affordable GST registration plan.
             </p>
             <p>
-              You can opt for Clear TDS/TCS Return services where a TDS/TCS
-              Return Expert will assist you, end to end with TDS/TCS Return.
+              First Filing allows businesses to submit all their information
+              online via a single portal, which makes it much easier than having
+              to manually fill out multiple forms. Furthermore, it also offers
+              an efficient way of tracking progress and ensuring accuracy of
+              submitted data. Our team of experts is always available to help
+              guide you through the process. So, if you’re looking for an easy
+              and affordable way to get registered for GST, look no further than
+              First Filing!
             </p>
             <h4>
               <span className="slash_right">
-                Penalty for not obtaining TDS/TCS Return
+                Penalties for not obtaining GST
               </span>
             </h4>
             <p>
-              An offender not paying tax or making short payments (genuine
-              errors) has to pay a penalty of 10% of the tax amount due subject
-              to a minimum of Rs.10,000.
+              Failure to register for GST or disobey GST rules can result in
+              fines and legal action under the Goods and Services Tax (GST)
+              regime in India. The following are the consequences for failing to
+              register for GST:
             </p>
+
+            <div class="partnershiptollpli">
+              <ul>
+                <li>
+                  A late fee of Rs. 50 per day, up to a maximum of Rs. 5,000, is
+                  due if someone fails to secure GST registration within the
+                  allotted time frame.
+                </li>
+                <li>
+                  If a person who is registered for GST violates the GST rules
+                  while doing so, they may be subject to a fine of up to 10% of
+                  the tax amount owed, or Rs. 10,000, whichever is larger.
+                </li>
+                <li>
+                  If a person provides goods or services without acquiring GST
+                  registration, the goods or services may be seized, and the
+                  individual may be compelled to pay a penalty equal to 100% of
+                  the tax amount owed.
+                </li>
+                <li>
+                  A person who willfully evades taxes or commits fraud may be
+                  prosecuted under the GST laws, which could result in an
+                  imprisonment, a fine, or both.
+                </li>
+              </ul>
+            </div>
             <p>
-              The penalty will at 100% of the tax amount due when the offender
-              has deliberately evaded paying taxes
+              It is therefore important for businesses and individuals to ensure
+              that they are registered under GST if required and comply with the
+              regulations to avoid any penalties or legal consequences.
             </p>
           </div>
         </div>
@@ -273,33 +333,7 @@ function GoodsAndServiceGST() {
       <section className="sevicesBack22">
         <ServiceType2 />
       </section>
-      <div className="container">
-        <div
-          className="col-md-12 mt-5 gstman-text  text-center"
-          data-aos="fade-top"
-          data-aos-delay="500"
-        >
-          <h3>
-            <div className="slash_1 web-color">
-              <span>FAQ..! Need Help</span>
-            </div>
-          </h3>
-        </div>
-        <div className="col-md-12" data-aos="fade-bottom" data-aos-delay="500">
-          <div className="form-group gst-input">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Search"
-              name="search"
-            />
-          </div>
-        </div>
-
-        <Faq />
-      </div>
-
-      <Footer />
+      <Faq />
     </>
   );
 }
